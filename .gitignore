@@ -8,6 +8,7 @@
 *.mcp
 *.mcs
 *.mcw
+*.err
 
 # Libraries
 *.lib
