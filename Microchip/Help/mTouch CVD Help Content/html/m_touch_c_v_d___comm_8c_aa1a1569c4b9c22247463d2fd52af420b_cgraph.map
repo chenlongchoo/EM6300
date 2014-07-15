@@ -1,4 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$m_touch_c_v_d___comm_8c.html#a8465b3a12561c42976a44afc6c80b82e" title="Sends a single character through the serial port or bit&#45;bangs a UART implementation if no UART is ava..." alt="" coords="245,5,320,35"/>
-<area shape="rect" id="node5" href="$m_touch_c_v_d___comm_8c.html#a4836483eea7ba088abc4be62b540bfde" title="Sends an integer through the serial port." alt="" coords="139,31,197,60"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$m_touch_c_v_d___comm_8c.html#aa1a1569c4b9c22247463d2fd52af420b" title="Performs a loop and outputs data to the PC according to the set protocol." alt="" coords="236,5,319,35"/>
-<area shape="rect" id="node7" href="$m_touch_c_v_d___comm_8c.html#a4836483eea7ba088abc4be62b540bfde" title="Sends an integer through the serial port." alt="" coords="128,31,187,60"/>
-<area shape="rect" id="node5" href="$group___decoding.html#gac9fbc0448eeb1690da198052177c011f" title="Updates the state of the sensor using the current CVDSensorData value." alt="" coords="369,5,468,35"/>
-</map>
