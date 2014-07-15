@@ -1,4 +1,3 @@
-
 #include <delays.h>
 #include <timers.h>
 #include <stdlib.h>
@@ -31,7 +30,6 @@
 	#pragma config XINST = OFF
 	#pragma config WDTEN = ON
 	#pragma config WDTPS = 4096
-//	#pragma config WDTEN = OFF
 	#pragma config LVP = OFF
 	#pragma config MCLRE = OFF	// added in since the New Hardware design doesn't have pull up resistor.
 	#pragma config PWRT = ON
@@ -153,7 +151,6 @@ void HighISR(void);
 			static i = 0;
 			static unsigned long j = 0;
 	
-//			WriteTimer1(0x8000);	// This will create an timer interrupt every second.
 			TMR1H = 0x80;
 			TMR1L = 0x02;
 			
@@ -165,17 +162,11 @@ void HighISR(void);
 				StartDoReadingFlag = 1;
 				i = 0;
 			}
-//			if( StartDoAdc == 0 && j++ >= 5)
-//			{
-//				// Read baterry voltage every 5 mins
-//				StartDoAdc = 1;
-//				j = 0;
-//			}
 			///////////////////////////////////////////
 												
 			HandleRTCC();			// Update time and calendar			
 			PIR1bits.TMR1IF = 0;	// Clear interrupt flag
-		}	
+		}
 					
 		INTCON = backup;
 	}
@@ -195,13 +186,15 @@ CALIBRATION_VALUES	CalibrationData;
 //*****************************************************************
 void InitTimer(void)
 {
-	// Initialise timer 3.
-//	OpenTimer3(
-//		TIMER_INT_ON
-//		& T3_16BIT_RW
-//		& T3_SOURCE_INT
-//		& T3_PS_1_8
-//		& T3_SYNC_EXT_OFF );
+	// 2014-03-04 Liz. Timer 1 is initialised once time only when meter power up and not in sleep mode
+	// Initialise timer 1.
+	OpenTimer1(
+		TIMER_INT_ON
+		& T1_16BIT_RW
+		& T1_SOURCE_EXT
+		& T1_PS_1_1
+		& T1_OSC1EN_ON  
+		& T1_SYNC_EXT_OFF );
 			
 	INTCONbits.GIEH = 1;
 	INTCONbits.GIEL = 1;	
@@ -433,17 +426,7 @@ void InitMeter(void)
 //*****************************************************************
 
 void main (void)
-{				
-	// 2014-03-04 Liz. Timer 1 is initialised once time only when meter power up and not in sleep mode
-	// Initialise timer 1.
-	OpenTimer1(
-		TIMER_INT_ON
-		& T1_16BIT_RW
-		& T1_SOURCE_EXT
-		& T1_PS_1_1
-		& T1_OSC1EN_ON  
-		& T1_SYNC_EXT_OFF );
-	
+{	
 	// Initialise meter
 	InitMeter();
 	// 2014-03-12 Liz. DateTime is initialised once time only when meter reset.
@@ -459,11 +442,6 @@ void main (void)
 
 	while (1)
 	{
-		#ifdef APP_USE_MDD
-		FSFILE * fpointer;
-		char filename[] = "File1.txt";
-		#endif
-
 		// 2014-06-09 Liz. Check VSENSE
 		{
 			BYTE i = 0, k = 0, j = 0;
