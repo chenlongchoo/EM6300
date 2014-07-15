@@ -1,5 +1,0 @@
-\form#0:\[ Threshold_{Press} = min + 0.75 (max - min) \]
-\form#1:\[ SamplesPerScan = \frac{\frac{F_{OSC}}{4} * DesiredSampleRate}{(256 - 2^{N-1}) * TMR0_{Prescaler} * NumberOfSensors} \]
-\form#2:\[ SamplesPerScan = \frac{\frac{F_{OSC}}{4} * 0.100}{224 * TMR0_{Prescaler} * NumberOfSensors} \]
-\form#3:\[ SamplesPerScan = \frac{\frac{F_{OSC}}{4} * 0.020}{224 * TMR0_{Prescaler} * NumberOfSensors} \]
-\form#4:\[ SamplesPerScan = \frac{\frac{F_{OSC}}{4} * 0.017}{224 * TMR0_{Prescaler} * NumberOfSensors} \]
