@@ -1,5 +1,5 @@
 MPLINK 4.42, Linker
-Linker Map File - Created Tue Jul 15 11:53:35 2014
+Linker Map File - Created Tue Jul 15 12:17:35 2014
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -18,31 +18,31 @@ Linker Map File - Created Tue Jul 15 11:53:35 2014
       .romdata_PingDemo.o    romdata   0x0000fe    program   0x000000
       .romdata_MPFSImg2.o    romdata   0x0000fe    program   0x000000
        .romdata_MPFSImg.o    romdata   0x0000fe    program   0x000000
+   .romdata_LCDBlocking.o    romdata   0x0000fe    program   0x000000
+         .romdata_MPFS2.o    romdata   0x0000fe    program   0x000000
            .romdata_UDP.o    romdata   0x0000fe    program   0x000000
           .romdata_Tick.o    romdata   0x0000fe    program   0x000000
 .romdata_TCPPerformanceTest.o    romdata   0x0000fe    program   0x000000
+          .romdata_NBNS.o    romdata   0x0000fe    program   0x000000
+        .romdata_Reboot.o    romdata   0x0000fe    program   0x000000
       .romdata_StackTsk.o    romdata   0x0000fe    program   0x000000
      .romdata_SPIEEPROM.o    romdata   0x0000fe    program   0x000000
           .romdata_SNTP.o    romdata   0x0000fe    program   0x000000
           .romdata_SNMP.o    romdata   0x0000fe    program   0x000000
           .romdata_SMTP.o    romdata   0x0000fe    program   0x000000
-        .romdata_Reboot.o    romdata   0x0000fe    program   0x000000
-          .romdata_NBNS.o    romdata   0x0000fe    program   0x000000
-         .romdata_MPFS2.o    romdata   0x0000fe    program   0x000000
-   .romdata_LCDBlocking.o    romdata   0x0000fe    program   0x000000
           .romdata_fabs.o    romdata   0x0000fe    program   0x000000
         .romdata___init.o    romdata   0x0000fe    program   0x000000
        .romdata_u1write.o    romdata   0x0000fe    program   0x000000
         .romdata_u1defs.o    romdata   0x0000fe    program   0x000000
         .romdata_u1read.o    romdata   0x0000fe    program   0x000000
         .romdata_u1open.o    romdata   0x0000fe    program   0x000000
-   .romdata_eeprom_task.o    romdata   0x0000fe    program   0x000000
-.romdata_ModbusTCPClient_Meter.o    romdata   0x0000fe    program   0x000000
 .romdata_ModbusTCPServer_Meter.o    romdata   0x0000fe    program   0x000000
+.romdata_ModbusTCPClient_Meter.o    romdata   0x0000fe    program   0x000000
+          .romdata_menu.o    romdata   0x0000fe    program   0x000000
+           .romdata_lcd.o    romdata   0x0000fe    program   0x000000
+   .romdata_eeprom_task.o    romdata   0x0000fe    program   0x000000
       .romdata_Announce.o    romdata   0x0000fe    program   0x000000
      .romdata_registers.o    romdata   0x0000fe    program   0x000000
-           .romdata_lcd.o    romdata   0x0000fe    program   0x000000
-          .romdata_menu.o    romdata   0x0000fe    program   0x000000
            .romdata_mcu.o    romdata   0x0000fe    program   0x000000
        .romdata_utility.o    romdata   0x0000fe    program   0x000000
        .idata_utility.o_i    romdata   0x0000fe    program   0x000001
@@ -80,10 +80,10 @@ Linker Map File - Created Tue Jul 15 11:53:35 2014
          .idata_MPFS2.o_i    romdata   0x0000ff    program   0x000000
          .idata_DHCPs.o_i    romdata   0x0000ff    program   0x000000
           .idata_DHCP.o_i    romdata   0x0000ff    program   0x000000
-           .idata_lcd.o_i    romdata   0x0000ff    program   0x000000
-         .idata_Delay.o_i    romdata   0x0000ff    program   0x000000
  .idata_LegacyHTTPApp.o_i    romdata   0x0000ff    program   0x000000
            .idata_FTP.o_i    romdata   0x0000ff    program   0x000000
+           .idata_lcd.o_i    romdata   0x0000ff    program   0x000000
+         .idata_Delay.o_i    romdata   0x0000ff    program   0x000000
 .idata_ModbusTCPClient_Meter.o_i    romdata   0x0000ff    program   0x000000
    .idata_LCDBlocking.o_i    romdata   0x0000ff    program   0x000000
            .idata_ARP.o_i    romdata   0x0000ff    program   0x000001
@@ -160,36 +160,36 @@ Linker Map File - Created Tue Jul 15 11:53:35 2014
        .idata_Helpers.o_i    romdata   0x011519    program   0x000004
       .idata_Announce.o_i    romdata   0x01151d    program   0x000002
        .idata_ARCFOUR.o_i    romdata   0x01151f    program   0x000000
-           .code_Random.o       code   0x011520    program   0x000000
-           .code_Reboot.o       code   0x011520    program   0x000000
-          .code_MPFSImg.o       code   0x011520    program   0x000000
-    .code_CustomHTTPApp.o       code   0x011520    program   0x000000
-          .code_c018i_e.o       code   0x011520    program   0x000000
-            .code_HTTP2.o       code   0x011520    program   0x000000
-             .code_SMTP.o       code   0x011520    program   0x000000
            .code_u1defs.o       code   0x011520    program   0x000000
          .code_MPFSImg2.o       code   0x011520    program   0x000000
-             .code_SNMP.o       code   0x011520    program   0x000000
+            .code_HTTP2.o       code   0x011520    program   0x000000
          .code_ETH97J60.o       code   0x011520    program   0x000000
-      .code_BerkeleyAPI.o       code   0x011520    program   0x000000
-              .code_DNS.o       code   0x011520    program   0x000000
-              .code_SSL.o       code   0x011520    program   0x000000
-             .code_ICMP.o       code   0x011520    program   0x000000
+          .code_c018i_e.o       code   0x011520    program   0x000000
               .code_RSA.o       code   0x011520    program   0x000000
-            .code_DHCPs.o       code   0x011520    program   0x000000
+             .code_SNMP.o       code   0x011520    program   0x000000
+           .code_Hashes.o       code   0x011520    program   0x000000
+          .code_MPFSImg.o       code   0x011520    program   0x000000
+           .code_Reboot.o       code   0x011520    program   0x000000
+.code_TCPPerformanceTest.o       code   0x011520    program   0x000000
+           .code_Random.o       code   0x011520    program   0x000000
+             .code_SMTP.o       code   0x011520    program   0x000000
            .code_BigInt.o       code   0x011520    program   0x000000
              .code_DHCP.o       code   0x011520    program   0x000000
       .code_LCDBlocking.o       code   0x011520    program   0x000000
-           .code_Hashes.o       code   0x011520    program   0x000000
-             .code_NBNS.o       code   0x011520    program   0x000000
-            .code_Delay.o       code   0x011520    program   0x000000
            .code_DynDNS.o       code   0x011520    program   0x000000
-         .code_ENC28J60.o       code   0x011520    program   0x000000
-.code_TCPPerformanceTest.o       code   0x011520    program   0x000000
+             .code_NBNS.o       code   0x011520    program   0x000000
           .code_ARCFOUR.o       code   0x011520    program   0x000000
+         .code_ENC28J60.o       code   0x011520    program   0x000000
+            .code_DHCPs.o       code   0x011520    program   0x000000
+            .code_Delay.o       code   0x011520    program   0x000000
+             .code_ICMP.o       code   0x011520    program   0x000000
+              .code_SSL.o       code   0x011520    program   0x000000
+              .code_DNS.o       code   0x011520    program   0x000000
              .code_SNTP.o       code   0x011520    program   0x000000
 .code_ModbusTCPClient_Meter.o       code   0x011520    program   0x000000
          .code_PingDemo.o       code   0x011520    program   0x000000
+      .code_BerkeleyAPI.o       code   0x011520    program   0x000000
+    .code_CustomHTTPApp.o       code   0x011520    program   0x000000
 .config_1fff8_Main_Meter_Top_Board.o    romdata   0x01fff8    program   0x000001
 .config_1fff9_Main_Meter_Top_Board.o    romdata   0x01fff9    program   0x000001
 .config_1fffa_Main_Meter_Top_Board.o    romdata   0x01fffa    program   0x000001
@@ -227,41 +227,39 @@ Linker Map File - Created Tue Jul 15 11:53:35 2014
             .idata_Tick.o      idata   0x000500       data   0x000004
          .idata_Helpers.o      idata   0x000504       data   0x000004
              .idata_ARP.o      idata   0x000508       data   0x000001
-             .udata_RSA.o      udata   0x000509       data   0x000000
-          .udata___init.o      udata   0x000509       data   0x000000
-          .idata___init.o      idata   0x000509       data   0x000000
-          .idata_Random.o      idata   0x000509       data   0x000000
-          .udata_Random.o      udata   0x000509       data   0x000000
           .idata_BigInt.o      idata   0x000509       data   0x000000
-            .udata_fabs.o      udata   0x000509       data   0x000000
-          .udata_BigInt.o      udata   0x000509       data   0x000000
-            .idata_fabs.o      idata   0x000509       data   0x000000
-         .idata_ARCFOUR.o      idata   0x000509       data   0x000000
-         .udata_ARCFOUR.o      udata   0x000509       data   0x000000
-      .idata_ENCX24J600.o      idata   0x000509       data   0x000000
-.idata_ModbusTCPClient_Meter.o      idata   0x000509       data   0x000000
-     .idata_BerkeleyAPI.o      idata   0x000509       data   0x000000
+             .idata_RSA.o      idata   0x000509       data   0x000000
+          .udata_Random.o      udata   0x000509       data   0x000000
+          .idata_Random.o      idata   0x000509       data   0x000000
      .udata_BerkeleyAPI.o      udata   0x000509       data   0x000000
-          .idata_u1open.o      idata   0x000509       data   0x000000
-          .udata_u1read.o      udata   0x000509       data   0x000000
+     .idata_BerkeleyAPI.o      idata   0x000509       data   0x000000
+          .udata_BigInt.o      udata   0x000509       data   0x000000
+      .idata_ENCX24J600.o      idata   0x000509       data   0x000000
+             .udata_RSA.o      udata   0x000509       data   0x000000
+         .udata_ARCFOUR.o      udata   0x000509       data   0x000000
+         .idata_ARCFOUR.o      idata   0x000509       data   0x000000
+            .idata_fabs.o      idata   0x000509       data   0x000000
+            .udata_fabs.o      udata   0x000509       data   0x000000
+          .idata___init.o      idata   0x000509       data   0x000000
+          .udata___init.o      udata   0x000509       data   0x000000
+         .idata_u1write.o      idata   0x000509       data   0x000000
+         .udata_u1write.o      udata   0x000509       data   0x000000
+          .idata_u1defs.o      idata   0x000509       data   0x000000
           .idata_u1read.o      idata   0x000509       data   0x000000
-   .udata_LegacyHTTPApp.o      udata   0x000509       data   0x000000
+          .udata_u1read.o      udata   0x000509       data   0x000000
+          .idata_u1open.o      idata   0x000509       data   0x000000
+          .udata_u1open.o      udata   0x000509       data   0x000000
+.idata_ModbusTCPClient_Meter.o      idata   0x000509       data   0x000000
+.udata_ModbusTCPClient_Meter.o      udata   0x000509       data   0x000000
              .idata_lcd.o      idata   0x000509       data   0x000000
              .udata_lcd.o      udata   0x000509       data   0x000000
-          .idata_u1defs.o      idata   0x000509       data   0x000000
-         .udata_u1write.o      udata   0x000509       data   0x000000
+             .idata_FTP.o      idata   0x000509       data   0x000000
    .idata_LegacyHTTPApp.o      idata   0x000509       data   0x000000
-         .idata_u1write.o      idata   0x000509       data   0x000000
-          .udata_u1open.o      udata   0x000509       data   0x000000
+   .udata_LegacyHTTPApp.o      udata   0x000509       data   0x000000
          .udata_utility.o      udata   0x000509       data   0x000000
              .idata_SSL.o      idata   0x000509       data   0x000000
              .udata_SSL.o      udata   0x000509       data   0x000000
-             .idata_FTP.o      idata   0x000509       data   0x000000
-             .idata_RSA.o      idata   0x000509       data   0x000000
-.udata_ModbusTCPClient_Meter.o      udata   0x000509       data   0x000000
-     .idata_LCDBlocking.o      idata   0x000509       data   0x000000
      .udata_LCDBlocking.o      udata   0x000509       data   0x000000
-   .udata_CustomHTTPApp.o      udata   0x000509       data   0x000000
             .idata_ICMP.o      idata   0x000509       data   0x000000
             .udata_ICMP.o      udata   0x000509       data   0x000000
            .idata_HTTP2.o      idata   0x000509       data   0x000000
@@ -271,8 +269,6 @@ Linker Map File - Created Tue Jul 15 11:53:35 2014
         .idata_ETH97J60.o      idata   0x000509       data   0x000000
         .udata_ETH97J60.o      udata   0x000509       data   0x000000
         .idata_ENC28J60.o      idata   0x000509       data   0x000000
-   .idata_CustomHTTPApp.o      idata   0x000509       data   0x000000
-           .udata_Delay.o      udata   0x000509       data   0x000000
         .udata_ENC28J60.o      udata   0x000509       data   0x000000
           .idata_DynDNS.o      idata   0x000509       data   0x000000
           .udata_DynDNS.o      udata   0x000509       data   0x000000
@@ -283,19 +279,22 @@ Linker Map File - Created Tue Jul 15 11:53:35 2014
             .idata_DHCP.o      idata   0x000509       data   0x000000
             .udata_DHCP.o      udata   0x000509       data   0x000000
            .idata_Delay.o      idata   0x000509       data   0x000000
-        .idata_PingDemo.o      idata   0x000509       data   0x000000
-        .udata_PingDemo.o      udata   0x000509       data   0x000000
-        .idata_MPFSImg2.o      idata   0x000509       data   0x000000
-        .udata_MPFSImg2.o      udata   0x000509       data   0x000000
+           .udata_Delay.o      udata   0x000509       data   0x000000
+   .idata_CustomHTTPApp.o      idata   0x000509       data   0x000000
+   .udata_CustomHTTPApp.o      udata   0x000509       data   0x000000
+         .idata_c018i_e.o      idata   0x000509       data   0x000000
          .idata_MPFSImg.o      idata   0x000509       data   0x000000
          .udata_MPFSImg.o      udata   0x000509       data   0x000000
+        .udata_MPFSImg2.o      udata   0x000509       data   0x000000
 .idata_TCPPerformanceTest.o      idata   0x000509       data   0x000000
 .udata_TCPPerformanceTest.o      udata   0x000509       data   0x000000
-         .idata_c018i_e.o      idata   0x000509       data   0x000000
+        .idata_MPFSImg2.o      idata   0x000509       data   0x000000
         .idata_StackTsk.o      idata   0x000509       data   0x000000
        .idata_SPIEEPROM.o      idata   0x000509       data   0x000000
             .idata_SNTP.o      idata   0x000509       data   0x000000
             .udata_SNTP.o      udata   0x000509       data   0x000000
+        .udata_PingDemo.o      udata   0x000509       data   0x000000
+        .idata_PingDemo.o      idata   0x000509       data   0x000000
             .idata_SNMP.o      idata   0x000509       data   0x000000
             .udata_SNMP.o      udata   0x000509       data   0x000000
             .idata_SMTP.o      idata   0x000509       data   0x000000
@@ -305,6 +304,7 @@ Linker Map File - Created Tue Jul 15 11:53:35 2014
             .idata_NBNS.o      idata   0x000509       data   0x000000
             .udata_NBNS.o      udata   0x000509       data   0x000000
            .idata_MPFS2.o      idata   0x000509       data   0x000000
+     .idata_LCDBlocking.o      idata   0x000509       data   0x000000
                  memory_1      idata   0x000800       data   0x0001db
        .udata_registers.o      udata   0x0009db       data   0x0001c4
              .udata_FTP.o      udata   0x000b9f       data   0x000049
@@ -467,8 +467,8 @@ MCUProcessIncomingMessage   0x00dace    program     extern C:\Users\EricGoh\Desk
          ModbusReqHandler   0x00aeb8    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
    Modbus_MeterServerTask   0x00a498    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
    MultiplyTwoLongNumbers   0x00838a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
-                  OneByte   0x00f812    program     static C:\MCC18\src\extended\stdclib\itobcd.asm
                   OneByte   0x00f9bc    program     static C:\MCC18\src\extended\stdclib\ltobcd.asm
+                  OneByte   0x00f812    program     static C:\MCC18\src\extended\stdclib\itobcd.asm
                Open1USART   0x010e48    program     extern C:\MCC18\src\pmc_common\USART\u1open.c
 PHASE_ENERGY_REGISTERS_QUEUE   0x000c16    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
  PHASE_STATUS_FLAGS_QUEUE   0x000c4a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
@@ -487,20 +487,20 @@ POWER_REGISTERS_SIZE_QUEUE_M   0x000ce6    program     extern C:\Users\EricGoh\D
  POWER_SIGNED_REGISTERS_M   0x000d26    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
           ParseFTPCommand   0x00ea12    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
            ParseFTPString   0x00eaca    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-                ProcLower   0x00f7c6    program     static C:\MCC18\src\extended\stdclib\itoa.asm
                 ProcLower   0x00f954    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
+                ProcLower   0x00f7c6    program     static C:\MCC18\src\extended\stdclib\itoa.asm
                 ProcLower   0x00face    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
+                ProcUpper   0x00fac4    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
                 ProcUpper   0x00f7bc    program     static C:\MCC18\src\extended\stdclib\itoa.asm
                 ProcUpper   0x00f94a    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
-                ProcUpper   0x00fac4    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
                   PutFile   0x00e8c2    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
                      Quit   0x00e822    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
                   RESTORE   0x00ef48    program     static C:\MCC18\src\extended\math\div32u.asm
-                  RESTORE   0x00ee9a    program     static C:\MCC18\src\extended\math\div32s.asm
                   RESTORE   0x00ede8    program     static C:\MCC18\src\extended\math\div16u.asm
+                  RESTORE   0x00ee9a    program     static C:\MCC18\src\extended\math\div32s.asm
               RETQUOTIENT   0x00ef38    program     static C:\MCC18\src\extended\math\div32u.asm
-              RETQUOTIENT   0x00ee8a    program     static C:\MCC18\src\extended\math\div32s.asm
               RETQUOTIENT   0x00ede0    program     static C:\MCC18\src\extended\math\div16u.asm
+              RETQUOTIENT   0x00ee8a    program     static C:\MCC18\src\extended\math\div32s.asm
      ROMStringToIPAddress   0x00d394    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Helpers.c
                Read1USART   0x010fb6    program     extern C:\MCC18\src\pmc_common\USART\u1read.c
          ReadMemoryWindow   0x007a42    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\ENCX24J600.c
@@ -510,9 +510,9 @@ POWER_REGISTERS_SIZE_QUEUE_M   0x000ce6    program     extern C:\Users\EricGoh\D
              ResetControl   0x00cda4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
               ResetMemory   0x000784    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
                   SETSIGN   0x00ee16    program     static C:\MCC18\src\extended\math\div32s.asm
-                 SETUPSTK   0x00edf6    program     static C:\MCC18\src\extended\math\div32s.asm
-                 SETUPSTK   0x00eeb2    program     static C:\MCC18\src\extended\math\div32u.asm
                  SETUPSTK   0x00ed7e    program     static C:\MCC18\src\extended\math\div16u.asm
+                 SETUPSTK   0x00eeb2    program     static C:\MCC18\src\extended\math\div32u.asm
+                 SETUPSTK   0x00edf6    program     static C:\MCC18\src\extended\math\div32s.asm
             SaveAppConfig   0x00cd10    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
           SendSystemReset   0x007934    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\ENCX24J600.c
                   SendTCP   0x003050    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\TCP.c
@@ -568,12 +568,12 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
                  TickInit   0x000aa8    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Tick.c
                TickUpdate   0x000bda    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Tick.c
             ToggleCRYPTEN   0x007f7e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\ENCX24J600.c
-                 TstLower   0x00f93e    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
-                 TstLower   0x00f7b0    program     static C:\MCC18\src\extended\stdclib\itoa.asm
                  TstLower   0x00fab8    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
-                 TstUpper   0x00f938    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
+                 TstLower   0x00f7b0    program     static C:\MCC18\src\extended\stdclib\itoa.asm
+                 TstLower   0x00f93e    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                  TstUpper   0x00fab2    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
                  TstUpper   0x00f7aa    program     static C:\MCC18\src\extended\stdclib\itoa.asm
+                 TstUpper   0x00f938    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                  UDPClose   0x00b964    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\UDP.c
                UDPDiscard   0x00c026    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\UDP.c
                  UDPFlush   0x00bd42    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\UDP.c
@@ -618,17 +618,17 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
               _3jContinue   0x00fc72    program     static C:\MCC18\src\extended\stdclib\mcpyp2r.asm
                    _3jEnd   0x00f868    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                    _3jEnd   0x00fd48    program     static C:\MCC18\src\extended\stdclib\memset.asm
-              _4jContinue   0x00fb9c    program     static C:\MCC18\src\extended\stdclib\memcpy.asm
-              _4jContinue   0x00fcc4    program     static C:\MCC18\src\extended\stdclib\memmove.asm
               _4jContinue   0x00fee0    program     static C:\MCC18\src\extended\stdclib\strncpy.asm
               _4jContinue   0x00fb04    program     static C:\MCC18\src\extended\stdclib\memcmp.asm
+              _4jContinue   0x00fb9c    program     static C:\MCC18\src\extended\stdclib\memcpy.asm
+              _4jContinue   0x00fcc4    program     static C:\MCC18\src\extended\stdclib\memmove.asm
                    _4jEnd   0x00fc7c    program     static C:\MCC18\src\extended\stdclib\mcpyp2r.asm
-                   _4jEnd   0x00fb5e    program     static C:\MCC18\src\extended\stdclib\mcmpp2r.asm
                    _4jEnd   0x00fbfa    program     static C:\MCC18\src\extended\stdclib\mcpyp2p.asm
-                   _5jEnd   0x00feea    program     static C:\MCC18\src\extended\stdclib\strncpy.asm
-                   _5jEnd   0x00fb0e    program     static C:\MCC18\src\extended\stdclib\memcmp.asm
-                   _5jEnd   0x00fba6    program     static C:\MCC18\src\extended\stdclib\memcpy.asm
+                   _4jEnd   0x00fb5e    program     static C:\MCC18\src\extended\stdclib\mcmpp2r.asm
                    _5jEnd   0x00fcce    program     static C:\MCC18\src\extended\stdclib\memmove.asm
+                   _5jEnd   0x00fba6    program     static C:\MCC18\src\extended\stdclib\memcpy.asm
+                   _5jEnd   0x00fb0e    program     static C:\MCC18\src\extended\stdclib\memcmp.asm
+                   _5jEnd   0x00feea    program     static C:\MCC18\src\extended\stdclib\strncpy.asm
               _6jContinue   0x00fcfc    program     static C:\MCC18\src\extended\stdclib\memmove.asm
                    _7jEnd   0x00fd06    program     static C:\MCC18\src\extended\stdclib\memmove.asm
        _D100TCYXCODE_000A   0x0110ba    program     static C:\MCC18\src\extended\delays\d100tcyx.asm
@@ -735,8 +735,8 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
            ___if_lbl00010   0x00a5f8    program     static                          
            ___if_lbl00011   0x00a5f8    program     static                          
            ___if_lbl00013   0x00c602    program     static                          
-           ___if_lbl00014   0x00c602    program     static                          
            ___if_lbl00014   0x00d11e    program     static                          
+           ___if_lbl00014   0x00c602    program     static                          
            ___if_lbl00015   0x00d12c    program     static                          
            ___if_lbl00016   0x00a672    program     static                          
            ___if_lbl00016   0x00d1a0    program     static                          
@@ -745,51 +745,51 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
            ___if_lbl00018   0x00a76c    program     static                          
            ___if_lbl00019   0x00c64a    program     static                          
            ___if_lbl00020   0x00a79e    program     static                          
-           ___if_lbl00021   0x00a810    program     static                          
            ___if_lbl00021   0x00c6c0    program     static                          
-           ___if_lbl00023   0x006f24    program     static                          
+           ___if_lbl00021   0x00a810    program     static                          
            ___if_lbl00023   0x00c6fa    program     static                          
+           ___if_lbl00023   0x006f24    program     static                          
            ___if_lbl00024   0x006f42    program     static                          
-           ___if_lbl00025   0x00c780    program     static                          
            ___if_lbl00025   0x006f42    program     static                          
+           ___if_lbl00025   0x00c780    program     static                          
            ___if_lbl00028   0x00a852    program     static                          
            ___if_lbl00029   0x00c84e    program     static                          
            ___if_lbl00031   0x007000    program     static                          
-           ___if_lbl00032   0x00a878    program     static                          
            ___if_lbl00032   0x00c910    program     static                          
+           ___if_lbl00032   0x00a878    program     static                          
            ___if_lbl00033   0x00a880    program     static                          
            ___if_lbl00034   0x00a92c    program     static                          
-           ___if_lbl00034   0x00705c    program     static                          
            ___if_lbl00034   0x00c910    program     static                          
+           ___if_lbl00034   0x00705c    program     static                          
            ___if_lbl00036   0x00a92e    program     static                          
            ___if_lbl00036   0x00c910    program     static                          
-           ___if_lbl00037   0x00a944    program     static                          
            ___if_lbl00037   0x00c910    program     static                          
-           ___if_lbl00038   0x00a95a    program     static                          
+           ___if_lbl00037   0x00a944    program     static                          
            ___if_lbl00038   0x009700    program     static                          
+           ___if_lbl00038   0x00a95a    program     static                          
            ___if_lbl00039   0x009708    program     static                          
-           ___if_lbl00040   0x00971c    program     static                          
-           ___if_lbl00040   0x00c968    program     static                          
            ___if_lbl00040   0x00a9f2    program     static                          
+           ___if_lbl00040   0x00c968    program     static                          
+           ___if_lbl00040   0x00971c    program     static                          
            ___if_lbl00041   0x00c968    program     static                          
-           ___if_lbl00041   0x00a9fa    program     static                          
            ___if_lbl00041   0x000734    program     static                          
+           ___if_lbl00041   0x00a9fa    program     static                          
            ___if_lbl00042   0x009740    program     static                          
+           ___if_lbl00043   0x00076a    program     static                          
+           ___if_lbl00043   0x00c968    program     static                          
            ___if_lbl00043   0x00aaaa    program     static                          
            ___if_lbl00043   0x009740    program     static                          
-           ___if_lbl00043   0x00c968    program     static                          
-           ___if_lbl00043   0x00076a    program     static                          
-           ___if_lbl00044   0x00c9e6    program     static                          
            ___if_lbl00044   0x009754    program     static                          
+           ___if_lbl00044   0x00c9e6    program     static                          
            ___if_lbl00045   0x00aae4    program     static                          
-           ___if_lbl00046   0x009778    program     static                          
            ___if_lbl00046   0x00aafc    program     static                          
+           ___if_lbl00046   0x009778    program     static                          
            ___if_lbl00047   0x009778    program     static                          
            ___if_lbl00048   0x009784    program     static                          
            ___if_lbl00050   0x00ac48    program     static                          
            ___if_lbl00051   0x00ac86    program     static                          
-           ___if_lbl00053   0x009830    program     static                          
            ___if_lbl00053   0x00aca8    program     static                          
+           ___if_lbl00053   0x009830    program     static                          
            ___if_lbl00054   0x00acbe    program     static                          
            ___if_lbl00055   0x00acd8    program     static                          
            ___if_lbl00056   0x00ad16    program     static                          
@@ -803,16 +803,16 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
            ___if_lbl00062   0x0099f0    program     static                          
            ___if_lbl00063   0x00adcc    program     static                          
            ___if_lbl00064   0x009a18    program     static                          
-           ___if_lbl00065   0x00e16c    program     static                          
-           ___if_lbl00065   0x00ae16    program     static                          
            ___if_lbl00065   0x009a18    program     static                          
+           ___if_lbl00065   0x00ae16    program     static                          
+           ___if_lbl00065   0x00e16c    program     static                          
            ___if_lbl00066   0x00ae6e    program     static                          
            ___if_lbl00066   0x00e1b2    program     static                          
            ___if_lbl00067   0x00e1c0    program     static                          
            ___if_lbl00067   0x009a18    program     static                          
            ___if_lbl00067   0x00ae82    program     static                          
-           ___if_lbl00068   0x00e1ca    program     static                          
            ___if_lbl00068   0x00ae82    program     static                          
+           ___if_lbl00068   0x00e1ca    program     static                          
            ___if_lbl00069   0x009a1a    program     static                          
            ___if_lbl00070   0x00ae82    program     static                          
            ___if_lbl00071   0x009a20    program     static                          
@@ -820,8 +820,8 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
            ___if_lbl00072   0x00e244    program     static                          
            ___if_lbl00072   0x00ae82    program     static                          
            ___if_lbl00073   0x00e24e    program     static                          
-           ___if_lbl00075   0x00ce22    program     static                          
            ___if_lbl00075   0x00aeaa    program     static                          
+           ___if_lbl00075   0x00ce22    program     static                          
            ___if_lbl00076   0x00ce22    program     static                          
            ___if_lbl00078   0x00ce28    program     static                          
            ___if_lbl00080   0x00ce28    program     static                          
@@ -830,13 +830,13 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
            ___if_lbl00087   0x00cf28    program     static                          
            ___if_lbl00088   0x00cf28    program     static                          
            ___if_lbl00090   0x00cf28    program     static                          
-       ___return_lbl00000   0x00aeb0    program     static                          
-       ___return_lbl00000   0x000004    program     static                          
        ___return_lbl00000   0x010af8    program     static                          
        ___return_lbl00000   0x00001c    program     static                          
-       ___return_lbl00001   0x011108    program     static                          
+       ___return_lbl00000   0x000004    program     static                          
+       ___return_lbl00000   0x00aeb0    program     static                          
        ___return_lbl00001   0x000adc    program     static                          
        ___return_lbl00001   0x00000c    program     static                          
+       ___return_lbl00001   0x011108    program     static                          
        ___return_lbl00002   0x010e46    program     static                          
        ___return_lbl00005   0x00c9e8    program     static                          
        ___return_lbl00009   0x00d1ce    program     static                          
@@ -884,49 +884,49 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
                   __mul16   0x00ef56    program     extern C:\MCC18\src\extended\math\mul16.asm
                   __mul24   0x00efbe    program     extern C:\MCC18\src\extended\math\mul24.asm
                   __mul32   0x00f07e    program     extern C:\MCC18\src\extended\math\mul32.asm
-               __string_0   0x010ace    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
+               __string_0   0x010a53    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
+               __string_0   0x010a4e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
                __string_0   0x0108e6    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\MPFS2.c
-               __string_0   0x010991    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
                __string_0   0x0108ed    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
-               __string_0   0x010ac9    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_1   0x0109b1    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
+               __string_0   0x01091e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
+               __string_1   0x010a49    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_1   0x010ace    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
                __string_1   0x01091b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
-               __string_1   0x010ac4    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_10   0x010a7d    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_11   0x010a6d    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_12   0x010a63    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_13   0x010a5c    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_14   0x010a46    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_15   0x010a31    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_16   0x010a16    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_17   0x010a0b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_17   0x010980    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_18   0x0109f3    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_19   0x01096f    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_19   0x0109d3    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_2   0x010abf    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_10   0x010a02    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_11   0x0109f2    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_12   0x0109e8    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_13   0x0109e1    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_14   0x0109cb    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_15   0x0109b6    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_16   0x01099b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_17   0x010990    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_17   0x010ab9    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_18   0x010978    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_19   0x010aa8    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_19   0x010958    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_2   0x010a44    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
                __string_2   0x01090b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
-               __string_2   0x0109ad    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
-              __string_20   0x0109be    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_21   0x0109b5    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_25   0x01095e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_26   0x01094f    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_27   0x010942    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_28   0x010931    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+               __string_2   0x010aca    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
+              __string_20   0x010943    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_21   0x01093a    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_25   0x010a97    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_26   0x010a88    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_27   0x010a7b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_28   0x010a6a    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
                __string_3   0x010901    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
-               __string_3   0x010aba    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_30   0x01092e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_31   0x010927    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_32   0x01091f    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_33   0x01091e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-               __string_4   0x010ab5    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_3   0x010a3f    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_30   0x010a67    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_31   0x010a60    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_32   0x010a58    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_33   0x010a57    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+               __string_4   0x010a3a    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
                __string_4   0x0108fc    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
                __string_5   0x0108ef    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
-               __string_5   0x010ab0    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_6   0x010aab    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_7   0x010aa6    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_8   0x010aa1    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_9   0x010a95    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_5   0x010a35    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_6   0x010a30    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_7   0x010a2b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_8   0x010a26    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_9   0x010a1a    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
                __tmplbl_0   0x00c51c    program     static                          
                __tmplbl_0   0x00a4e0    program     static                          
                __tmplbl_1   0x00a4d8    program     static                          
@@ -942,34 +942,34 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
              __tmplbl_124   0x004f2e    program     static                          
              __tmplbl_126   0x004f2e    program     static                          
              __tmplbl_128   0x004f2e    program     static                          
-              __tmplbl_13   0x006ff2    program     static                          
               __tmplbl_13   0x00adb4    program     static                          
+              __tmplbl_13   0x006ff2    program     static                          
              __tmplbl_131   0x004f2e    program     static                          
              __tmplbl_137   0x004f2e    program     static                          
              __tmplbl_138   0x004f2e    program     static                          
-              __tmplbl_14   0x00e100    program     static                          
-              __tmplbl_14   0x00972e    program     static                          
               __tmplbl_14   0x006fde    program     static                          
+              __tmplbl_14   0x00972e    program     static                          
+              __tmplbl_14   0x00e100    program     static                          
              __tmplbl_140   0x004f2e    program     static                          
              __tmplbl_142   0x004f2e    program     static                          
              __tmplbl_143   0x004f2e    program     static                          
+              __tmplbl_15   0x009722    program     static                          
               __tmplbl_15   0x006fc6    program     static                          
               __tmplbl_15   0x00e0fa    program     static                          
-              __tmplbl_15   0x009722    program     static                          
               __tmplbl_16   0x009766    program     static                          
               __tmplbl_16   0x00e210    program     static                          
               __tmplbl_16   0x006fc2    program     static                          
               __tmplbl_17   0x00975a    program     static                          
-              __tmplbl_17   0x006fb2    program     static                          
               __tmplbl_17   0x00e1d8    program     static                          
+              __tmplbl_17   0x006fb2    program     static                          
+              __tmplbl_18   0x00979a    program     static                          
               __tmplbl_18   0x006fb0    program     static                          
               __tmplbl_18   0x00e20e    program     static                          
-              __tmplbl_18   0x00979a    program     static                          
               __tmplbl_19   0x00e25a    program     static                          
               __tmplbl_19   0x00978c    program     static                          
               __tmplbl_19   0x007050    program     static                          
-               __tmplbl_2   0x00c8b2    program     static                          
                __tmplbl_2   0x00a5c2    program     static                          
+               __tmplbl_2   0x00c8b2    program     static                          
               __tmplbl_20   0x007046    program     static                          
               __tmplbl_20   0x00e252    program     static                          
               __tmplbl_20   0x0097e8    program     static                          
@@ -982,12 +982,12 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
               __tmplbl_23   0x00cdda    program     static                          
               __tmplbl_24   0x00984c    program     static                          
               __tmplbl_24   0x00cdd4    program     static                          
-              __tmplbl_25   0x00983a    program     static                          
               __tmplbl_25   0x00ce20    program     static                          
+              __tmplbl_25   0x00983a    program     static                          
               __tmplbl_26   0x0098ca    program     static                          
               __tmplbl_26   0x00ce1a    program     static                          
-              __tmplbl_27   0x0098c4    program     static                          
               __tmplbl_27   0x00ce92    program     static                          
+              __tmplbl_27   0x0098c4    program     static                          
               __tmplbl_28   0x009948    program     static                          
               __tmplbl_28   0x00ceb6    program     static                          
               __tmplbl_29   0x009932    program     static                          
@@ -998,16 +998,16 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
               __tmplbl_31   0x00ceee    program     static                          
                __tmplbl_4   0x00c8b0    program     static                          
                __tmplbl_4   0x00a81c    program     static                          
-               __tmplbl_5   0x00a872    program     static                          
                __tmplbl_5   0x00c8c6    program     static                          
+               __tmplbl_5   0x00a872    program     static                          
                __tmplbl_6   0x00a86a    program     static                          
                __tmplbl_6   0x00c8de    program     static                          
-               __tmplbl_7   0x00a8e0    program     static                          
                __tmplbl_7   0x00c8d8    program     static                          
-               __tmplbl_8   0x00a9d2    program     static                          
+               __tmplbl_7   0x00a8e0    program     static                          
                __tmplbl_8   0x00c938    program     static                          
-               __tmplbl_9   0x00a9b4    program     static                          
+               __tmplbl_8   0x00a9d2    program     static                          
                __tmplbl_9   0x00c932    program     static                          
+               __tmplbl_9   0x00a9b4    program     static                          
             __zero_memory   0x0110d0    program     extern C:\MCC18\src\extended\proc\p18F87J50.asm
                 _do_cinit   0x010daa    program     extern C:\MCC18\src\extended\startup\c018i_e.c
             _early16uexit   0x00eda0    program     extern C:\MCC18\src\extended\math\div16u.asm
@@ -1043,70 +1043,70 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
                    itoBCD   0x00f7d0    program     extern C:\MCC18\src\extended\stdclib\itobcd.asm
                      itoa   0x00f6f0    program     extern C:\MCC18\src\extended\stdclib\itoa.asm
                      jBeg   0x00eb9a    program     static C:\MCC18\src\extended\math\cast32FP.asm
-                     jDo1   0x00f904    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                      jDo1   0x00fa7e    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
+                     jDo1   0x00f904    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                      jDo1   0x00f776    program     static C:\MCC18\src\extended\stdclib\itoa.asm
-                    jDo10   0x00f8e0    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                     jDo10   0x00fa5a    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
+                    jDo10   0x00f8e0    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                      jDo2   0x00fa7a    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
-                     jDo2   0x00f772    program     static C:\MCC18\src\extended\stdclib\itoa.asm
                      jDo2   0x00f900    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
-                     jDo3   0x00fa76    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
-                     jDo3   0x00f76e    program     static C:\MCC18\src\extended\stdclib\itoa.asm
+                     jDo2   0x00f772    program     static C:\MCC18\src\extended\stdclib\itoa.asm
                      jDo3   0x00f8fc    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
+                     jDo3   0x00f76e    program     static C:\MCC18\src\extended\stdclib\itoa.asm
+                     jDo3   0x00fa76    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
+                     jDo4   0x00f8f8    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                      jDo4   0x00fa72    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
                      jDo4   0x00f76a    program     static C:\MCC18\src\extended\stdclib\itoa.asm
-                     jDo4   0x00f8f8    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
+                     jDo5   0x00f8f4    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                      jDo5   0x00fa6e    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
                      jDo5   0x00f766    program     static C:\MCC18\src\extended\stdclib\itoa.asm
-                     jDo5   0x00f8f4    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
-                     jDo6   0x00fa6a    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
                      jDo6   0x00f8f0    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
-                     jDo7   0x00fa66    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
+                     jDo6   0x00fa6a    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
                      jDo7   0x00f8ec    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
-                     jDo8   0x00fa62    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
+                     jDo7   0x00fa66    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
                      jDo8   0x00f8e8    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
-                     jDo9   0x00fa5e    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
+                     jDo8   0x00fa62    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
                      jDo9   0x00f8e4    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
+                     jDo9   0x00fa5e    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
                     jDone   0x00ed0c    program     static C:\MCC18\src\extended\math\castFP16.asm
-                     jEnd   0x00f80e    program     static C:\MCC18\src\extended\stdclib\itobcd.asm
-                     jEnd   0x00fdd0    program     static C:\MCC18\src\extended\stdclib\scatp2r.asm
-                     jEnd   0x00fb14    program     static C:\MCC18\src\extended\stdclib\memcmp.asm
                      jEnd   0x00f9b8    program     static C:\MCC18\src\extended\stdclib\ltobcd.asm
-                     jEnd   0x00fd50    program     static C:\MCC18\src\extended\stdclib\memset.asm
-                     jEnd   0x00fef6    program     static C:\MCC18\src\extended\stdclib\strncpy.asm
-                     jEnd   0x00fe98    program     static C:\MCC18\src\extended\stdclib\slenpgm.asm
                      jEnd   0x00fc84    program     static C:\MCC18\src\extended\stdclib\mcpyp2r.asm
                      jEnd   0x00fe60    program     static C:\MCC18\src\extended\stdclib\strlen.asm
+                     jEnd   0x00f80e    program     static C:\MCC18\src\extended\stdclib\itobcd.asm
+                     jEnd   0x00fef6    program     static C:\MCC18\src\extended\stdclib\strncpy.asm
                      jEnd   0x00fc38    program     static C:\MCC18\src\extended\stdclib\mcpyp2p.asm
-                     jEnd   0x00fd0c    program     static C:\MCC18\src\extended\stdclib\memmove.asm
-                     jEnd   0x00ff30    program     static C:\MCC18\src\extended\stdclib\strupr.asm
-                     jEnd   0x00fbac    program     static C:\MCC18\src\extended\stdclib\memcpy.asm
+                     jEnd   0x00fb14    program     static C:\MCC18\src\extended\stdclib\memcmp.asm
+                     jEnd   0x00fd50    program     static C:\MCC18\src\extended\stdclib\memset.asm
                      jEnd   0x00fe44    program     static C:\MCC18\src\extended\stdclib\scpyp2r.asm
+                     jEnd   0x00fbac    program     static C:\MCC18\src\extended\stdclib\memcpy.asm
+                     jEnd   0x00fe98    program     static C:\MCC18\src\extended\stdclib\slenpgm.asm
+                     jEnd   0x00ff30    program     static C:\MCC18\src\extended\stdclib\strupr.asm
+                     jEnd   0x00fdd0    program     static C:\MCC18\src\extended\stdclib\scatp2r.asm
                      jEnd   0x00f6c4    program     static C:\MCC18\src\extended\stdclib\atoi.asm
                      jEnd   0x00fb66    program     static C:\MCC18\src\extended\stdclib\mcmpp2r.asm
+                     jEnd   0x00fd0c    program     static C:\MCC18\src\extended\stdclib\memmove.asm
                  jEndLoop   0x00f6ac    program     static C:\MCC18\src\extended\stdclib\atoi.asm
                     jExit   0x00ec56    program     static C:\MCC18\src\extended\math\packFP.asm
                     jExit   0x00ed14    program     static C:\MCC18\src\extended\math\castFP16.asm
-                    jLoop   0x00fd80    program     static C:\MCC18\src\extended\stdclib\strcat.asm
-                    jLoop   0x00fcb8    program     static C:\MCC18\src\extended\stdclib\memmove.asm
                     jLoop   0x00f97a    program     static C:\MCC18\src\extended\stdclib\ltobcd.asm
-                    jLoop   0x00fc66    program     static C:\MCC18\src\extended\stdclib\mcpyp2r.asm
-                    jLoop   0x00fbd8    program     static C:\MCC18\src\extended\stdclib\mcpyp2p.asm
+                    jLoop   0x00ff1c    program     static C:\MCC18\src\extended\stdclib\strupr.asm
+                    jLoop   0x00ecec    program     static C:\MCC18\src\extended\math\castFP16.asm
                     jLoop   0x00faf8    program     static C:\MCC18\src\extended\stdclib\memcmp.asm
-                    jLoop   0x00fd32    program     static C:\MCC18\src\extended\stdclib\memset.asm
-                    jLoop   0x00fb90    program     static C:\MCC18\src\extended\stdclib\memcpy.asm
                     jLoop   0x00fb48    program     static C:\MCC18\src\extended\stdclib\mcmpp2r.asm
+                    jLoop   0x00fed4    program     static C:\MCC18\src\extended\stdclib\strncpy.asm
+                    jLoop   0x00fe56    program     static C:\MCC18\src\extended\stdclib\strlen.asm
+                    jLoop   0x00fb90    program     static C:\MCC18\src\extended\stdclib\memcpy.asm
+                    jLoop   0x00fe80    program     static C:\MCC18\src\extended\stdclib\slenpgm.asm
+                    jLoop   0x00fbd8    program     static C:\MCC18\src\extended\stdclib\mcpyp2p.asm
+                    jLoop   0x00fc66    program     static C:\MCC18\src\extended\stdclib\mcpyp2r.asm
+                    jLoop   0x00fd80    program     static C:\MCC18\src\extended\stdclib\strcat.asm
+                    jLoop   0x00fdc6    program     static C:\MCC18\src\extended\stdclib\scatp2r.asm
+                    jLoop   0x00fd32    program     static C:\MCC18\src\extended\stdclib\memset.asm
+                    jLoop   0x00fe3a    program     static C:\MCC18\src\extended\stdclib\scpyp2r.asm
+                    jLoop   0x00f7e8    program     static C:\MCC18\src\extended\stdclib\itobcd.asm
+                    jLoop   0x00fcb8    program     static C:\MCC18\src\extended\stdclib\memmove.asm
                     jLoop   0x00f65e    program     static C:\MCC18\src\extended\stdclib\atoi.asm
                     jLoop   0x00fdfa    program     static C:\MCC18\src\extended\stdclib\strcpy.asm
-                    jLoop   0x00fe3a    program     static C:\MCC18\src\extended\stdclib\scpyp2r.asm
-                    jLoop   0x00fe56    program     static C:\MCC18\src\extended\stdclib\strlen.asm
-                    jLoop   0x00f7e8    program     static C:\MCC18\src\extended\stdclib\itobcd.asm
-                    jLoop   0x00fdc6    program     static C:\MCC18\src\extended\stdclib\scatp2r.asm
-                    jLoop   0x00ecec    program     static C:\MCC18\src\extended\math\castFP16.asm
-                    jLoop   0x00fe80    program     static C:\MCC18\src\extended\stdclib\slenpgm.asm
-                    jLoop   0x00fed4    program     static C:\MCC18\src\extended\stdclib\strncpy.asm
-                    jLoop   0x00ff1c    program     static C:\MCC18\src\extended\stdclib\strupr.asm
                 jLoopExit   0x00ecfc    program     static C:\MCC18\src\extended\math\castFP16.asm
                      jMax   0x00ecc0    program     static C:\MCC18\src\extended\math\castFP16.asm
                   jMaxNeg   0x00ecce    program     static C:\MCC18\src\extended\math\castFP16.asm
@@ -1125,13 +1125,13 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
                     jSkip   0x00ff2c    program     static C:\MCC18\src\extended\stdclib\strupr.asm
                   jSkipWS   0x00f634    program     static C:\MCC18\src\extended\stdclib\atoi.asm
                  jSkipWS1   0x00f646    program     static C:\MCC18\src\extended\stdclib\atoi.asm
-                jTstLowZ1   0x00f7ba    program     static C:\MCC18\src\extended\stdclib\itoa.asm
-                jTstLowZ1   0x00f948    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                 jTstLowZ1   0x00fac2    program     static C:\MCC18\src\extended\stdclib\ultoa.asm
+                jTstLowZ1   0x00f948    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
+                jTstLowZ1   0x00f7ba    program     static C:\MCC18\src\extended\stdclib\itoa.asm
                  jTstSign   0x00f64a    program     static C:\MCC18\src\extended\stdclib\atoi.asm
-                jTstSign1   0x00f868    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
-                jTstSign1   0x00f71c    program     static C:\MCC18\src\extended\stdclib\itoa.asm
                 jTstSign1   0x00f656    program     static C:\MCC18\src\extended\stdclib\atoi.asm
+                jTstSign1   0x00f71c    program     static C:\MCC18\src\extended\stdclib\itoa.asm
+                jTstSign1   0x00f868    program     static C:\MCC18\src\extended\stdclib\ltoa.asm
                 jTstSign2   0x00f65c    program     static C:\MCC18\src\extended\stdclib\atoi.asm
                 jTstSign3   0x00f65e    program     static C:\MCC18\src\extended\stdclib\atoi.asm
                   jUnpkA1   0x00ed2c    program     static C:\MCC18\src\extended\math\unpackFP.asm
@@ -1144,9 +1144,9 @@ TickConvertToMilliseconds   0x000b68    program     extern C:\Users\EricGoh\Desk
                     jZero   0x00ecd6    program     static C:\MCC18\src\extended\math\castFP16.asm
                jZero1and2   0x00ec84    program     static C:\MCC18\src\extended\math\packFP.asm
           leftRotateDWORD   0x00d900    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Helpers.c
-                     loop   0x0110fe    program     static                          
-                     loop   0x00edac    program     static C:\MCC18\src\extended\math\div16u.asm
                      loop   0x00eee4    program     static C:\MCC18\src\extended\math\div32u.asm
+                     loop   0x00edac    program     static C:\MCC18\src\extended\math\div16u.asm
+                     loop   0x0110fe    program     static                          
                    loop_h   0x0110de    program     static C:\MCC18\src\extended\proc\p18F87J50.asm
                    loop_l   0x0110e8    program     static C:\MCC18\src\extended\proc\p18F87J50.asm
                    ltoBCD   0x00f95e    program     extern C:\MCC18\src\extended\stdclib\ltobcd.asm
@@ -1476,8 +1476,8 @@ POWER_REGISTERS_DIVIDE_BY_A   0x0001c7       data     extern C:\Users\EricGoh\De
 POWER_REGISTERS_DIVIDE_BY_M   0x0001b7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
     POWER_REGISTERS_QUEUE   0x0001a7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
 POWER_REGISTERS_QUEUE_STATE   0x000000       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
-POWER_REGISTERS_QUEUE_STATE   0x000300       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
 POWER_REGISTERS_QUEUE_STATE   0x0004ff       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
+POWER_REGISTERS_QUEUE_STATE   0x000300       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
 POWER_REGISTERS_QUEUE_STATE   0x000100       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
 POWER_REGISTERS_SIZE_QUEUE   0x0001af       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
                       PR2   0x000fcb       data     extern C:\MCC18\src\extended\proc\p18F87J50.asm
@@ -1602,8 +1602,8 @@ POWER_REGISTERS_SIZE_QUEUE   0x0001af       data     extern C:\Users\EricGoh\Des
                 TXSTAbits   0x000fad       data     extern C:\MCC18\src\extended\proc\p18F87J50.asm
                    Target   0x0000ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\ARP.c
                     Timer   0x000bfc       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-                    Timer   0x0001f6       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
                     Timer   0x0000cd       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
+                    Timer   0x0001f6       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
                     UADDR   0x000f5e       data     extern C:\MCC18\src\extended\proc\p18F87J50.asm
                 UADDRbits   0x000f5e       data     extern C:\MCC18\src\extended\proc\p18F87J50.asm
                      UCFG   0x000f5f       data     extern C:\MCC18\src\extended\proc\p18F87J50.asm
@@ -1672,6 +1672,11 @@ POWER_REGISTERS_SIZE_QUEUE   0x0001af       data     extern C:\Users\EricGoh\Des
                 __RETVAL1   0x000f3d       data     extern C:\MCC18\src\extended\math\cmath18.asm
                 __RETVAL2   0x000f3e       data     extern C:\MCC18\src\extended\math\cmath18.asm
                 __RETVAL3   0x000f3f       data     extern C:\MCC18\src\extended\math\cmath18.asm
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\lcd.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\mcu.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
@@ -1679,19 +1684,14 @@ POWER_REGISTERS_SIZE_QUEUE   0x0001af       data     extern C:\Users\EricGoh\Des
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\UDP.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Tick.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\TCP.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\lcd.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\StackTsk.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\SPIEEPROM.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\MPFS2.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\IP.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Helpers.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\ARP.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
                   __tmp_0   0x0003ee       data     static C:\MCC18\src\pmc_common\USART\u1open.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
           activeUDPSocket   0x000ee6       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\UDP.c
        bBootloadActivated   0x00043b       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
                 bChangeIP   0x00043e       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
@@ -1701,8 +1701,8 @@ POWER_REGISTERS_SIZE_QUEUE   0x0001af       data     extern C:\Users\EricGoh\Des
               bResetMeter   0x00043f       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
                     bWait   0x0000e3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
              b_reset_maxq   0x00037c       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\mcu.c
-             boardrequest   0x0001f2       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
              boardrequest   0x0001f0       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+             boardrequest   0x0001f2       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
     button_down_old_state   0x000beb       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
    button_enter_old_state   0x000bf1       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
   button_escape_old_state   0x000bef       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
@@ -1710,8 +1710,8 @@ POWER_REGISTERS_SIZE_QUEUE   0x0001af       data     extern C:\Users\EricGoh\Des
       button_up_old_state   0x000bed       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
                      c_cb   0x000047       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
              char_menu_pw   0x000bf8       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-                    count   0x0004e2       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
                     count   0x0004e0       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
+                    count   0x0004e2       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
                 curr_byte   0x0001e4       data     static C:\MCC18\src\extended\startup\c018i_e.c
                curr_entry   0x0001e6       data     static C:\MCC18\src\extended\startup\c018i_e.c
              current_menu   0x000be9       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
@@ -2165,14 +2165,14 @@ ConvertPowerReadingsToCharArray   0x008d0e    program     extern C:\Users\EricGo
          ___else_lbl00071   0x00ae48    program     static                          
            ___if_lbl00066   0x00ae6e    program     static                          
          ___else_lbl00069   0x00ae70    program     static                          
-           ___if_lbl00067   0x00ae82    program     static                          
-           ___if_lbl00068   0x00ae82    program     static                          
-           ___if_lbl00070   0x00ae82    program     static                          
            ___if_lbl00072   0x00ae82    program     static                          
+           ___if_lbl00070   0x00ae82    program     static                          
+           ___if_lbl00068   0x00ae82    program     static                          
+           ___if_lbl00067   0x00ae82    program     static                          
        ___case_6_lbl00076   0x00ae84    program     static                          
            ___if_lbl00075   0x00aeaa    program     static                          
-       ___return_lbl00000   0x00aeb0    program     static                          
    ___switchexit_lbl00004   0x00aeb0    program     static                          
+       ___return_lbl00000   0x00aeb0    program     static                          
          ModbusReqHandler   0x00aeb8    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
                   UDPInit   0x00b48c    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\UDP.c
                 UDPOpenEx   0x00b4b8    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\UDP.c
@@ -2230,8 +2230,8 @@ ConvertPowerReadingsToCharArray   0x008d0e    program     extern C:\Users\EricGo
                __tmplbl_7   0x00c8d8    program     static                          
                __tmplbl_6   0x00c8de    program     static                          
          ___else_lbl00033   0x00c8f4    program     static                          
-           ___if_lbl00037   0x00c910    program     static                          
            ___if_lbl00032   0x00c910    program     static                          
+           ___if_lbl00037   0x00c910    program     static                          
            ___if_lbl00036   0x00c910    program     static                          
            ___if_lbl00034   0x00c910    program     static                          
               __tmplbl_10   0x00c92c    program     static                          
@@ -2243,8 +2243,8 @@ ConvertPowerReadingsToCharArray   0x008d0e    program     extern C:\Users\EricGo
            ___if_lbl00043   0x00c968    program     static                          
               __tmplbl_11   0x00c98c    program     static                          
            ___if_lbl00044   0x00c9e6    program     static                          
-       ___return_lbl00005   0x00c9e8    program     static                          
         ___while_lbl00028   0x00c9e8    program     static                          
+       ___return_lbl00005   0x00c9e8    program     static                          
           InitializeBoard   0x00c9f0    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
             InitAppConfig   0x00ca86    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
             SaveAppConfig   0x00cd10    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
@@ -2260,8 +2260,8 @@ ConvertPowerReadingsToCharArray   0x008d0e    program     extern C:\Users\EricGo
               __tmplbl_25   0x00ce20    program     static                          
            ___if_lbl00076   0x00ce22    program     static                          
            ___if_lbl00075   0x00ce22    program     static                          
-           ___if_lbl00080   0x00ce28    program     static                          
        ___return_lbl00070   0x00ce28    program     static                          
+           ___if_lbl00080   0x00ce28    program     static                          
            ___if_lbl00078   0x00ce28    program     static                          
            CustomClearWdt   0x00ce30    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
               __tmplbl_27   0x00ce92    program     static                          
@@ -2271,8 +2271,8 @@ ConvertPowerReadingsToCharArray   0x008d0e    program     extern C:\Users\EricGo
          ___else_lbl00086   0x00cee8    program     static                          
               __tmplbl_31   0x00ceee    program     static                          
               __tmplbl_30   0x00cef4    program     static                          
-           ___if_lbl00084   0x00cefa    program     static                          
            ___if_lbl00085   0x00cefa    program     static                          
+           ___if_lbl00084   0x00cefa    program     static                          
          ___else_lbl00089   0x00cefc    program     static                          
        ___return_lbl00081   0x00cf28    program     static                          
            ___if_lbl00090   0x00cf28    program     static                          
@@ -2318,8 +2318,8 @@ MCUProcessIncomingMessage   0x00dace    program     extern C:\Users\EricGoh\Desk
              SetMCUIsBusy   0x00e014    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\mcu.c
   MCURequestToBOTTOMBoard   0x00e04a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\mcu.c
               __tmplbl_15   0x00e0fa    program     static                          
-              __tmplbl_14   0x00e100    program     static                          
         ___while_lbl00057   0x00e100    program     static                          
+              __tmplbl_14   0x00e100    program     static                          
            ___if_lbl00059   0x00e102    program     static                          
         ___while_lbl00058   0x00e102    program     static                          
            ___if_lbl00060   0x00e10c    program     static                          
@@ -2358,8 +2358,8 @@ MCUProcessIncomingMessage   0x00dace    program     extern C:\Users\EricGoh\Desk
                   jPkLoop   0x00ebf0    program     static C:\MCC18\src\extended\math\packFP.asm
              jPkShiftDone   0x00ec0c    program     static C:\MCC18\src\extended\math\packFP.asm
                jPkRoundIt   0x00ec22    program     static C:\MCC18\src\extended\math\packFP.asm
-             jPkRoundDone   0x00ec3a    program     static C:\MCC18\src\extended\math\packFP.asm
               __FpReturnW   0x00ec3a    program     extern C:\MCC18\src\extended\math\packFP.asm
+             jPkRoundDone   0x00ec3a    program     static C:\MCC18\src\extended\math\packFP.asm
                     jExit   0x00ec56    program     static C:\MCC18\src\extended\math\packFP.asm
             __FpReturnNaN   0x00ec64    program     extern C:\MCC18\src\extended\math\packFP.asm
         __FpReturnSignInf   0x00ec72    program     extern C:\MCC18\src\extended\math\packFP.asm
@@ -2583,42 +2583,42 @@ MCUProcessIncomingMessage   0x00dace    program     extern C:\Users\EricGoh\Desk
                __string_3   0x010901    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
                __string_2   0x01090b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
                __string_1   0x01091b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
-              __string_33   0x01091e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_32   0x01091f    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_31   0x010927    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_30   0x01092e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_28   0x010931    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_27   0x010942    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_26   0x01094f    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_25   0x01095e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_19   0x01096f    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-              __string_17   0x010980    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
-               __string_0   0x010991    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
-               __string_2   0x0109ad    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
-               __string_1   0x0109b1    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
-              __string_21   0x0109b5    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_20   0x0109be    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_19   0x0109d3    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_18   0x0109f3    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_17   0x010a0b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_16   0x010a16    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_15   0x010a31    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_14   0x010a46    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_13   0x010a5c    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_12   0x010a63    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_11   0x010a6d    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-              __string_10   0x010a7d    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_9   0x010a95    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_8   0x010aa1    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_7   0x010aa6    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_6   0x010aab    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_5   0x010ab0    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_4   0x010ab5    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_3   0x010aba    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_2   0x010abf    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_1   0x010ac4    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_0   0x010ac9    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-               __string_0   0x010ace    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
+               __string_0   0x01091e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
+              __string_21   0x01093a    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_20   0x010943    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_19   0x010958    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_18   0x010978    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_17   0x010990    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_16   0x01099b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_15   0x0109b6    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_14   0x0109cb    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_13   0x0109e1    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_12   0x0109e8    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_11   0x0109f2    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+              __string_10   0x010a02    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_9   0x010a1a    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_8   0x010a26    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_7   0x010a2b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_6   0x010a30    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_5   0x010a35    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_4   0x010a3a    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_3   0x010a3f    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_2   0x010a44    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_1   0x010a49    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_0   0x010a4e    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
+               __string_0   0x010a53    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
+              __string_33   0x010a57    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_32   0x010a58    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_31   0x010a60    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_30   0x010a67    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_28   0x010a6a    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_27   0x010a7b    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_26   0x010a88    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_25   0x010a97    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_19   0x010aa8    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+              __string_17   0x010ab9    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+               __string_2   0x010aca    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
+               __string_1   0x010ace    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
                 Write_Lcd   0x010ad2    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\lcd.c
        ___return_lbl00000   0x010af8    program     static                          
           LCD_ClearScreen   0x010b00    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\lcd.c
@@ -2633,8 +2633,8 @@ MCUProcessIncomingMessage   0x00dace    program     extern C:\Users\EricGoh\Desk
                 copy_loop   0x010e1c    program     static                          
             copy_one_byte   0x010e22    program     static                          
              done_copying   0x010e30    program     static                          
-       ___return_lbl00002   0x010e46    program     static                          
                      done   0x010e46    program     static                          
+       ___return_lbl00002   0x010e46    program     static                          
                Open1USART   0x010e48    program     extern C:\MCC18\src\pmc_common\USART\u1open.c
                 FTPVerify   0x010ec2    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\LegacyHTTPApp.c
                      fabs   0x010f24    program     extern C:\MCC18\src\extended\stdclib\fabs.c
@@ -2772,26 +2772,26 @@ POWER_REGISTERS_QUEUE_STATE   0x000300       data     static C:\Users\EricGoh\De
                fatCacheID   0x0003e6       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\MPFS2.c
                  numFiles   0x0003e8       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\MPFS2.c
                  lastRead   0x0003ea       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\MPFS2.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Helpers.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\mcu.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\IP.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\MPFS2.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\SPIEEPROM.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\StackTsk.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\lcd.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\SPIEEPROM.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\menu.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\StackTsk.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\IP.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\TCP.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Tick.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\UDP.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\ENCX24J600.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\ARP.c
-                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\mcu.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Meter_Top_Board\Main_Meter_Top_Board.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\FTP.c
                   __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\eeprom_task.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Helpers.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\ARP.c
                   __tmp_0   0x0003ee       data     static C:\MCC18\src\pmc_common\USART\u1open.c
+                  __tmp_0   0x0003ee       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\ModbusTCPServer_Meter.c
           UDP_Flag_Status   0x0003fd       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
               DiscoverySM   0x0003fe       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Microchip\TCPIP Stack\Announce.c
             DelayCounter1   0x0003ff       data     extern C:\MCC18\src\extended\delays\delayd1.asm

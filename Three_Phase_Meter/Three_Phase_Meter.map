@@ -1,5 +1,5 @@
 MPLINK 4.42, Linker
-Linker Map File - Created Tue Jul 15 11:56:50 2014
+Linker Map File - Created Tue Jul 15 12:17:53 2014
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -57,21 +57,21 @@ Linker Map File - Created Tue Jul 15 11:56:50 2014
            .romdata_mcu.o    romdata   0x0000ff    program   0x000000
        .romdata_utility.o    romdata   0x0000ff    program   0x000000
          .romdata_power.o    romdata   0x0000ff    program   0x000000
-         .idata_adcon.o_i    romdata   0x0000ff    program   0x000000
-         .romdata_adcon.o    romdata   0x0000ff    program   0x000000
      .romdata_registers.o    romdata   0x0000ff    program   0x000000
           .romdata_rtcc.o    romdata   0x0000ff    program   0x000000
+         .idata_adcon.o_i    romdata   0x0000ff    program   0x000000
+         .romdata_adcon.o    romdata   0x0000ff    program   0x000000
        .idata_adcbusy.o_i    romdata   0x0000ff    program   0x000000
+      .idata_spi_clos.o_i    romdata   0x0000ff    program   0x000000
       .romdata_busy_eep.o    romdata   0x0000ff    program   0x000000
       .idata_adcclose.o_i    romdata   0x0000ff    program   0x000000
       .romdata_adcclose.o    romdata   0x0000ff    program   0x000000
       .idata_busy_eep.o_i    romdata   0x0000ff    program   0x000000
        .romdata_adcbusy.o    romdata   0x0000ff    program   0x000000
-      .idata_spi_clos.o_i    romdata   0x0000ff    program   0x000000
-            .code_c018i.o       code   0x000100    program   0x000000
+            .code_udefs.o       code   0x000100    program   0x000000
             .code_adcon.o       code   0x000100    program   0x000000
                     DevID    romdata   0x000100    program   0x000004
-            .code_udefs.o       code   0x000100    program   0x000000
+            .code_c018i.o       code   0x000100    program   0x000000
              .code_rtcc.o       code   0x000104    program   0x000652
                    STRING       code   0x000756    program   0x00014a
                    STDLIB       code   0x0008a0    program   0x000134
