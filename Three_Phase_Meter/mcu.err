@@ -1,0 +1,16 @@
+Warning[2105] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 663 : Eric(2012-09-21) - To be deprecated. Should now call MMT_GET_CALIBRATION_DATA.
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 301 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 319 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 320 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 331 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 332 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 333 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 342 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 367 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 380 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 398 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 469 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 579 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 591 : suspicious pointer conversion
+Warning[2054] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 726 : suspicious pointer conversion
+Warning[2058] C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c 749 : call of function without prototype

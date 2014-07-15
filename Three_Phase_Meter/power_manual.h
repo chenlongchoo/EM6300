@@ -1,0 +1,20 @@
+//power_manual.h
+
+#if defined(APP_USE_MANUAL_READING)
+
+#include "adc.h"
+
+
+typedef enum {
+	PHASE_A_VOLTAGE = ADC_CH1,
+	PHASE_A_CURRENT = ADC_CH0,
+	PHASE_B_VOLTAGE = ADC_CH15,
+	PHASE_B_CURRENT = ADC_CH14,
+	PHASE_C_VOLTAGE = ADC_CH11,
+	PHASE_C_CURRENT = ADC_CH10,
+	PHASE_N_CURRENT = ADC_CH7
+} PHASE_CHANNEL;
+
+int PowerM_ReadADC(PHASE_CHANNEL ch);
+
+#endif

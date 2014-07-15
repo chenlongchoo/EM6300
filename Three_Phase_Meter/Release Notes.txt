@@ -1,0 +1,8 @@
+*** Release Notes ***
+
+2012-04-19(Eric)
+-----------------------------
+1) Fixed bug in total kwh displaying wrongly when counter 2 of energy reading is > 0.
+2) Fixed bug where total kwh can show rubbish when the total kwh is shown for the first time.
+3) Fixed "Call of function without prototype" problems.
+

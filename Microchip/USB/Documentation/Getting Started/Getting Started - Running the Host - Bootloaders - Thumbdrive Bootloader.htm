@@ -1,0 +1,937 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 12">
+<meta name=Originator content="Microsoft Word 12">
+<link rel=File-List
+href="Getting%20Started%20-%20Running%20the%20Host%20-%20Bootloaders%20-%20Thumbdrive%20Bootloader_files/filelist.xml">
+<link rel=Edit-Time-Data
+href="Getting%20Started%20-%20Running%20the%20Host%20-%20Bootloaders%20-%20Thumbdrive%20Bootloader_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Getting Started: Running the “Host - Bootloaders - Thumbdrive
+Bootloader” demo</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="country-region"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>C12109</o:Author>
+  <o:LastAuthor>David Flowers</o:LastAuthor>
+  <o:Revision>98</o:Revision>
+  <o:TotalTime>271</o:TotalTime>
+  <o:Created>2008-03-29T21:04:00Z</o:Created>
+  <o:LastSaved>2011-05-31T18:27:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>1041</o:Words>
+  <o:Characters>5940</o:Characters>
+  <o:Company>Microchip Technology Inc</o:Company>
+  <o:Lines>49</o:Lines>
+  <o:Paragraphs>13</o:Paragraphs>
+  <o:CharactersWithSpaces>6968</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<link rel=themeData
+href="Getting%20Started%20-%20Running%20the%20Host%20-%20Bootloaders%20-%20Thumbdrive%20Bootloader_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="Getting%20Started%20-%20Running%20the%20Host%20-%20Bootloaders%20-%20Thumbdrive%20Bootloader_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>90</w:Zoom>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" LatentStyleCount="267">
+  <w:LsdException Locked="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="99" Name="No List"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true"
+   Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-1610611985 1107304683 0 0 415 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-style:italic;}
+h3
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:"Arial","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{mso-style-unhide:no;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-unhide:no;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-unhide:no;
+	mso-style-link:"Plain Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-unhide:no;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.PlainTextChar
+	{mso-style-name:"Plain Text Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Plain Text";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 65.95pt 1.0in 65.95pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="22530"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoPlainText align=center style='text-align:center'><a
+name="_Toc194573682"><b style='mso-bidi-font-weight:normal'><u><span
+style='font-size:16.0pt;font-family:"Arial","sans-serif"'>Getting Started:
+Running the “Host – Bootloaders – Thumbdrive Bootloader” demo</span></u></b></a><b
+style='mso-bidi-font-weight:normal'><u><span style='font-size:16.0pt;
+font-family:"Arial","sans-serif"'><o:p></o:p></span></u></b></p>
+
+<p class=MsoPlainText><span style='font-size:16.0pt;font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><!--[if supportFields]><span
+style='font-family:"Arial","sans-serif"'><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>TOC \o &quot;1-3&quot; \h \z \u <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc216753240">Required
+Hardware:<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc216753240 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200310036003700350033003200340030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc216753241">Configuration
+1: Explorer 16<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc216753241 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200310036003700350033003200340031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc216753242">Configuring
+the Hardware:<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc216753242 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200310036003700350033003200340032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc216753243">Configuration
+1: Explorer 16<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc216753243 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200310036003700350033003200340033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc216753244">Firmware<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc216753244 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200310036003700350033003200340034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc216753245">Creating
+a hex file to bootload<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc216753245 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200310036003700350033003200340035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc216753246">Loading
+the hex file<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc216753246 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>4<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200310036003700350033003200340036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc216753247">Trademarks:<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc216753247 \h <span style='mso-element:field-separator'></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200310036003700350033003200340037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><!--[if supportFields]><span style='font-family:"Arial","sans-serif"'><span
+style='mso-element:field-end'></span></span><![endif]--><span style='font-family:
+"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc216753240"></a><a name="required_hardware"><span
+style='mso-bookmark:_Toc216753240'><span style='mso-fareast-font-family:"Times New Roman"'>Required
+Hardware</span></span></a><span style='mso-bookmark:_Toc216753240'><span
+style='mso-fareast-font-family:"Times New Roman"'>:</span></span><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><span
+style='mso-spacerun:yes'>  </span>To run this project, you will need one of the
+following sets of hardware:<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'><span
+style='mso-spacerun:yes'>    </span><a name="_Toc216753241">Configuration 1:
+Explorer 16</a><o:p></o:p></span></h3>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><span
+style='mso-spacerun:yes'>      </span><a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=MA240014">PIC24FJ256GB110
+Plug-In-Module (PIM)</a> (MA240014)<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><span
+style='mso-spacerun:yes'>      </span><a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=DM240001">Explorer
+16</a> (DM240001)<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><span
+style='mso-spacerun:yes'>      </span><a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=AC164131">USB
+PICtail™ Plus Daughter Card</a> (AC164131)<o:p></o:p></span></p>
+
+<h2><a name="_Toc216753242"></a><a name="configuring_the_hardware"><span
+style='mso-bookmark:_Toc216753242'><span style='mso-fareast-font-family:"Times New Roman"'>Configuring
+the Hardware</span></span></a><span style='mso-bookmark:_Toc216753242'><span
+style='mso-fareast-font-family:"Times New Roman"'>:</span></span><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>This
+section describes how to set up the various configurations of hardware to run
+this demo.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'><a
+href="#config_3">Configuration 1: PIC24FJ256GB110 PIM + Explorer 16</a><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<h3 style='text-indent:.5in'><a name="config_3"></a><a name="_Toc216753243"><span
+style='mso-bookmark:config_3'><span style='mso-fareast-font-family:"Times New Roman"'>Configuration
+1: Explorer 16</span></span></a><span style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h3>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>1)
+Before attaching the PIC24FJ256GB110 PIM to the Explorer 16 board, insure that
+the processor selector switch (S2) is in the “PIM” position as seen in the
+image below. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-family:"Arial","sans-serif";
+mso-no-proof:yes'><img border=0 width=473 height=356 id="_x0000_i1029"
+src="../images/Explorer%2016%20(processor%20switch).JPG"></span><span
+style='font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:"Arial","sans-serif"'>2)
+Short the J7 jumper to the “PIC24” setting<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-family:"Arial","sans-serif";
+mso-no-proof:yes'><img border=0 width=402 height=334 id="_x0000_i1028"
+src="../images/Explorer%2016%20(programming%20jumper).JPG"></span><span
+style='font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>3)
+Before connecting the PIC24FJ256GB110 PIM to the Explorer 16 board, remove all
+attached cables from both boards.<span style='mso-spacerun:yes'>  </span>Connect
+the PIC24FJ256GB110 PIM to the Explorer 16 board.<span
+style='mso-spacerun:yes'>  </span>Be careful when connecting the boards to
+insure that no pins are bent or damaged during the process.<span
+style='mso-spacerun:yes'>  </span>Also insure that the PIM is not shifted in
+any direction and that all of the headers are properly aligned.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'><span
+style='mso-tab-count:1'>            </span>3a)<span style='mso-spacerun:yes'> 
+</span>If using the PIC24FJ64GB004 PIM, please insure that the programming port
+switch is switched in the PGX1 direction.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span
+style='mso-no-proof:yes'><img border=0 width=220 height=202 id="_x0000_i1027"
+src="../images/pic24fj64gb004_pim_switch.jpg"></span><span style='font-family:
+"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>4)<span
+style='mso-spacerun:yes'>  </span>On the USB PICTail Plus board, short jumpers
+JP2 and JP3.<span style='mso-spacerun:yes'>  </span>Remove all other shorts on
+the board.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-family:"Arial","sans-serif";
+mso-no-proof:yes'><img border=0 width=365 height=499 id="_x0000_i1026"
+src="../images/USB%20PICTail+%20(Host%20Enabled).JPG"></span><span
+style='font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>5)<span
+style='mso-spacerun:yes'>  </span>Connect the USB PICTail Plus board to either
+of the female PICTail Plus connectors or on the card edge connector (J9) at the
+edge of the Explorer 16 board.<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><a name=firmware></a><a name="_Toc216753244"><span
+style='mso-bookmark:firmware'><span class=Heading2Char><span style='font-size:
+14.0pt'>Firmware</span></span></span></a><span style='mso-bookmark:firmware'></span><span
+style='mso-bookmark:_Toc216753244'></span><span style='font-family:"Arial","sans-serif"'>:<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>The
+source code for this demo is available in the “&lt;Install Directory&gt;\USB
+Host - Bootloaders\Mass Storage Bootloader” directory.<span
+style='mso-spacerun:yes'>  </span>In this directory you will find all of the
+user level source and header files as well as project and workspace files for
+each of the hardware platforms.<span style='mso-spacerun:yes'>  </span>Find the
+project (*.mcp) or workspace (*.mcw) file that corresponds to the hardware
+platform you wish to test.<span style='mso-spacerun:yes'>  </span>Compile and
+program the demo code into the hardware platform.<span
+style='mso-spacerun:yes'>  </span>For more help on how to compile and program
+projects, please refer to the MPLAB® help available through the help menu of
+MPLAB (Help-&gt;Topics…-&gt;MPLAB IDE).<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><a name="_Toc216753245"><span class=Heading2Char><span
+style='font-size:14.0pt'>Creating a hex file to bootload</span></span></a><span
+style='mso-bookmark:_Toc216753245'></span><span style='font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>Any
+application in the MCHPFSUSB release can be used to create a hex file the can
+be loaded with this bootloader.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>In
+order to create a new hex file to bootload, follow these steps:<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><b style='mso-bidi-font-weight:
+normal'><u><span style='font-family:"Arial","sans-serif"'>MPLAB 8:<o:p></o:p></span></u></b></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>1)
+first open up the target project.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>2)
+Insure that the correct processor is selected in the “Configure-&gt;Select
+Device” option of MPLAB 8<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>3)
+If there is a linker script already attached to the project, remove it from the
+project by right clicking on it and selecting remove.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>4)
+Copy the appropriate linker file to the demo project folder.<span
+style='mso-spacerun:yes'>  </span>The linker files for the thumbdrive
+bootloader can be found in the “&lt;install directory&gt;\USB Host -
+Bootloaders\Mass Storage Bootloader\Application Files\Linker Files” folder.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>5)
+Add this file to the project by right clicking on the “linker scripts” folder
+in the project window, select “Add Files…”.<span style='mso-spacerun:yes'> 
+</span>Select the correct file.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>6)
+Compile the project.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>7)
+Rename the resulting .hex file to “image.hex”.<span style='mso-spacerun:yes'> 
+</span>It is important that the name be exact.<span style='mso-spacerun:yes'> 
+</span>The bootloader is looking for that file specifically by name.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><b style='mso-bidi-font-weight:
+normal'><u><span style='font-family:"Arial","sans-serif"'>MPLAB X:<o:p></o:p></span></u></b></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>1)
+first open up the target project.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>2)
+Select the configuration that corresponds to your demo board. <o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>3)
+Copy the appropriate linker file to the demo project folder.<span
+style='mso-spacerun:yes'>  </span>The linker files for the thumbdrive
+bootloader can be found in the “&lt;install directory&gt;\USB Host -
+Bootloaders\Mass Storage Bootloader\Application Files\Linker Files” folder.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>4)
+Add this file to the project by right clicking on the “linker scripts” folder
+in the project window, select “Add Existing Item…”.<span
+style='mso-spacerun:yes'>  </span>Select the correct file that corresponds to
+the processor that is being used on the demo board.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>5)
+Compile the project.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>6)
+Rename the resulting .hex file to “image.hex”.<span style='mso-spacerun:yes'> 
+</span>It is important that the name be exact.<span style='mso-spacerun:yes'> 
+</span>The bootloader is looking for that file specifically by name.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><a name="_Toc216753246"><span class=Heading2Char><span
+style='font-size:14.0pt'>Loading the hex file</span></span></a><span
+style='mso-bookmark:_Toc216753246'></span><span style='font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>Once
+the image.hex file is created through the process listed above, copy this file
+onto a thumbdrive.<span style='mso-spacerun:yes'>  </span>Insert the thumbdrive
+into the USB PICtail Plus A connector.<span style='mso-spacerun:yes'> 
+</span>On the Explorer 16, Press and hold the S3 button while resetting the
+board by pressing the MCLR button or applying power to the board. <o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='mso-no-proof:yes'><img
+border=0 width=694 height=447 id="_x0000_i1025"
+src="../images/Explorer%2016%20+%20PIM%20+%20USB%20PICtail+%20(sw6).jpg"></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>The
+D5 LED should illuminate if this is done correctly.<span
+style='mso-spacerun:yes'>  </span>The D5 LED should turn itself off once the
+bootload process is complete.<span style='mso-spacerun:yes'>  </span>At this
+point of time the application should be running.<span
+style='mso-spacerun:yes'>  </span>If you wish to abort a bootload sequence you
+can press the S6 switch or power cycle the board.<o:p></o:p></span></p>
+
+<h2><a name="_Toc195786561"></a><a name="_Toc195786501"></a><a
+name="_Toc195786411"></a><a name="_Toc216753247"><span style='mso-bookmark:
+_Toc195786411'><span style='mso-bookmark:_Toc195786501'><span style='mso-bookmark:
+_Toc195786561'><span style='mso-fareast-font-family:"Times New Roman"'>Trademarks:</span></span></span></span></a><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";color:black'>The Microchip name and logo, the
+Microchip logo, MPLAB, and PIC are registered trademarks of Microchip
+Technology Incorporated in the <st1:place w:st="on"><st1:country-region w:st="on">U.S.A.</st1:country-region></st1:place>
+and other countries.<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";color:black'>PICDEM is a trademark of
+Microchip Technology Incorporated in the <st1:country-region w:st="on"><st1:place
+ w:st="on">U.S.A.</st1:place></st1:country-region> and other countries.<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";color:black'>Microsoft, Windows, and Windows
+Vista are either registered trademarks or trademarks of Microsoft Corporation
+in the <st1:country-region w:st="on"><st1:place w:st="on">United States</st1:place></st1:country-region>
+and/or other countries.<o:p></o:p></span></i></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

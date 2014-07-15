@@ -1,0 +1,1770 @@
+MPLINK 4.42, Linker
+Linker Map File - Created Tue Jul 15 11:56:50 2014
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+               _entry_scn       code   0x000000    program   0x000006
+           .code___init.o       code   0x000006    program   0x000002
+               highVector       code   0x000008    program   0x000006
+          .code_adcbusy.o       code   0x00000e    program   0x00000a
+                lowVector       code   0x000018    program   0x000006
+                   .cinit    romdata   0x00001e    program   0x00004a
+            .code_uopen.o       code   0x000068    program   0x00008a
+             .stringtable    romdata   0x0000f2    program   0x00000d
+      .romdata_spi_open.o    romdata   0x0000ff    program   0x000000
+      .idata_spi_open.o_i    romdata   0x0000ff    program   0x000000
+       .romdata_adcopen.o    romdata   0x0000ff    program   0x000000
+       .idata_adcopen.o_i    romdata   0x0000ff    program   0x000000
+       .romdata_fxm3232.o    romdata   0x0000ff    program   0x000000
+       .idata_fxm3232.o_i    romdata   0x0000ff    program   0x000000
+      .romdata_fxd3232u.o    romdata   0x0000ff    program   0x000000
+      .idata_fxd3232u.o_i    romdata   0x0000ff    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x0000ff    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x0000ff    program   0x000000
+      .romdata_fxd0808u.o    romdata   0x0000ff    program   0x000000
+      .idata_fxd0808u.o_i    romdata   0x0000ff    program   0x000000
+       .romdata_adcconv.o    romdata   0x0000ff    program   0x000000
+       .idata_adcconv.o_i    romdata   0x0000ff    program   0x000000
+        .romdata_uclose.o    romdata   0x0000ff    program   0x000000
+        .idata_uclose.o_i    romdata   0x0000ff    program   0x000000
+       .romdata_t3close.o    romdata   0x0000ff    program   0x000000
+       .idata_t3close.o_i    romdata   0x0000ff    program   0x000000
+      .romdata_spi_clos.o    romdata   0x0000ff    program   0x000000
+        .romdata___init.o    romdata   0x0000ff    program   0x000000
+        .idata___init.o_i    romdata   0x0000ff    program   0x000000
+       .romdata_write_B.o    romdata   0x0000ff    program   0x000000
+       .idata_write_B.o_i    romdata   0x0000ff    program   0x000000
+        .romdata_uwrite.o    romdata   0x0000ff    program   0x000000
+        .idata_uwrite.o_i    romdata   0x0000ff    program   0x000000
+      .romdata_spi_writ.o    romdata   0x0000ff    program   0x000000
+      .idata_spi_writ.o_i    romdata   0x0000ff    program   0x000000
+         .romdata_udefs.o    romdata   0x0000ff    program   0x000000
+         .idata_udefs.o_i    romdata   0x0000ff    program   0x000000
+        .romdata_read_B.o    romdata   0x0000ff    program   0x000000
+        .idata_read_B.o_i    romdata   0x0000ff    program   0x000000
+         .romdata_uread.o    romdata   0x0000ff    program   0x000000
+         .idata_uread.o_i    romdata   0x0000ff    program   0x000000
+       .romdata_adcread.o    romdata   0x0000ff    program   0x000000
+       .idata_adcread.o_i    romdata   0x0000ff    program   0x000000
+         .romdata_uopen.o    romdata   0x0000ff    program   0x000000
+         .idata_uopen.o_i    romdata   0x0000ff    program   0x000000
+        .romdata_t1open.o    romdata   0x0000ff    program   0x000000
+        .idata_t1open.o_i    romdata   0x0000ff    program   0x000000
+         .idata_c018i.o_i    romdata   0x0000ff    program   0x000000
+         .romdata_c018i.o    romdata   0x0000ff    program   0x000000
+          .romdata_main.o    romdata   0x0000ff    program   0x000000
+           .romdata_mcu.o    romdata   0x0000ff    program   0x000000
+       .romdata_utility.o    romdata   0x0000ff    program   0x000000
+         .romdata_power.o    romdata   0x0000ff    program   0x000000
+         .idata_adcon.o_i    romdata   0x0000ff    program   0x000000
+         .romdata_adcon.o    romdata   0x0000ff    program   0x000000
+     .romdata_registers.o    romdata   0x0000ff    program   0x000000
+          .romdata_rtcc.o    romdata   0x0000ff    program   0x000000
+       .idata_adcbusy.o_i    romdata   0x0000ff    program   0x000000
+      .romdata_busy_eep.o    romdata   0x0000ff    program   0x000000
+      .idata_adcclose.o_i    romdata   0x0000ff    program   0x000000
+      .romdata_adcclose.o    romdata   0x0000ff    program   0x000000
+      .idata_busy_eep.o_i    romdata   0x0000ff    program   0x000000
+       .romdata_adcbusy.o    romdata   0x0000ff    program   0x000000
+      .idata_spi_clos.o_i    romdata   0x0000ff    program   0x000000
+            .code_c018i.o       code   0x000100    program   0x000000
+            .code_adcon.o       code   0x000100    program   0x000000
+                    DevID    romdata   0x000100    program   0x000004
+            .code_udefs.o       code   0x000100    program   0x000000
+             .code_rtcc.o       code   0x000104    program   0x000652
+                   STRING       code   0x000756    program   0x00014a
+                   STDLIB       code   0x0008a0    program   0x000134
+               _cinit_scn       code   0x0009d4    program   0x00009e
+          .code_adcopen.o       code   0x000a72    program   0x00007e
+          .code_fxm3232.o       code   0x000af0    program   0x000070
+         .code_spi_open.o       code   0x000b60    program   0x00006a
+             D10KTCYXCODE       code   0x000bca    program   0x00002e
+          .code_t3close.o       code   0x000bf8    program   0x000006
+                       ko    romdata   0x000c00    program   0x000146
+             .code_main.o       code   0x000d46    program   0x003e7c
+          .code_utility.o       code   0x004bc2    program   0x001804
+            .code_power.o       code   0x0063c6    program   0x001652
+              .code_mcu.o       code   0x007a18    program   0x00117a
+                     PROG       code   0x008b92    program   0x000562
+          .code_write_B.o       code   0x0090f4    program   0x000060
+           .code_read_B.o       code   0x009154    program   0x00005c
+         .code_fxd3232u.o       code   0x0091b0    program   0x000048
+           .code_t1open.o       code   0x0091f8    program   0x000042
+        .code_registers.o       code   0x00923a    program   0x000040
+            .code_uread.o       code   0x00927a    program   0x00003e
+         .code_spi_writ.o       code   0x0092b8    program   0x00003c
+           .code_uwrite.o       code   0x0092f4    program   0x00002e
+         .code_fxd1616u.o       code   0x009322    program   0x00002c
+              D1KTCYXCODE       code   0x00934e    program   0x000020
+                    .code       code   0x00936e    program   0x000020
+             _startup_scn       code   0x00938e    program   0x00001c
+             D100TCYXCODE       code   0x0093aa    program   0x00001c
+         .code_fxd0808u.o       code   0x0093c6    program   0x00001c
+              D10TCYXCODE       code   0x0093e2    program   0x000016
+          .code_adcread.o       code   0x0093f8    program   0x000012
+           .code_uclose.o       code   0x00940a    program   0x00000c
+         .code_busy_eep.o       code   0x009416    program   0x000006
+         .code_adcclose.o       code   0x00941c    program   0x000006
+         .code_spi_clos.o       code   0x009422    program   0x000004
+          .code_adcconv.o       code   0x009426    program   0x000004
+       .idata_utility.o_i    romdata   0x00942a    program   0x000061
+          .idata_rtcc.o_i    romdata   0x00948b    program   0x00000e
+     .idata_registers.o_i    romdata   0x009499    program   0x0000e1
+         .idata_power.o_i    romdata   0x00957a    program   0x000063
+           .idata_mcu.o_i    romdata   0x0095dd    program   0x0000ce
+          .idata_main.o_i    romdata   0x0096ab    program   0x0000ac
+    .config_300001_main.o    romdata   0x300001    program   0x000001
+    .config_300002_main.o    romdata   0x300002    program   0x000001
+    .config_300003_main.o    romdata   0x300003    program   0x000001
+    .config_300005_main.o    romdata   0x300005    program   0x000001
+    .config_300006_main.o    romdata   0x300006    program   0x000001
+                MATH_DATA      udata   0x000000       data   0x000014
+                 .tmpdata      udata   0x000014       data   0x00000e
+              HighISR_tmp      udata   0x000022       data   0x000002
+                DELAYDAT2      udata   0x000024       data   0x000001
+                DELAYDAT1      udata   0x000025       data   0x000001
+            .udata_main.o      udata   0x000060       data   0x00008b
+            .idata_rtcc.o      idata   0x0000eb       data   0x00000e
+            .udata_rtcc.o      udata   0x0000f9       data   0x000007
+       .idata_registers.o      idata   0x000100       data   0x0000e1
+           .udata_power.o      udata   0x0001e1       data   0x00000d
+           .udata_c018i.o      udata   0x0001ee       data   0x00000a
+         .udata_utility.o      udata   0x0001f8       data   0x000003
+             .idata_mcu.o      idata   0x000200       data   0x0000ce
+            .idata_main.o      idata   0x000300       data   0x0000ac
+           .idata_power.o      idata   0x000400       data   0x000063
+         .idata_utility.o      idata   0x000463       data   0x000061
+       .udata_registers.o      udata   0x000700       data   0x000200
+                   .stack      udata   0x000e00       data   0x000100
+             .udata_mcu.o      udata   0x000f00       data   0x00005e
+           .udata_udefs.o      udata   0x000f5e       data   0x000001
+         .udata_adcopen.o      udata   0x000f5f       data   0x000000
+         .idata_adcopen.o      idata   0x000f5f       data   0x000000
+        .udata_spi_open.o      udata   0x000f5f       data   0x000000
+        .idata_spi_open.o      idata   0x000f5f       data   0x000000
+          .udata_t1open.o      udata   0x000f5f       data   0x000000
+          .idata_t1open.o      idata   0x000f5f       data   0x000000
+           .udata_uopen.o      udata   0x000f5f       data   0x000000
+           .idata_uopen.o      idata   0x000f5f       data   0x000000
+         .udata_adcread.o      udata   0x000f5f       data   0x000000
+         .idata_adcread.o      idata   0x000f5f       data   0x000000
+           .udata_uread.o      udata   0x000f5f       data   0x000000
+           .idata_uread.o      idata   0x000f5f       data   0x000000
+          .udata_read_B.o      udata   0x000f5f       data   0x000000
+          .idata_read_B.o      idata   0x000f5f       data   0x000000
+           .idata_udefs.o      idata   0x000f5f       data   0x000000
+        .udata_spi_writ.o      udata   0x000f5f       data   0x000000
+        .idata_spi_writ.o      idata   0x000f5f       data   0x000000
+          .udata_uwrite.o      udata   0x000f5f       data   0x000000
+          .idata_uwrite.o      idata   0x000f5f       data   0x000000
+         .udata_write_B.o      udata   0x000f5f       data   0x000000
+         .idata_write_B.o      idata   0x000f5f       data   0x000000
+          .udata___init.o      udata   0x000f5f       data   0x000000
+          .idata___init.o      idata   0x000f5f       data   0x000000
+           .idata_adcon.o      idata   0x000f5f       data   0x000000
+         .udata_adcbusy.o      udata   0x000f5f       data   0x000000
+         .idata_adcbusy.o      idata   0x000f5f       data   0x000000
+        .udata_busy_eep.o      udata   0x000f5f       data   0x000000
+        .idata_busy_eep.o      idata   0x000f5f       data   0x000000
+        .udata_adcclose.o      udata   0x000f5f       data   0x000000
+        .idata_adcclose.o      idata   0x000f5f       data   0x000000
+        .udata_spi_clos.o      udata   0x000f5f       data   0x000000
+        .idata_spi_clos.o      idata   0x000f5f       data   0x000000
+         .udata_t3close.o      udata   0x000f5f       data   0x000000
+         .idata_t3close.o      idata   0x000f5f       data   0x000000
+          .udata_uclose.o      udata   0x000f5f       data   0x000000
+          .idata_uclose.o      idata   0x000f5f       data   0x000000
+         .udata_adcconv.o      udata   0x000f5f       data   0x000000
+         .idata_adcconv.o      idata   0x000f5f       data   0x000000
+           .idata_c018i.o      idata   0x000f5f       data   0x000000
+           .udata_adcon.o      udata   0x000f5f       data   0x000000
+        .udata_fxd0808u.o      udata   0x000f5f       data   0x000000
+        .idata_fxd0808u.o      idata   0x000f5f       data   0x000000
+        .udata_fxd1616u.o      udata   0x000f5f       data   0x000000
+        .idata_fxd1616u.o      idata   0x000f5f       data   0x000000
+        .udata_fxd3232u.o      udata   0x000f5f       data   0x000000
+        .idata_fxd3232u.o      idata   0x000f5f       data   0x000000
+         .udata_fxm3232.o      udata   0x000f5f       data   0x000000
+         .idata_fxm3232.o      idata   0x000f5f       data   0x000000
+            SFR_UNBANKED0      udata   0x000f77       data   0x000089
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x0000fe      
+                            0x000100    0x000bfd      
+                            0x000c00    0x009756      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+            38745 out of 66584 program addresses used, program memory utilization is 58%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+           Add_raw_energy   0x0046aa    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          AutoCalibration   0x0033f4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  BusyADC   0x00000e    program     extern C:\MCC18\src\pmc_common\ADC\adcbusy.c
+                 Busy_eep   0x009416    program     extern C:\MCC18\src\pmc_common\EEP\busy_eep.c
+          CaptureOverflow   0x0025a6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+   Check_MAXQGlobalStatus   0x004b72    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                 CloseADC   0x00941c    program     extern C:\MCC18\src\pmc_common\ADC\adcclose.c
+                 CloseSPI   0x009422    program     extern C:\MCC18\src\pmc_common\SPI\spi_clos.c
+              CloseTimer3   0x000bf8    program     extern C:\MCC18\src\pmc_common\Timers\t3close.c
+               CloseUSART   0x00940a    program     extern C:\MCC18\src\pmc_common\USART\uclose.c
+   ComputeTotalRealEnergy   0x005cc0    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+               ConvertADC   0x009426    program     extern C:\MCC18\src\pmc_common\ADC\adcconv.c
+  CopyModbusPowerReadings   0x005416    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+        CopyPowerReadings   0x00501e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+                   D100_1   0x0093b8    program     static C:\MCC18\src\traditional\delays\d100tcyx.asm
+                    D100x   0x0093b6    program     static C:\MCC18\src\traditional\delays\d100tcyx.asm
+                   D10K_1   0x000bd6    program     static C:\MCC18\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x000be2    program     static C:\MCC18\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x000bd4    program     static C:\MCC18\src\traditional\delays\d10ktcyx.asm
+                    D10_1   0x0093f2    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+                     D10x   0x0093ea    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+                   D1616S   0x008d94    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x008da2    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x008d9e    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x008db4    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
+                    D1K_1   0x00935a    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+                     D1Kx   0x009358    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+                   D3232S   0x008dee    program     static C:\MCC18\src\traditional\math\fxd3232s.asm
+                D3232SNEG   0x008dfc    program     static C:\MCC18\src\traditional\math\fxd3232s.asm
+                 D3232SOK   0x008df8    program     static C:\MCC18\src\traditional\math\fxd3232s.asm
+                  D3232SX   0x008e1c    program     static C:\MCC18\src\traditional\math\fxd3232s.asm
+                  DA1616S   0x008d84    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
+                  DA3232S   0x008dd8    program     static C:\MCC18\src\traditional\math\fxd3232s.asm
+             Delay100TCYx   0x0093aa    program     extern C:\MCC18\src\traditional\delays\d100tcyx.asm
+             Delay10KTCYx   0x000bca    program     extern C:\MCC18\src\traditional\delays\d10ktcyx.asm
+              Delay10TCYx   0x0093e2    program     extern C:\MCC18\src\traditional\delays\d10tcyx.asm
+              Delay1KTCYx   0x00934e    program     extern C:\MCC18\src\traditional\delays\d1ktcyx.asm
+               DoReadings   0x002b0e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+ENERGY_OVERFLOW_FLAGS_QUEUE   0x000c5a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+ENERGY_OVERFLOW_FLAGS_SIZE_QUEUE   0x000c60    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+                 FLO1632S   0x008b96    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
+                 FLO1632U   0x008b92    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
+                 FLO3232S   0x008bc0    program     extern C:\MCC18\src\traditional\math\cast32FP.asm
+                 FLO3232U   0x008bbc    program     extern C:\MCC18\src\traditional\math\cast32FP.asm
+                    FPD32   0x008bf2    program     extern C:\MCC18\src\traditional\math\divFP.asm
+                    FPM32   0x008c98    program     extern C:\MCC18\src\traditional\math\mulFP.asm
+                 FXD0808U   0x0093c6    program     extern C:\MCC18\src\traditional\math\fxd0808u.c
+                 FXD1616S   0x008d72    program     extern C:\MCC18\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x009322    program     extern C:\MCC18\src\traditional\math\fxd1616u.c
+                 FXD3232S   0x008dbe    program     extern C:\MCC18\src\traditional\math\fxd3232s.asm
+                 FXD3232U   0x0091b0    program     extern C:\MCC18\src\traditional\math\fxd3232u.c
+                 FXM1616S   0x008e26    program     extern C:\MCC18\src\traditional\math\fxm1616s.asm
+                 FXM1616U   0x008e80    program     extern C:\MCC18\src\traditional\math\fxm1616u.asm
+                  FXM3232   0x000af0    program     extern C:\MCC18\src\traditional\math\fxm3232.c
+                  FindLSB   0x003b5c    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+   FormThreePhaseReadings   0x007202    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+               HandleRTCC   0x0003ca    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+                  HighISR   0x000d6c    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               HighVector   0x000008    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  INT3216   0x008ebc    program     extern C:\MCC18\src\traditional\math\castFP16.asm
+       InitDataFromEEPROM   0x0019d6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+              InitIOPorts   0x000e76    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                 InitMAXQ   0x000e9a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                InitMeter   0x0014b0    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+           InitParameters   0x001342    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                 InitRTCC   0x000104    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+                InitTimer   0x000e70    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                   LowISR   0x000d46    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                LowVector   0x000018    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  MCUOpen   0x007a18    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+MCUProcessIncomingMessage   0x007a9e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+            MCUSendString   0x008a00    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                 MCUTasks   0x007a32    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+            MCUUnloadData   0x007a3e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+             MCUWriteByte   0x008b72    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+           Modbus3PEnergy   0x0057ce    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+        Modbus3PMaxDemand   0x005a0c    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+          Modbus3PReading   0x005aa4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+   MultiplyTwoLongNumbers   0x004c50    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+                  OneByte   0x0009c2    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                  OpenADC   0x000a72    program     extern C:\MCC18\src\pmc_common\ADC\adcopen.c
+                  OpenSPI   0x000b60    program     extern C:\MCC18\src\pmc_common\SPI\spi_open.c
+               OpenTimer1   0x0091f8    program     extern C:\MCC18\src\pmc_common\Timers\t1open.c
+                OpenUSART   0x000068    program     extern C:\MCC18\src\pmc_common\USART\uopen.c
+PHASE_ENERGY_REGISTERS_QUEUE   0x000c16    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+ PHASE_STATUS_FLAGS_QUEUE   0x000c4a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+PHASE_STATUS_FLAGS_SIZE_QUEUE   0x000c52    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+  POWER_CALIBRATION_QUEUE   0x000c00    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_CALIBRATION_SIZE_QUEUE   0x000c34    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+  POWER_REGISTERS_QUEUE_A   0x000c86    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+  POWER_REGISTERS_QUEUE_B   0x000ca6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+  POWER_REGISTERS_QUEUE_C   0x000cc6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+  POWER_REGISTERS_QUEUE_M   0x000c66    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_SIZE_QUEUE_A   0x000cf6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_SIZE_QUEUE_B   0x000d06    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_SIZE_QUEUE_C   0x000d16    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_SIZE_QUEUE_M   0x000ce6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+ POWER_SIGNED_REGISTERS_A   0x000d36    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+ POWER_SIGNED_REGISTERS_M   0x000d26    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+PowerCalculateCALIBChecksum   0x00572a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+               PowerClose   0x0071de    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+         PowerGetReadings   0x0063e4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+                PowerOpen   0x0063c6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+     PowerSendReadCommand   0x0068ac    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+     PowerWriteCALBToMAXQ   0x003d2e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+           PowerWriteChar   0x0071e4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+   Power_SendWriteCommand   0x006ee4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+        Power_WriteToMAXQ   0x007150    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+                ProcLower   0x000976    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                ProcUpper   0x00096c    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+ RTCC_DateTimeToCharArray   0x00027e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+         RTCC_GetDateTime   0x0001cc    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+         RTCC_SetDateTime   0x000118    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+                  ReadADC   0x0093f8    program     extern C:\MCC18\src\pmc_common\ADC\adcread.c
+       ReadRTCCFromEEPROM   0x0005ec    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+                ReadUSART   0x00927a    program     extern C:\MCC18\src\pmc_common\USART\uread.c
+               Read_b_eep   0x009154    program     extern C:\MCC18\src\pmc_common\EEP\read_B.c
+                 ResetBot   0x0046a2    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          ResetSPIDevices   0x002af6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+      SaveCalibrationData   0x0021ac    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         SaveRTCCToEEPROM   0x0004d0    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+       SaveRawEnergyToEEP   0x00485a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  Set_div   0x00923a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+                  TAGTB32   0x008f1a    program     extern C:\MCC18\src\traditional\math\gtFP.asm
+                  TALTB32   0x008f2c    program     extern C:\MCC18\src\traditional\math\ltFP.asm
+               TSIGN1616A   0x008e72    program     static C:\MCC18\src\traditional\math\fxm1616s.asm
+                 TstLower   0x000960    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                 TstUpper   0x00095a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+           Update_Max_Min   0x00402e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+     VBatVoltageDetection   0x0039be    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                 WriteSPI   0x0092b8    program     extern C:\MCC18\src\pmc_common\SPI\spi_writ.c
+               WriteUSART   0x0092f4    program     extern C:\MCC18\src\pmc_common\USART\uwrite.c
+              Write_b_eep   0x0090f4    program     extern C:\MCC18\src\pmc_common\EEP\write_B.c
+              _2jContinue   0x000812    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+              _3jContinue   0x0007de    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                   _3jEnd   0x00081c    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+              _4jContinue   0x00078a    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+                   _4jEnd   0x0007e8    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                   _5jEnd   0x000794    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+       _D100TCYXCODE_0008   0x0093b2    program     static C:\MCC18\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0012   0x0093bc    program     static C:\MCC18\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0018   0x0093c2    program     static C:\MCC18\src\traditional\delays\d100tcyx.asm
+       _D10KTCYXCODE_0010   0x000bda    program     static C:\MCC18\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x000be6    program     static C:\MCC18\src\traditional\delays\d10ktcyx.asm
+        _D10TCYXCODE_000A   0x0093ec    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x0093ee    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x0093f0    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D1KTCYXCODE_0010   0x00935e    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0016   0x009364    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+              __FpCompare   0x008f3e    program     extern C:\MCC18\src\traditional\math\compFP.asm
+                 __FpExit   0x008ff4    program     extern C:\MCC18\src\traditional\math\packFP.asm
+                 __FpPack   0x009020    program     extern C:\MCC18\src\traditional\math\packFP.asm
+            __FpReturnNaN   0x008fe8    program     extern C:\MCC18\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x008ffa    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x009012    program     extern C:\MCC18\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x009000    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x00901a    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x008ff6    program     extern C:\MCC18\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x00900e    program     extern C:\MCC18\src\traditional\math\packFP.asm
+              __FpReturnW   0x009078    program     extern C:\MCC18\src\traditional\math\packFP.asm
+              __FpUnPackA   0x009098    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x0090c8    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
+           ___do_lbl00038   0x00155a    program     static                          
+           ___do_lbl00039   0x001566    program     static                          
+           ___do_lbl00050   0x0014f0    program     static                          
+           ___do_lbl00064   0x00179a    program     static                          
+           ___do_lbl00065   0x0017b2    program     static                          
+           ___do_lbl00068   0x001736    program     static                          
+           ___do_lbl00096   0x001bf8    program     static                          
+           ___do_lbl00097   0x001bfe    program     static                          
+           ___do_lbl00100   0x001b5c    program     static                          
+           ___do_lbl00104   0x001ce8    program     static                          
+           ___do_lbl00105   0x001cee    program     static                          
+           ___do_lbl00108   0x001c2c    program     static                          
+           ___do_lbl00112   0x001dd8    program     static                          
+           ___do_lbl00113   0x001dde    program     static                          
+           ___do_lbl00116   0x001d1c    program     static                          
+           ___do_lbl00141   0x002166    program     static                          
+           ___do_lbl00142   0x00216c    program     static                          
+           ___do_lbl00145   0x0020ca    program     static                          
+         ___else_lbl00044   0x00150a    program     static                          
+         ___else_lbl00047   0x001552    program     static                          
+         ___else_lbl00049   0x001532    program     static                          
+         ___else_lbl00052   0x001574    program     static                          
+         ___else_lbl00079   0x001902    program     static                          
+         ___else_lbl00091   0x001b34    program     static                          
+         ___else_lbl00093   0x001b12    program     static                          
+         ___else_lbl00099   0x001bf4    program     static                          
+         ___else_lbl00107   0x001ce4    program     static                          
+         ___else_lbl00115   0x001dd4    program     static                          
+         ___else_lbl00119   0x001dea    program     static                          
+         ___else_lbl00132   0x002000    program     static                          
+         ___else_lbl00137   0x002080    program     static                          
+         ___else_lbl00144   0x002162    program     static                          
+         ___else_lbl00148   0x002178    program     static                          
+          ___for_lbl00041   0x00150e    program     static                          
+          ___for_lbl00042   0x001512    program     static                          
+          ___for_lbl00045   0x0014fa    program     static                          
+          ___for_lbl00062   0x001870    program     static                          
+          ___for_lbl00063   0x001876    program     static                          
+          ___for_lbl00070   0x001720    program     static                          
+          ___for_lbl00084   0x001ad8    program     static                          
+          ___for_lbl00085   0x001ae2    program     static                          
+          ___for_lbl00087   0x001a74    program     static                          
+          ___for_lbl00094   0x001bfe    program     static                          
+          ___for_lbl00095   0x001c08    program     static                          
+          ___for_lbl00101   0x001b4a    program     static                          
+          ___for_lbl00102   0x001cee    program     static                          
+          ___for_lbl00103   0x001cf8    program     static                          
+          ___for_lbl00109   0x001c1a    program     static                          
+          ___for_lbl00110   0x001dde    program     static                          
+          ___for_lbl00111   0x001de8    program     static                          
+          ___for_lbl00117   0x001d0a    program     static                          
+          ___for_lbl00120   0x001f06    program     static                          
+          ___for_lbl00121   0x001f10    program     static                          
+          ___for_lbl00123   0x001e9e    program     static                          
+          ___for_lbl00124   0x001ff4    program     static                          
+          ___for_lbl00125   0x001ffe    program     static                          
+          ___for_lbl00127   0x001fe8    program     static                          
+          ___for_lbl00128   0x001ff4    program     static                          
+          ___for_lbl00129   0x001f68    program     static                          
+          ___for_lbl00130   0x001f14    program     static                          
+          ___for_lbl00133   0x002068    program     static                          
+          ___for_lbl00134   0x002072    program     static                          
+          ___for_lbl00135   0x002040    program     static                          
+          ___for_lbl00139   0x00216c    program     static                          
+          ___for_lbl00140   0x002176    program     static                          
+          ___for_lbl00146   0x0020b8    program     static                          
+           ___if_lbl00043   0x00150e    program     static                          
+           ___if_lbl00046   0x00155a    program     static                          
+           ___if_lbl00048   0x00155a    program     static                          
+           ___if_lbl00051   0x001578    program     static                          
+           ___if_lbl00053   0x0015d0    program     static                          
+           ___if_lbl00055   0x0015ec    program     static                          
+           ___if_lbl00056   0x0015fa    program     static                          
+           ___if_lbl00057   0x001620    program     static                          
+           ___if_lbl00058   0x00169a    program     static                          
+           ___if_lbl00059   0x00169a    program     static                          
+           ___if_lbl00060   0x00169e    program     static                          
+           ___if_lbl00061   0x0016a8    program     static                          
+           ___if_lbl00067   0x00179a    program     static                          
+           ___if_lbl00069   0x001870    program     static                          
+           ___if_lbl00071   0x00187e    program     static                          
+           ___if_lbl00073   0x0018f4    program     static                          
+           ___if_lbl00074   0x0018f4    program     static                          
+           ___if_lbl00075   0x0018f4    program     static                          
+           ___if_lbl00076   0x001938    program     static                          
+           ___if_lbl00077   0x0019bc    program     static                          
+           ___if_lbl00078   0x0019c0    program     static                          
+           ___if_lbl00083   0x001a70    program     static                          
+           ___if_lbl00086   0x001ad8    program     static                          
+           ___if_lbl00090   0x001b3e    program     static                          
+           ___if_lbl00092   0x001b3e    program     static                          
+           ___if_lbl00098   0x001bf8    program     static                          
+           ___if_lbl00106   0x001ce8    program     static                          
+           ___if_lbl00114   0x001dd8    program     static                          
+           ___if_lbl00118   0x001e70    program     static                          
+           ___if_lbl00122   0x001f06    program     static                          
+           ___if_lbl00126   0x001f60    program     static                          
+           ___if_lbl00131   0x002026    program     static                          
+           ___if_lbl00136   0x00208a    program     static                          
+           ___if_lbl00138   0x0020b4    program     static                          
+           ___if_lbl00143   0x002166    program     static                          
+           ___if_lbl00147   0x002194    program     static                          
+       ___return_lbl00000   0x0091f6    program     static                          
+       ___return_lbl00000   0x0091a4    program     static                          
+       ___return_lbl00000   0x000004    program     static                          
+       ___return_lbl00000   0x00934c    program     static                          
+       ___return_lbl00000   0x0093e0    program     static                          
+       ___return_lbl00000   0x00001c    program     static                          
+       ___return_lbl00000   0x000b5e    program     static                          
+       ___return_lbl00001   0x0093a8    program     static                          
+       ___return_lbl00001   0x00000c    program     static                          
+       ___return_lbl00002   0x000a70    program     static                          
+       ___return_lbl00035   0x0019c2    program     static                          
+       ___return_lbl00080   0x002198    program     static                          
+       ___return_lbl00327   0x0046a8    program     static                          
+        ___while_lbl00036   0x0014de    program     static                          
+        ___while_lbl00037   0x0019c2    program     static                          
+               __config_0   0x300001    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               __config_1   0x300002    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               __config_2   0x300003    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               __config_3   0x300005    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               __config_4   0x300006    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                   __init   0x000006    program     extern C:\MCC18\src\traditional\stdclib\__init.c
+               __string_0   0x0000fa    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+               __string_2   0x0000f2    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+              __tmplbl_10   0x001560    program     static                          
+              __tmplbl_11   0x0015de    program     static                          
+              __tmplbl_12   0x0015d8    program     static                          
+              __tmplbl_13   0x0017b2    program     static                          
+              __tmplbl_14   0x0017ac    program     static                          
+              __tmplbl_15   0x00188a    program     static                          
+              __tmplbl_16   0x001884    program     static                          
+              __tmplbl_17   0x001a6e    program     static                          
+              __tmplbl_18   0x001a5e    program     static                          
+              __tmplbl_19   0x001a4e    program     static                          
+              __tmplbl_20   0x001b0c    program     static                          
+              __tmplbl_21   0x001afe    program     static                          
+              __tmplbl_22   0x001af0    program     static                          
+              __tmplbl_30   0x0089ec    program     static                          
+              __tmplbl_31   0x0089ec    program     static                          
+              __tmplbl_32   0x0089ec    program     static                          
+              __tmplbl_33   0x0089ec    program     static                          
+              __tmplbl_34   0x0089ec    program     static                          
+              __tmplbl_35   0x0089ec    program     static                          
+              __tmplbl_36   0x0089ec    program     static                          
+              __tmplbl_37   0x0089ba    program     static                          
+              __tmplbl_38   0x008942    program     static                          
+              __tmplbl_39   0x00893a    program     static                          
+              __tmplbl_40   0x0088f2    program     static                          
+              __tmplbl_41   0x0088a2    program     static                          
+              __tmplbl_42   0x0086ee    program     static                          
+              __tmplbl_43   0x0085d4    program     static                          
+              __tmplbl_44   0x00855e    program     static                          
+              __tmplbl_45   0x008520    program     static                          
+              __tmplbl_46   0x008440    program     static                          
+              __tmplbl_48   0x0089d4    program     static                          
+              __tmplbl_49   0x0089ec    program     static                          
+              __tmplbl_50   0x0089d4    program     static                          
+              __tmplbl_81   0x001800    program     static                          
+              __tmplbl_89   0x0033d2    program     static                          
+               __tmplbl_9   0x001566    program     static                          
+              __tmplbl_99   0x002b34    program     static                          
+            __zero_memory   0x00936e    program     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                _do_cinit   0x0009d4    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                   _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                   _false   0x0091f2    program     static                          
+                 _startup   0x00938e    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                compare_l   0x009384    program     static C:\MCC18\src\traditional\proc\p18F46K20.asm
+                copy_loop   0x000a46    program     static                          
+            copy_one_byte   0x000a4c    program     static                          
+                     done   0x000a70    program     static                          
+             done_copying   0x000a5a    program     static                          
+               dwDeviceID   0x000100    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  endloop   0x009348    program     static                          
+                  endloop   0x0093dc    program     static                          
+                   itoBCD   0x000980    program     extern C:\MCC18\src\traditional\stdclib\itobcd.asm
+                     itoa   0x0008a0    program     extern C:\MCC18\src\traditional\stdclib\itoa.asm
+                 jANotInf   0x008c10    program     static C:\MCC18\src\traditional\math\divFP.asm
+                 jANotInf   0x008cb6    program     static C:\MCC18\src\traditional\math\mulFP.asm
+                jANotZero   0x008c24    program     static C:\MCC18\src\traditional\math\divFP.asm
+                  jAisNeg   0x008fba    program     static C:\MCC18\src\traditional\math\compFP.asm
+              jBothFinite   0x008cc4    program     static C:\MCC18\src\traditional\math\mulFP.asm
+             jBothNotZero   0x008f5c    program     static C:\MCC18\src\traditional\math\compFP.asm
+             jBothNotZero   0x008cd0    program     static C:\MCC18\src\traditional\math\mulFP.asm
+                     jDo1   0x000926    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo2   0x000922    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo3   0x00091e    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo4   0x00091a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo5   0x000916    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                      jEQ   0x008f78    program     static C:\MCC18\src\traditional\math\compFP.asm
+                     jEnd   0x0009be    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                     jEnd   0x00079a    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+                     jEnd   0x00089e    program     static C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                     jEnd   0x000824    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                     jEnd   0x0007f0    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                    jExch   0x008f84    program     static C:\MCC18\src\traditional\math\compFP.asm
+                    jExit   0x008f18    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                   jExpEQ   0x008fca    program     static C:\MCC18\src\traditional\math\compFP.asm
+                   jFinal   0x008fae    program     static C:\MCC18\src\traditional\math\compFP.asm
+                jHaveZero   0x008ccc    program     static C:\MCC18\src\traditional\math\mulFP.asm
+                jI2F16Beg   0x008ba6    program     static C:\MCC18\src\traditional\math\cast16FP.asm
+                jI2F32Beg   0x008bd8    program     static C:\MCC18\src\traditional\math\cast32FP.asm
+                    jLoop   0x008ef8    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                    jLoop   0x000806    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                    jLoop   0x00077e    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+                    jLoop   0x0007d2    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                    jLoop   0x000998    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                    jLoop   0x000854    program     static C:\MCC18\src\traditional\stdclib\strcat.asm
+                    jLoop   0x000894    program     static C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                    jLoop   0x008c4c    program     static C:\MCC18\src\traditional\math\divFP.asm
+                jLoopExit   0x008f08    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                     jMax   0x008ecc    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x008eda    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  jMaxPos   0x008ed0    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                      jNE   0x008f7c    program     static C:\MCC18\src\traditional\math\compFP.asm
+                    jNext   0x008c72    program     static C:\MCC18\src\traditional\math\divFP.asm
+                jNoAdjust   0x008c70    program     static C:\MCC18\src\traditional\math\divFP.asm
+                  jNoExch   0x008fa4    program     static C:\MCC18\src\traditional\math\compFP.asm
+                  jNotInf   0x008ee8    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                jNullLoop   0x00084e    program     static C:\MCC18\src\traditional\stdclib\strcat.asm
+                  jPkLoop   0x00902e    program     static C:\MCC18\src\traditional\math\packFP.asm
+             jPkRoundDone   0x009078    program     static C:\MCC18\src\traditional\math\packFP.asm
+               jPkRoundIt   0x009060    program     static C:\MCC18\src\traditional\math\packFP.asm
+             jPkShiftDone   0x00904a    program     static C:\MCC18\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x009004    program     static C:\MCC18\src\traditional\math\packFP.asm
+                  jRotate   0x008fd6    program     static C:\MCC18\src\traditional\math\compFP.asm
+                   jShift   0x008fc0    program     static C:\MCC18\src\traditional\math\compFP.asm
+              jSignedZero   0x008c1a    program     static C:\MCC18\src\traditional\math\divFP.asm
+                 jSignsEQ   0x008f60    program     static C:\MCC18\src\traditional\math\compFP.asm
+                jTstLowZ1   0x00096a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                jTstSign1   0x0008cc    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                  jUnpkA1   0x0090a2    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x0090ba    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x0090b0    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x0090d2    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x0090ea    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x0090e0    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x0090c4    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                    jZero   0x008ee2    program     static C:\MCC18\src\traditional\math\castFP16.asm
+               jZero1and2   0x009008    program     static C:\MCC18\src\traditional\math\packFP.asm
+                     loop   0x00939e    program     static                          
+                     loop   0x0093ce    program     static                          
+                     loop   0x00932c    program     static                          
+                     loop   0x0091be    program     static                          
+                   loop_h   0x00937c    program     static C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   loop_l   0x009386    program     static C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     main   0x0014bc    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               math_power   0x004bc2    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+                   memcpy   0x000756    program     extern C:\MCC18\src\traditional\stdclib\memcpy.asm
+            memcpypgm2ram   0x0007ac    program     extern C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                   memset   0x0007f2    program     extern C:\MCC18\src\traditional\stdclib\memset.asm
+            not_leap_year   0x000488    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+                   strcat   0x000826    program     extern C:\MCC18\src\traditional\stdclib\strcat.asm
+            strcpypgm2ram   0x00086e    program     extern C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                     test   0x0009ee    program     static                          
+               zero_block   0x00937c    program     static C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ADCON0   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               ADCON0bits   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ADCON1   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               ADCON1bits   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ADCON2   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               ADCON2bits   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    ADRES   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ADRESH   0x000fc4       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ADRESL   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    ANSEL   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ANSELH   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               ANSELHbits   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                ANSELbits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+          AUTO_RESET_TIME   0x000367       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  BAUDCON   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              BAUDCONbits   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  BAUDCTL   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              BAUDCTLbits   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                      BSR   0x000fe0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CCP1CON   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CCP1CONbits   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CCP2CON   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CCP2CONbits   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    CCPR1   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   CCPR1H   0x000fbf       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   CCPR1L   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    CCPR2   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   CCPR2H   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   CCPR2L   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CM1CON0   0x000f7b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CM1CON0bits   0x000f7b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CM2CON0   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CM2CON0bits   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CM2CON1   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CM2CON1bits   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   CVRCON   0x000fb5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CVRCON2   0x000fb4       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CVRCON2bits   0x000fb4       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               CVRCONbits   0x000fb5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+          CalibrationData   0x0000a1       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+            DATE_TIME_POS   0x000255       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.h
+            DATE_TIME_POS   0x0000eb       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.h
+            DATE_TIME_POS   0x000455       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.h
+            DATE_TIME_POS   0x000355       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.h
+            DATE_TIME_POS   0x0004b8       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.h
+                     DDRA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 DDRAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     DDRB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 DDRBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     DDRC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 DDRCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     DDRD   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 DDRDbits   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     DDRE   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 DDREbits   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+            DelayCounter1   0x000025       data     extern C:\MCC18\src\traditional\delays\delayd1.asm
+            DelayCounter2   0x000024       data     extern C:\MCC18\src\traditional\delays\delayd2.asm
+                  ECCP1AS   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              ECCP1ASbits   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    EEADR   0x000fa9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   EEADRH   0x000faa       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               EEADRHbits   0x000faa       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                EEADRbits   0x000fa9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   EECON1   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               EECON1bits   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   EECON2   0x000fa7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   EEDATA   0x000fa8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+  EEPROM_CALIBRATION_DATA   0x00023d       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+  EEPROM_CALIBRATION_DATA   0x00043c       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+  EEPROM_CALIBRATION_DATA   0x00033c       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+  EEPROM_CALIBRATION_DATA   0x0004a0       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC1   0x000201       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC1   0x000300       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC1   0x000400       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC1   0x000464       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC2   0x00041e       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC2   0x00031e       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC2   0x000482       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC2   0x00021f       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+          EEP_RECORD_FLAG   0x0000f7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+           EEP_TIMER_FLAG   0x0000f8       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+           EnrOvfCounter1   0x000063       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+           EnrOvfCounter2   0x000082       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                     FSR0   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR0H   0x000fea       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR0L   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     FSR1   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR1H   0x000fe2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR1L   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     FSR2   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR2H   0x000fda       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR2L   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  HLVDCON   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              HLVDCONbits   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    INDF0   0x000fef       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    INDF1   0x000fe7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    INDF2   0x000fdf       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   INTCON   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  INTCON2   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              INTCON2bits   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  INTCON3   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              INTCON3bits   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               INTCONbits   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     IOCB   0x000f7d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 IOCBbits   0x000f7d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     IPR1   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 IPR1bits   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     IPR2   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 IPR2bits   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+      IS_STATUS_FLAG_SENT   0x00028b       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+      IS_TIME_INITIALISED   0x000062       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+      IS_TIME_INITIALISED   0x000f02       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+      IS_TIME_INITIALISED   0x0001fa       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+      IS_TIME_INITIALISED   0x0001e3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+                     I_fs   0x00039b       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+      InitCalibrationData   0x000370       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                     LATA   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 LATAbits   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     LATB   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 LATBbits   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     LATC   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 LATCbits   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     LATD   0x000f8c       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 LATDbits   0x000f8c       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     LATE   0x000f8d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 LATEbits   0x000f8d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   LVDCON   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               LVDCONbits   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+    MAX_MIN_STORAGE_QUEUE   0x0001db       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+         MCUHasNewMessage   0x000262       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+            MCUNewMessage   0x000263       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+      MCUNewMessageLength   0x000261       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+            MCU_RX_BUFFER   0x000290       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+    MCU_RX_BUFFER_POINTER   0x00028f       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                   OSCCON   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               OSCCONbits   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  OSCTUNE   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              OSCTUNEbits   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+      PARENT_PING_COUNTER   0x0001e1       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+      PARENT_PING_COUNTER   0x000f00       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+      PARENT_PING_COUNTER   0x000060       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+      PARENT_PING_COUNTER   0x0001f8       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+                       PC   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                      PCL   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   PCLATH   0x000ffa       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   PCLATU   0x000ffb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+PHASE_RAW_ENERGY_STORAGE_QUEUE   0x000101       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+                     PIE1   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 PIE1bits   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     PIE2   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 PIE2bits   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     PIR1   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 PIR1bits   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     PIR2   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 PIR2bits   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   PLUSW0   0x000feb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   PLUSW1   0x000fe3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   PLUSW2   0x000fdb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PORTA   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                PORTAbits   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PORTB   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                PORTBbits   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PORTC   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                PORTCbits   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PORTD   0x000f83       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                PORTDbits   0x000f83       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PORTE   0x000f84       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                PORTEbits   0x000f84       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTDEC0   0x000fed       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTDEC1   0x000fe5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTDEC2   0x000fdd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTINC0   0x000fee       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTINC1   0x000fe6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTINC2   0x000fde       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+           POWER_READINGS   0x00019f       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+         POWER_READINGS_A   0x00013f       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+         POWER_READINGS_B   0x00015f       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+         POWER_READINGS_C   0x00017f       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+         POWER_READINGS_M   0x00011f       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_DIVIDE_BY   0x0001d7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_DIVIDE_BY_A   0x0001c7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_DIVIDE_BY_M   0x0001b7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+    POWER_REGISTERS_QUEUE   0x0001a7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_QUEUE_STATE   0x000200       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\registers.h
+POWER_REGISTERS_QUEUE_STATE   0x000463       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
+POWER_REGISTERS_QUEUE_STATE   0x000100       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
+POWER_REGISTERS_QUEUE_STATE   0x000454       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
+POWER_REGISTERS_QUEUE_STATE   0x000354       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
+POWER_REGISTERS_SIZE_QUEUE   0x0001af       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+                      PR2   0x000fcb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  PREINC0   0x000fec       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  PREINC1   0x000fe4       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  PREINC2   0x000fdc       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     PROD   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PRODH   0x000ff4       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PRODL   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  PSTRCON   0x000fb9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              PSTRCONbits   0x000fb9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  PWM1CON   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              PWM1CONbits   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     RCON   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 RCONbits   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    RCREG   0x000fae       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    RCSTA   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                RCSTAbits   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+         REFRESH_INTERVAL   0x00036a       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         RefreshMaxDemand   0x000368       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          SAVE_RAW_ENERGY   0x00036f       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                SAVE_RTCC   0x00036e       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                     SIGN   0x000000       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                   SLRCON   0x000f78       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               SLRCONbits   0x000f78       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    SPBRG   0x000faf       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   SPBRGH   0x000fb0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   SSPADD   0x000fc8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   SSPBUF   0x000fc9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  SSPCON1   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              SSPCON1bits   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  SSPCON2   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              SSPCON2bits   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   SSPMSK   0x000f77       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               SSPMSKbits   0x000f77       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  SSPSTAT   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              SSPSTATbits   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   STATUS   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               STATUSbits   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   STKPTR   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               STKPTRbits   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               StartDoAdc   0x000363       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+       StartDoReadingFlag   0x000369       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                    T0CON   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                T0CONbits   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    T1CON   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                T1CONbits   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    T2CON   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                T2CONbits   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    T3CON   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                T3CONbits   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   TABLAT   0x000ff5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   TBLPTR   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  TBLPTRH   0x000ff7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  TBLPTRL   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  TBLPTRU   0x000ff8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR0H   0x000fd7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR0L   0x000fd6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR1H   0x000fcf       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR1L   0x000fce       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     TMR2   0x000fcc       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR3H   0x000fb3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR3L   0x000fb2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                      TOS   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     TOSH   0x000ffe       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     TOSL   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     TOSU   0x000fff       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TRISA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TRISAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TRISB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TRISBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TRISC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TRISCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TRISD   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TRISDbits   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TRISE   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TRISEbits   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TXREG   0x000fad       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TXSTA   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TXSTAbits   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+             USART_Status   0x000f5e       data     extern C:\MCC18\src\pmc_common\USART\udefs.c
+                     V_fs   0x00039f       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+              Vsense_high   0x000365       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                        W   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   WDTCON   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               WDTCONbits   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     WPUB   0x000f7c       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 WPUBbits   0x000f7c       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     WREG   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 __AARGB0   0x000009       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB1   0x000008       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB2   0x000007       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB3   0x000006       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB4   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB5   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB7   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                   __AEXP   0x00000a       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __BARGB0   0x00000e       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB1   0x00000d       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB2   0x00000c       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB3   0x00000b       data     extern C:\MCC18\src\traditional\math\barg.asm
+                   __BEXP   0x00000f       data     extern C:\MCC18\src\traditional\math\barg.asm
+                __FPFLAGS   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                  __REMB0   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB1   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB2   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB3   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                   __TEMP   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000012       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000011       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB3   0x000010       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                  __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\EEP\write_B.c
+                  __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\EEP\read_B.c
+                  __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\ADC\adcread.c
+                  __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\USART\uopen.c
+                  __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\ADC\adcopen.c
+                  __tmp_0   0x000014       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  __tmp_0   0x000014       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                  __tmp_0   0x000014       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+                  __tmp_0   0x000014       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+                  __tmp_0   0x000014       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+                  __tmp_2   0x000022       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               bMAXQ_init   0x000364       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+              bMeterReset   0x000366       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+             bReadyToRead   0x000462       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+             b_reset_maxq   0x0002cc       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                curr_byte   0x0001f1       data     static C:\MCC18\src\traditional\startup\c018i.c
+               curr_entry   0x0001f3       data     static C:\MCC18\src\traditional\startup\c018i.c
+                 data_ptr   0x0001f5       data     static C:\MCC18\src\traditional\startup\c018i.c
+                      dwK   0x0000cb       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+        dwNET_X_ENR_OVFC1   0x0000cf       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+        dwNET_X_ENR_OVFC2   0x0000d3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         dwRAW_NEG_ENERGY   0x0000e1       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         dwRAW_POS_ENERGY   0x0000df       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               error_list   0x0001e4       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+          fail_maxq_count   0x000461       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+                        i   0x000390       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+            is_7ESB_found   0x0002cd       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+               is_correct   0x0003ab       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          is_flag_cleared   0x000396       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+             is_save_RTCC   0x000361       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+             is_stop_mode   0x000362       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                        j   0x000392       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                       jj   0x0000e3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                       jj   0x0000c5       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                        k   0x0000c9       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                       kk   0x0000e5       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                       kk   0x0000c7       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          max_min_storage   0x0008f4       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+                max_value   0x0000e7       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                maxq_mask   0x00028c       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+              mcu_request   0x000f03       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                     prom   0x0001ee       data     static C:\MCC18\src\traditional\startup\c018i.c
+                      ptr   0x0000e9       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+       raw_energy_storage   0x00073c       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+     raw_energy_storage_2   0x000700       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+          reading_storage   0x000778       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+        reading_storage_1   0x00088c       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+                   result   0x0003a7       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                     rtcc   0x0000f9       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+                       sg   0x000f31       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                     temp   0x0003a3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                        u   0x000397       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  wEnr_cc   0x0000c3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         wNEG_X_ENR_OVFC1   0x0000d9       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         wNEG_X_ENR_OVFC2   0x0000dd       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                   wOvfc1   0x0000c1       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         wPOS_X_ENR_OVFC1   0x0000d7       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         wPOS_X_ENR_OVFC2   0x0000db       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   _entry   0x000000    program     extern C:\MCC18\src\traditional\startup\c018i.c
+       ___return_lbl00000   0x000004    program     static                          
+                   __init   0x000006    program     extern C:\MCC18\src\traditional\stdclib\__init.c
+               HighVector   0x000008    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+       ___return_lbl00001   0x00000c    program     static                          
+                  BusyADC   0x00000e    program     extern C:\MCC18\src\pmc_common\ADC\adcbusy.c
+                LowVector   0x000018    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+       ___return_lbl00000   0x00001c    program     static                          
+                OpenUSART   0x000068    program     extern C:\MCC18\src\pmc_common\USART\uopen.c
+               __string_2   0x0000f2    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+               __string_0   0x0000fa    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+               dwDeviceID   0x000100    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                 InitRTCC   0x000104    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+         RTCC_SetDateTime   0x000118    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+         RTCC_GetDateTime   0x0001cc    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+ RTCC_DateTimeToCharArray   0x00027e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+               HandleRTCC   0x0003ca    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+            not_leap_year   0x000488    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+         SaveRTCCToEEPROM   0x0004d0    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+       ReadRTCCFromEEPROM   0x0005ec    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+                   memcpy   0x000756    program     extern C:\MCC18\src\traditional\stdclib\memcpy.asm
+                    jLoop   0x00077e    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+              _4jContinue   0x00078a    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+                   _5jEnd   0x000794    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+                     jEnd   0x00079a    program     static C:\MCC18\src\traditional\stdclib\memcpy.asm
+            memcpypgm2ram   0x0007ac    program     extern C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                    jLoop   0x0007d2    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+              _3jContinue   0x0007de    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                   _4jEnd   0x0007e8    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                     jEnd   0x0007f0    program     static C:\MCC18\src\traditional\stdclib\mcpyp2r.asm
+                   memset   0x0007f2    program     extern C:\MCC18\src\traditional\stdclib\memset.asm
+                    jLoop   0x000806    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+              _2jContinue   0x000812    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                   _3jEnd   0x00081c    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                     jEnd   0x000824    program     static C:\MCC18\src\traditional\stdclib\memset.asm
+                   strcat   0x000826    program     extern C:\MCC18\src\traditional\stdclib\strcat.asm
+                jNullLoop   0x00084e    program     static C:\MCC18\src\traditional\stdclib\strcat.asm
+                    jLoop   0x000854    program     static C:\MCC18\src\traditional\stdclib\strcat.asm
+            strcpypgm2ram   0x00086e    program     extern C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                    jLoop   0x000894    program     static C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                     jEnd   0x00089e    program     static C:\MCC18\src\traditional\stdclib\scpyp2r.asm
+                     itoa   0x0008a0    program     extern C:\MCC18\src\traditional\stdclib\itoa.asm
+                jTstSign1   0x0008cc    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo5   0x000916    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo4   0x00091a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo3   0x00091e    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo2   0x000922    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                     jDo1   0x000926    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                 TstUpper   0x00095a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                 TstLower   0x000960    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                jTstLowZ1   0x00096a    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                ProcUpper   0x00096c    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                ProcLower   0x000976    program     static C:\MCC18\src\traditional\stdclib\itoa.asm
+                   itoBCD   0x000980    program     extern C:\MCC18\src\traditional\stdclib\itobcd.asm
+                    jLoop   0x000998    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                     jEnd   0x0009be    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                  OneByte   0x0009c2    program     static C:\MCC18\src\traditional\stdclib\itobcd.asm
+                _do_cinit   0x0009d4    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     test   0x0009ee    program     static                          
+                copy_loop   0x000a46    program     static                          
+            copy_one_byte   0x000a4c    program     static                          
+             done_copying   0x000a5a    program     static                          
+                     done   0x000a70    program     static                          
+       ___return_lbl00002   0x000a70    program     static                          
+                  OpenADC   0x000a72    program     extern C:\MCC18\src\pmc_common\ADC\adcopen.c
+                  FXM3232   0x000af0    program     extern C:\MCC18\src\traditional\math\fxm3232.c
+       ___return_lbl00000   0x000b5e    program     static                          
+                  OpenSPI   0x000b60    program     extern C:\MCC18\src\pmc_common\SPI\spi_open.c
+             Delay10KTCYx   0x000bca    program     extern C:\MCC18\src\traditional\delays\d10ktcyx.asm
+                    D10Kx   0x000bd4    program     static C:\MCC18\src\traditional\delays\d10ktcyx.asm
+                   D10K_1   0x000bd6    program     static C:\MCC18\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_0010   0x000bda    program     static C:\MCC18\src\traditional\delays\d10ktcyx.asm
+                    D10Kl   0x000be2    program     static C:\MCC18\src\traditional\delays\d10ktcyx.asm
+       _D10KTCYXCODE_001C   0x000be6    program     static C:\MCC18\src\traditional\delays\d10ktcyx.asm
+              CloseTimer3   0x000bf8    program     extern C:\MCC18\src\pmc_common\Timers\t3close.c
+  POWER_CALIBRATION_QUEUE   0x000c00    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+PHASE_ENERGY_REGISTERS_QUEUE   0x000c16    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_CALIBRATION_SIZE_QUEUE   0x000c34    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+ PHASE_STATUS_FLAGS_QUEUE   0x000c4a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+PHASE_STATUS_FLAGS_SIZE_QUEUE   0x000c52    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+ENERGY_OVERFLOW_FLAGS_QUEUE   0x000c5a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+ENERGY_OVERFLOW_FLAGS_SIZE_QUEUE   0x000c60    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+  POWER_REGISTERS_QUEUE_M   0x000c66    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+  POWER_REGISTERS_QUEUE_A   0x000c86    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+  POWER_REGISTERS_QUEUE_B   0x000ca6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+  POWER_REGISTERS_QUEUE_C   0x000cc6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_SIZE_QUEUE_M   0x000ce6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_SIZE_QUEUE_A   0x000cf6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_SIZE_QUEUE_B   0x000d06    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_SIZE_QUEUE_C   0x000d16    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+ POWER_SIGNED_REGISTERS_M   0x000d26    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+ POWER_SIGNED_REGISTERS_A   0x000d36    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+                   LowISR   0x000d46    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  HighISR   0x000d6c    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                InitTimer   0x000e70    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+              InitIOPorts   0x000e76    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                 InitMAXQ   0x000e9a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+           InitParameters   0x001342    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                InitMeter   0x0014b0    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                     main   0x0014bc    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+        ___while_lbl00036   0x0014de    program     static                          
+           ___do_lbl00050   0x0014f0    program     static                          
+          ___for_lbl00045   0x0014fa    program     static                          
+         ___else_lbl00044   0x00150a    program     static                          
+           ___if_lbl00043   0x00150e    program     static                          
+          ___for_lbl00041   0x00150e    program     static                          
+          ___for_lbl00042   0x001512    program     static                          
+         ___else_lbl00049   0x001532    program     static                          
+         ___else_lbl00047   0x001552    program     static                          
+           ___if_lbl00048   0x00155a    program     static                          
+           ___do_lbl00038   0x00155a    program     static                          
+           ___if_lbl00046   0x00155a    program     static                          
+              __tmplbl_10   0x001560    program     static                          
+               __tmplbl_9   0x001566    program     static                          
+           ___do_lbl00039   0x001566    program     static                          
+         ___else_lbl00052   0x001574    program     static                          
+           ___if_lbl00051   0x001578    program     static                          
+           ___if_lbl00053   0x0015d0    program     static                          
+              __tmplbl_12   0x0015d8    program     static                          
+              __tmplbl_11   0x0015de    program     static                          
+           ___if_lbl00055   0x0015ec    program     static                          
+           ___if_lbl00056   0x0015fa    program     static                          
+           ___if_lbl00057   0x001620    program     static                          
+           ___if_lbl00058   0x00169a    program     static                          
+           ___if_lbl00059   0x00169a    program     static                          
+           ___if_lbl00060   0x00169e    program     static                          
+           ___if_lbl00061   0x0016a8    program     static                          
+          ___for_lbl00070   0x001720    program     static                          
+           ___do_lbl00068   0x001736    program     static                          
+           ___do_lbl00064   0x00179a    program     static                          
+           ___if_lbl00067   0x00179a    program     static                          
+              __tmplbl_14   0x0017ac    program     static                          
+           ___do_lbl00065   0x0017b2    program     static                          
+              __tmplbl_13   0x0017b2    program     static                          
+              __tmplbl_81   0x001800    program     static                          
+          ___for_lbl00062   0x001870    program     static                          
+           ___if_lbl00069   0x001870    program     static                          
+          ___for_lbl00063   0x001876    program     static                          
+           ___if_lbl00071   0x00187e    program     static                          
+              __tmplbl_16   0x001884    program     static                          
+              __tmplbl_15   0x00188a    program     static                          
+           ___if_lbl00073   0x0018f4    program     static                          
+           ___if_lbl00074   0x0018f4    program     static                          
+           ___if_lbl00075   0x0018f4    program     static                          
+         ___else_lbl00079   0x001902    program     static                          
+           ___if_lbl00076   0x001938    program     static                          
+           ___if_lbl00077   0x0019bc    program     static                          
+           ___if_lbl00078   0x0019c0    program     static                          
+       ___return_lbl00035   0x0019c2    program     static                          
+        ___while_lbl00037   0x0019c2    program     static                          
+       InitDataFromEEPROM   0x0019d6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+              __tmplbl_19   0x001a4e    program     static                          
+              __tmplbl_18   0x001a5e    program     static                          
+              __tmplbl_17   0x001a6e    program     static                          
+           ___if_lbl00083   0x001a70    program     static                          
+          ___for_lbl00087   0x001a74    program     static                          
+          ___for_lbl00084   0x001ad8    program     static                          
+           ___if_lbl00086   0x001ad8    program     static                          
+          ___for_lbl00085   0x001ae2    program     static                          
+              __tmplbl_22   0x001af0    program     static                          
+              __tmplbl_21   0x001afe    program     static                          
+              __tmplbl_20   0x001b0c    program     static                          
+         ___else_lbl00093   0x001b12    program     static                          
+         ___else_lbl00091   0x001b34    program     static                          
+           ___if_lbl00090   0x001b3e    program     static                          
+           ___if_lbl00092   0x001b3e    program     static                          
+          ___for_lbl00101   0x001b4a    program     static                          
+           ___do_lbl00100   0x001b5c    program     static                          
+         ___else_lbl00099   0x001bf4    program     static                          
+           ___do_lbl00096   0x001bf8    program     static                          
+           ___if_lbl00098   0x001bf8    program     static                          
+           ___do_lbl00097   0x001bfe    program     static                          
+          ___for_lbl00094   0x001bfe    program     static                          
+          ___for_lbl00095   0x001c08    program     static                          
+          ___for_lbl00109   0x001c1a    program     static                          
+           ___do_lbl00108   0x001c2c    program     static                          
+         ___else_lbl00107   0x001ce4    program     static                          
+           ___do_lbl00104   0x001ce8    program     static                          
+           ___if_lbl00106   0x001ce8    program     static                          
+           ___do_lbl00105   0x001cee    program     static                          
+          ___for_lbl00102   0x001cee    program     static                          
+          ___for_lbl00103   0x001cf8    program     static                          
+          ___for_lbl00117   0x001d0a    program     static                          
+           ___do_lbl00116   0x001d1c    program     static                          
+         ___else_lbl00115   0x001dd4    program     static                          
+           ___do_lbl00112   0x001dd8    program     static                          
+           ___if_lbl00114   0x001dd8    program     static                          
+           ___do_lbl00113   0x001dde    program     static                          
+          ___for_lbl00110   0x001dde    program     static                          
+          ___for_lbl00111   0x001de8    program     static                          
+         ___else_lbl00119   0x001dea    program     static                          
+           ___if_lbl00118   0x001e70    program     static                          
+          ___for_lbl00123   0x001e9e    program     static                          
+          ___for_lbl00120   0x001f06    program     static                          
+           ___if_lbl00122   0x001f06    program     static                          
+          ___for_lbl00121   0x001f10    program     static                          
+          ___for_lbl00130   0x001f14    program     static                          
+           ___if_lbl00126   0x001f60    program     static                          
+          ___for_lbl00129   0x001f68    program     static                          
+          ___for_lbl00127   0x001fe8    program     static                          
+          ___for_lbl00124   0x001ff4    program     static                          
+          ___for_lbl00128   0x001ff4    program     static                          
+          ___for_lbl00125   0x001ffe    program     static                          
+         ___else_lbl00132   0x002000    program     static                          
+           ___if_lbl00131   0x002026    program     static                          
+          ___for_lbl00135   0x002040    program     static                          
+          ___for_lbl00133   0x002068    program     static                          
+          ___for_lbl00134   0x002072    program     static                          
+         ___else_lbl00137   0x002080    program     static                          
+           ___if_lbl00136   0x00208a    program     static                          
+           ___if_lbl00138   0x0020b4    program     static                          
+          ___for_lbl00146   0x0020b8    program     static                          
+           ___do_lbl00145   0x0020ca    program     static                          
+         ___else_lbl00144   0x002162    program     static                          
+           ___do_lbl00141   0x002166    program     static                          
+           ___if_lbl00143   0x002166    program     static                          
+          ___for_lbl00139   0x00216c    program     static                          
+           ___do_lbl00142   0x00216c    program     static                          
+          ___for_lbl00140   0x002176    program     static                          
+         ___else_lbl00148   0x002178    program     static                          
+           ___if_lbl00147   0x002194    program     static                          
+       ___return_lbl00080   0x002198    program     static                          
+      SaveCalibrationData   0x0021ac    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          CaptureOverflow   0x0025a6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          ResetSPIDevices   0x002af6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               DoReadings   0x002b0e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+              __tmplbl_99   0x002b34    program     static                          
+              __tmplbl_89   0x0033d2    program     static                          
+          AutoCalibration   0x0033f4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+     VBatVoltageDetection   0x0039be    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  FindLSB   0x003b5c    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+     PowerWriteCALBToMAXQ   0x003d2e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+           Update_Max_Min   0x00402e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                 ResetBot   0x0046a2    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+       ___return_lbl00327   0x0046a8    program     static                          
+           Add_raw_energy   0x0046aa    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+       SaveRawEnergyToEEP   0x00485a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+   Check_MAXQGlobalStatus   0x004b72    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               math_power   0x004bc2    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+   MultiplyTwoLongNumbers   0x004c50    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+        CopyPowerReadings   0x00501e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+  CopyModbusPowerReadings   0x005416    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+PowerCalculateCALIBChecksum   0x00572a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+           Modbus3PEnergy   0x0057ce    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+        Modbus3PMaxDemand   0x005a0c    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+          Modbus3PReading   0x005aa4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+   ComputeTotalRealEnergy   0x005cc0    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+                PowerOpen   0x0063c6    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+         PowerGetReadings   0x0063e4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+     PowerSendReadCommand   0x0068ac    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+   Power_SendWriteCommand   0x006ee4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+        Power_WriteToMAXQ   0x007150    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+               PowerClose   0x0071de    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+           PowerWriteChar   0x0071e4    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+   FormThreePhaseReadings   0x007202    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+                  MCUOpen   0x007a18    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                 MCUTasks   0x007a32    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+            MCUUnloadData   0x007a3e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+MCUProcessIncomingMessage   0x007a9e    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+              __tmplbl_46   0x008440    program     static                          
+              __tmplbl_45   0x008520    program     static                          
+              __tmplbl_44   0x00855e    program     static                          
+              __tmplbl_43   0x0085d4    program     static                          
+              __tmplbl_42   0x0086ee    program     static                          
+              __tmplbl_41   0x0088a2    program     static                          
+              __tmplbl_40   0x0088f2    program     static                          
+              __tmplbl_39   0x00893a    program     static                          
+              __tmplbl_38   0x008942    program     static                          
+              __tmplbl_37   0x0089ba    program     static                          
+              __tmplbl_50   0x0089d4    program     static                          
+              __tmplbl_48   0x0089d4    program     static                          
+              __tmplbl_31   0x0089ec    program     static                          
+              __tmplbl_30   0x0089ec    program     static                          
+              __tmplbl_32   0x0089ec    program     static                          
+              __tmplbl_33   0x0089ec    program     static                          
+              __tmplbl_34   0x0089ec    program     static                          
+              __tmplbl_35   0x0089ec    program     static                          
+              __tmplbl_49   0x0089ec    program     static                          
+              __tmplbl_36   0x0089ec    program     static                          
+            MCUSendString   0x008a00    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+             MCUWriteByte   0x008b72    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                 FLO1632U   0x008b92    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
+                 FLO1632S   0x008b96    program     extern C:\MCC18\src\traditional\math\cast16FP.asm
+                jI2F16Beg   0x008ba6    program     static C:\MCC18\src\traditional\math\cast16FP.asm
+                 FLO3232U   0x008bbc    program     extern C:\MCC18\src\traditional\math\cast32FP.asm
+                 FLO3232S   0x008bc0    program     extern C:\MCC18\src\traditional\math\cast32FP.asm
+                jI2F32Beg   0x008bd8    program     static C:\MCC18\src\traditional\math\cast32FP.asm
+                    FPD32   0x008bf2    program     extern C:\MCC18\src\traditional\math\divFP.asm
+                 jANotInf   0x008c10    program     static C:\MCC18\src\traditional\math\divFP.asm
+              jSignedZero   0x008c1a    program     static C:\MCC18\src\traditional\math\divFP.asm
+                jANotZero   0x008c24    program     static C:\MCC18\src\traditional\math\divFP.asm
+                    jLoop   0x008c4c    program     static C:\MCC18\src\traditional\math\divFP.asm
+                jNoAdjust   0x008c70    program     static C:\MCC18\src\traditional\math\divFP.asm
+                    jNext   0x008c72    program     static C:\MCC18\src\traditional\math\divFP.asm
+                    FPM32   0x008c98    program     extern C:\MCC18\src\traditional\math\mulFP.asm
+                 jANotInf   0x008cb6    program     static C:\MCC18\src\traditional\math\mulFP.asm
+              jBothFinite   0x008cc4    program     static C:\MCC18\src\traditional\math\mulFP.asm
+                jHaveZero   0x008ccc    program     static C:\MCC18\src\traditional\math\mulFP.asm
+             jBothNotZero   0x008cd0    program     static C:\MCC18\src\traditional\math\mulFP.asm
+                 FXD1616S   0x008d72    program     extern C:\MCC18\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x008d84    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
+                   D1616S   0x008d94    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x008d9e    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x008da2    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x008db4    program     static C:\MCC18\src\traditional\math\fxd1616s.asm
+                 FXD3232S   0x008dbe    program     extern C:\MCC18\src\traditional\math\fxd3232s.asm
+                  DA3232S   0x008dd8    program     static C:\MCC18\src\traditional\math\fxd3232s.asm
+                   D3232S   0x008dee    program     static C:\MCC18\src\traditional\math\fxd3232s.asm
+                 D3232SOK   0x008df8    program     static C:\MCC18\src\traditional\math\fxd3232s.asm
+                D3232SNEG   0x008dfc    program     static C:\MCC18\src\traditional\math\fxd3232s.asm
+                  D3232SX   0x008e1c    program     static C:\MCC18\src\traditional\math\fxd3232s.asm
+                 FXM1616S   0x008e26    program     extern C:\MCC18\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x008e72    program     static C:\MCC18\src\traditional\math\fxm1616s.asm
+                 FXM1616U   0x008e80    program     extern C:\MCC18\src\traditional\math\fxm1616u.asm
+                  INT3216   0x008ebc    program     extern C:\MCC18\src\traditional\math\castFP16.asm
+                     jMax   0x008ecc    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  jMaxPos   0x008ed0    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  jMaxNeg   0x008eda    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                    jZero   0x008ee2    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  jNotInf   0x008ee8    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                    jLoop   0x008ef8    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                jLoopExit   0x008f08    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                    jExit   0x008f18    program     static C:\MCC18\src\traditional\math\castFP16.asm
+                  TAGTB32   0x008f1a    program     extern C:\MCC18\src\traditional\math\gtFP.asm
+                  TALTB32   0x008f2c    program     extern C:\MCC18\src\traditional\math\ltFP.asm
+              __FpCompare   0x008f3e    program     extern C:\MCC18\src\traditional\math\compFP.asm
+             jBothNotZero   0x008f5c    program     static C:\MCC18\src\traditional\math\compFP.asm
+                 jSignsEQ   0x008f60    program     static C:\MCC18\src\traditional\math\compFP.asm
+                      jEQ   0x008f78    program     static C:\MCC18\src\traditional\math\compFP.asm
+                      jNE   0x008f7c    program     static C:\MCC18\src\traditional\math\compFP.asm
+                    jExch   0x008f84    program     static C:\MCC18\src\traditional\math\compFP.asm
+                  jNoExch   0x008fa4    program     static C:\MCC18\src\traditional\math\compFP.asm
+                   jFinal   0x008fae    program     static C:\MCC18\src\traditional\math\compFP.asm
+                  jAisNeg   0x008fba    program     static C:\MCC18\src\traditional\math\compFP.asm
+                   jShift   0x008fc0    program     static C:\MCC18\src\traditional\math\compFP.asm
+                   jExpEQ   0x008fca    program     static C:\MCC18\src\traditional\math\compFP.asm
+                  jRotate   0x008fd6    program     static C:\MCC18\src\traditional\math\compFP.asm
+            __FpReturnNaN   0x008fe8    program     extern C:\MCC18\src\traditional\math\packFP.asm
+                 __FpExit   0x008ff4    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnSignInf   0x008ff6    program     extern C:\MCC18\src\traditional\math\packFP.asm
+         __FpReturnNegInf   0x008ffa    program     extern C:\MCC18\src\traditional\math\packFP.asm
+         __FpReturnPosInf   0x009000    program     extern C:\MCC18\src\traditional\math\packFP.asm
+           jReturnPosInf0   0x009004    program     static C:\MCC18\src\traditional\math\packFP.asm
+               jZero1and2   0x009008    program     static C:\MCC18\src\traditional\math\packFP.asm
+       __FpReturnSignZero   0x00900e    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnNegZero   0x009012    program     extern C:\MCC18\src\traditional\math\packFP.asm
+        __FpReturnPosZero   0x00901a    program     extern C:\MCC18\src\traditional\math\packFP.asm
+                 __FpPack   0x009020    program     extern C:\MCC18\src\traditional\math\packFP.asm
+                  jPkLoop   0x00902e    program     static C:\MCC18\src\traditional\math\packFP.asm
+             jPkShiftDone   0x00904a    program     static C:\MCC18\src\traditional\math\packFP.asm
+               jPkRoundIt   0x009060    program     static C:\MCC18\src\traditional\math\packFP.asm
+             jPkRoundDone   0x009078    program     static C:\MCC18\src\traditional\math\packFP.asm
+              __FpReturnW   0x009078    program     extern C:\MCC18\src\traditional\math\packFP.asm
+              __FpUnPackA   0x009098    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkA1   0x0090a2    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkANZ   0x0090b0    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkA2   0x0090ba    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkNaN   0x0090c4    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+              __FpUnPackB   0x0090c8    program     extern C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkB1   0x0090d2    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                 jUnpkBNZ   0x0090e0    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+                  jUnpkB2   0x0090ea    program     static C:\MCC18\src\traditional\math\UnpackFP.asm
+              Write_b_eep   0x0090f4    program     extern C:\MCC18\src\pmc_common\EEP\write_B.c
+               Read_b_eep   0x009154    program     extern C:\MCC18\src\pmc_common\EEP\read_B.c
+       ___return_lbl00000   0x0091a4    program     static                          
+                 FXD3232U   0x0091b0    program     extern C:\MCC18\src\traditional\math\fxd3232u.c
+                     loop   0x0091be    program     static                          
+                   _false   0x0091f2    program     static                          
+       ___return_lbl00000   0x0091f6    program     static                          
+               OpenTimer1   0x0091f8    program     extern C:\MCC18\src\pmc_common\Timers\t1open.c
+                  Set_div   0x00923a    program     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+                ReadUSART   0x00927a    program     extern C:\MCC18\src\pmc_common\USART\uread.c
+                 WriteSPI   0x0092b8    program     extern C:\MCC18\src\pmc_common\SPI\spi_writ.c
+               WriteUSART   0x0092f4    program     extern C:\MCC18\src\pmc_common\USART\uwrite.c
+                 FXD1616U   0x009322    program     extern C:\MCC18\src\traditional\math\fxd1616u.c
+                     loop   0x00932c    program     static                          
+                  endloop   0x009348    program     static                          
+       ___return_lbl00000   0x00934c    program     static                          
+              Delay1KTCYx   0x00934e    program     extern C:\MCC18\src\traditional\delays\d1ktcyx.asm
+                     D1Kx   0x009358    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+                    D1K_1   0x00935a    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0010   0x00935e    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+        _D1KTCYXCODE_0016   0x009364    program     static C:\MCC18\src\traditional\delays\d1ktcyx.asm
+            __zero_memory   0x00936e    program     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               zero_block   0x00937c    program     static C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   loop_h   0x00937c    program     static C:\MCC18\src\traditional\proc\p18F46K20.asm
+                compare_l   0x009384    program     static C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   loop_l   0x009386    program     static C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 _startup   0x00938e    program     extern C:\MCC18\src\traditional\startup\c018i.c
+                     loop   0x00939e    program     static                          
+       ___return_lbl00001   0x0093a8    program     static                          
+             Delay100TCYx   0x0093aa    program     extern C:\MCC18\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0008   0x0093b2    program     static C:\MCC18\src\traditional\delays\d100tcyx.asm
+                    D100x   0x0093b6    program     static C:\MCC18\src\traditional\delays\d100tcyx.asm
+                   D100_1   0x0093b8    program     static C:\MCC18\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0012   0x0093bc    program     static C:\MCC18\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0018   0x0093c2    program     static C:\MCC18\src\traditional\delays\d100tcyx.asm
+                 FXD0808U   0x0093c6    program     extern C:\MCC18\src\traditional\math\fxd0808u.c
+                     loop   0x0093ce    program     static                          
+                  endloop   0x0093dc    program     static                          
+       ___return_lbl00000   0x0093e0    program     static                          
+              Delay10TCYx   0x0093e2    program     extern C:\MCC18\src\traditional\delays\d10tcyx.asm
+                     D10x   0x0093ea    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000A   0x0093ec    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000C   0x0093ee    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+        _D10TCYXCODE_000E   0x0093f0    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+                    D10_1   0x0093f2    program     static C:\MCC18\src\traditional\delays\d10tcyx.asm
+                  ReadADC   0x0093f8    program     extern C:\MCC18\src\pmc_common\ADC\adcread.c
+               CloseUSART   0x00940a    program     extern C:\MCC18\src\pmc_common\USART\uclose.c
+                 Busy_eep   0x009416    program     extern C:\MCC18\src\pmc_common\EEP\busy_eep.c
+                 CloseADC   0x00941c    program     extern C:\MCC18\src\pmc_common\ADC\adcclose.c
+                 CloseSPI   0x009422    program     extern C:\MCC18\src\pmc_common\SPI\spi_clos.c
+               ConvertADC   0x009426    program     extern C:\MCC18\src\pmc_common\ADC\adcconv.c
+               __config_0   0x300001    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               __config_1   0x300002    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               __config_2   0x300003    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               __config_3   0x300005    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               __config_4   0x300006    program     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                     SIGN   0x000000       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                __FPFLAGS   0x000001       data     extern C:\MCC18\src\traditional\math\cmath18.asm
+                  __REMB3   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB7   0x000002       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB6   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB2   0x000003       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB5   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB1   0x000004       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB4   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                  __REMB0   0x000005       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB3   0x000006       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB2   0x000007       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB1   0x000008       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __AARGB0   0x000009       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                   __AEXP   0x00000a       data     extern C:\MCC18\src\traditional\math\aarg.asm
+                 __BARGB3   0x00000b       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB2   0x00000c       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB1   0x00000d       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __BARGB0   0x00000e       data     extern C:\MCC18\src\traditional\math\barg.asm
+                   __BEXP   0x00000f       data     extern C:\MCC18\src\traditional\math\barg.asm
+                 __TEMPB3   0x000010       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000011       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000012       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                   __TEMP   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000013       data     extern C:\MCC18\src\traditional\math\temparg.asm
+                  __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\EEP\write_B.c
+                  __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\EEP\read_B.c
+                  __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\ADC\adcread.c
+                  __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\USART\uopen.c
+                  __tmp_0   0x000014       data     static C:\MCC18\src\pmc_common\ADC\adcopen.c
+                  __tmp_0   0x000014       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  __tmp_0   0x000014       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                  __tmp_0   0x000014       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\utility.c
+                  __tmp_0   0x000014       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+                  __tmp_0   0x000014       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+                  __tmp_2   0x000022       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+            DelayCounter2   0x000024       data     extern C:\MCC18\src\traditional\delays\delayd2.asm
+            DelayCounter1   0x000025       data     extern C:\MCC18\src\traditional\delays\delayd1.asm
+      PARENT_PING_COUNTER   0x000060       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+      IS_TIME_INITIALISED   0x000062       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+           EnrOvfCounter1   0x000063       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+           EnrOvfCounter2   0x000082       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          CalibrationData   0x0000a1       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                   wOvfc1   0x0000c1       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                  wEnr_cc   0x0000c3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                       jj   0x0000c5       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                       kk   0x0000c7       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                        k   0x0000c9       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                      dwK   0x0000cb       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+        dwNET_X_ENR_OVFC1   0x0000cf       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+        dwNET_X_ENR_OVFC2   0x0000d3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         wPOS_X_ENR_OVFC1   0x0000d7       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         wNEG_X_ENR_OVFC1   0x0000d9       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         wPOS_X_ENR_OVFC2   0x0000db       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         wNEG_X_ENR_OVFC2   0x0000dd       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         dwRAW_POS_ENERGY   0x0000df       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         dwRAW_NEG_ENERGY   0x0000e1       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                       jj   0x0000e3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                       kk   0x0000e5       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                max_value   0x0000e7       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                      ptr   0x0000e9       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+            DATE_TIME_POS   0x0000eb       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.h
+          EEP_RECORD_FLAG   0x0000f7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+           EEP_TIMER_FLAG   0x0000f8       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+                     rtcc   0x0000f9       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.c
+POWER_REGISTERS_QUEUE_STATE   0x000100       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
+PHASE_RAW_ENERGY_STORAGE_QUEUE   0x000101       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+         POWER_READINGS_M   0x00011f       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+         POWER_READINGS_A   0x00013f       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+         POWER_READINGS_B   0x00015f       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+         POWER_READINGS_C   0x00017f       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+           POWER_READINGS   0x00019f       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+    POWER_REGISTERS_QUEUE   0x0001a7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_SIZE_QUEUE   0x0001af       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_DIVIDE_BY_M   0x0001b7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_DIVIDE_BY_A   0x0001c7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+POWER_REGISTERS_DIVIDE_BY   0x0001d7       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+    MAX_MIN_STORAGE_QUEUE   0x0001db       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+      PARENT_PING_COUNTER   0x0001e1       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+      IS_TIME_INITIALISED   0x0001e3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+               error_list   0x0001e4       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+                     prom   0x0001ee       data     static C:\MCC18\src\traditional\startup\c018i.c
+                curr_byte   0x0001f1       data     static C:\MCC18\src\traditional\startup\c018i.c
+               curr_entry   0x0001f3       data     static C:\MCC18\src\traditional\startup\c018i.c
+                 data_ptr   0x0001f5       data     static C:\MCC18\src\traditional\startup\c018i.c
+      PARENT_PING_COUNTER   0x0001f8       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+      IS_TIME_INITIALISED   0x0001fa       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+POWER_REGISTERS_QUEUE_STATE   0x000200       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\registers.h
+         EEPROM_ENR_OVFC1   0x000201       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC2   0x00021f       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+  EEPROM_CALIBRATION_DATA   0x00023d       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+            DATE_TIME_POS   0x000255       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.h
+      MCUNewMessageLength   0x000261       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+         MCUHasNewMessage   0x000262       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+            MCUNewMessage   0x000263       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+      IS_STATUS_FLAG_SENT   0x00028b       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                maxq_mask   0x00028c       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+    MCU_RX_BUFFER_POINTER   0x00028f       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+            MCU_RX_BUFFER   0x000290       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+             b_reset_maxq   0x0002cc       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+            is_7ESB_found   0x0002cd       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+         EEPROM_ENR_OVFC1   0x000300       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC2   0x00031e       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+  EEPROM_CALIBRATION_DATA   0x00033c       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+POWER_REGISTERS_QUEUE_STATE   0x000354       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
+            DATE_TIME_POS   0x000355       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.h
+             is_save_RTCC   0x000361       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+             is_stop_mode   0x000362       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               StartDoAdc   0x000363       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               bMAXQ_init   0x000364       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+              Vsense_high   0x000365       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+              bMeterReset   0x000366       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          AUTO_RESET_TIME   0x000367       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         RefreshMaxDemand   0x000368       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+       StartDoReadingFlag   0x000369       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         REFRESH_INTERVAL   0x00036a       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                SAVE_RTCC   0x00036e       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          SAVE_RAW_ENERGY   0x00036f       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+      InitCalibrationData   0x000370       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                        i   0x000390       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                        j   0x000392       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+          is_flag_cleared   0x000396       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                        u   0x000397       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                     I_fs   0x00039b       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                     V_fs   0x00039f       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                     temp   0x0003a3       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+                   result   0x0003a7       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+               is_correct   0x0003ab       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.c
+         EEPROM_ENR_OVFC1   0x000400       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC2   0x00041e       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+  EEPROM_CALIBRATION_DATA   0x00043c       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+POWER_REGISTERS_QUEUE_STATE   0x000454       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
+            DATE_TIME_POS   0x000455       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.h
+          fail_maxq_count   0x000461       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+             bReadyToRead   0x000462       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\power.c
+POWER_REGISTERS_QUEUE_STATE   0x000463       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.h
+         EEPROM_ENR_OVFC1   0x000464       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+         EEPROM_ENR_OVFC2   0x000482       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+  EEPROM_CALIBRATION_DATA   0x0004a0       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+            DATE_TIME_POS   0x0004b8       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\rtcc.h
+     raw_energy_storage_2   0x000700       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+       raw_energy_storage   0x00073c       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+          reading_storage   0x000778       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+        reading_storage_1   0x00088c       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+          max_min_storage   0x0008f4       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Common\registers.c
+      PARENT_PING_COUNTER   0x000f00       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+      IS_TIME_INITIALISED   0x000f02       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\Three_Phase_Meter\main.h
+              mcu_request   0x000f03       data     extern C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+                       sg   0x000f31       data     static C:\Users\EricGoh\Desktop\2014-07-02 Liz v462a\common\mcu.c
+             USART_Status   0x000f5e       data     extern C:\MCC18\src\pmc_common\USART\udefs.c
+                   SSPMSK   0x000f77       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               SSPMSKbits   0x000f77       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   SLRCON   0x000f78       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               SLRCONbits   0x000f78       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CM2CON1   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CM2CON1bits   0x000f79       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CM2CON0   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CM2CON0bits   0x000f7a       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CM1CON0bits   0x000f7b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CM1CON0   0x000f7b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     WPUB   0x000f7c       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 WPUBbits   0x000f7c       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 IOCBbits   0x000f7d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     IOCB   0x000f7d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                ANSELbits   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    ANSEL   0x000f7e       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ANSELH   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               ANSELHbits   0x000f7f       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PORTA   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                PORTAbits   0x000f80       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PORTB   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                PORTBbits   0x000f81       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PORTC   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                PORTCbits   0x000f82       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PORTD   0x000f83       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                PORTDbits   0x000f83       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                PORTEbits   0x000f84       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PORTE   0x000f84       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     LATA   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 LATAbits   0x000f89       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     LATB   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 LATBbits   0x000f8a       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     LATC   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 LATCbits   0x000f8b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     LATD   0x000f8c       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 LATDbits   0x000f8c       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     LATE   0x000f8d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 LATEbits   0x000f8d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 DDRAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     DDRA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TRISA   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TRISAbits   0x000f92       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TRISB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TRISBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 DDRBbits   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     DDRB   0x000f93       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TRISC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 DDRCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     DDRC   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TRISCbits   0x000f94       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TRISDbits   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TRISD   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     DDRD   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 DDRDbits   0x000f95       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TRISE   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TRISEbits   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     DDRE   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 DDREbits   0x000f96       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  OSCTUNE   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              OSCTUNEbits   0x000f9b       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     PIE1   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 PIE1bits   0x000f9d       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 PIR1bits   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     PIR1   0x000f9e       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     IPR1   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 IPR1bits   0x000f9f       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 PIE2bits   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     PIE2   0x000fa0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     PIR2   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 PIR2bits   0x000fa1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     IPR2   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 IPR2bits   0x000fa2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   EECON1   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               EECON1bits   0x000fa6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   EECON2   0x000fa7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   EEDATA   0x000fa8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    EEADR   0x000fa9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                EEADRbits   0x000fa9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   EEADRH   0x000faa       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               EEADRHbits   0x000faa       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    RCSTA   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                RCSTAbits   0x000fab       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                TXSTAbits   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TXSTA   0x000fac       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TXREG   0x000fad       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    RCREG   0x000fae       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    SPBRG   0x000faf       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   SPBRGH   0x000fb0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    T3CON   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                T3CONbits   0x000fb1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR3L   0x000fb2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR3H   0x000fb3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CVRCON2bits   0x000fb4       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CVRCON2   0x000fb4       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               CVRCONbits   0x000fb5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   CVRCON   0x000fb5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  ECCP1AS   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              ECCP1ASbits   0x000fb6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  PWM1CON   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              PWM1CONbits   0x000fb7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              BAUDCTLbits   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  BAUDCTL   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              BAUDCONbits   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  BAUDCON   0x000fb8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  PSTRCON   0x000fb9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              PSTRCONbits   0x000fb9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CCP2CON   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CCP2CONbits   0x000fba       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    CCPR2   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   CCPR2L   0x000fbb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   CCPR2H   0x000fbc       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  CCP1CON   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              CCP1CONbits   0x000fbd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   CCPR1L   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    CCPR1   0x000fbe       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   CCPR1H   0x000fbf       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               ADCON2bits   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ADCON2   0x000fc0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               ADCON1bits   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ADCON1   0x000fc1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               ADCON0bits   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ADCON0   0x000fc2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ADRESL   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    ADRES   0x000fc3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   ADRESH   0x000fc4       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  SSPCON2   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              SSPCON2bits   0x000fc5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  SSPCON1   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              SSPCON1bits   0x000fc6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  SSPSTAT   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              SSPSTATbits   0x000fc7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   SSPADD   0x000fc8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   SSPBUF   0x000fc9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    T2CON   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                T2CONbits   0x000fca       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                      PR2   0x000fcb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     TMR2   0x000fcc       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                T1CONbits   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    T1CON   0x000fcd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR1L   0x000fce       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR1H   0x000fcf       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 RCONbits   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     RCON   0x000fd0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               WDTCONbits   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   WDTCON   0x000fd1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  HLVDCON   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              HLVDCONbits   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               LVDCONbits   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   LVDCON   0x000fd2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               OSCCONbits   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   OSCCON   0x000fd3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                T0CONbits   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    T0CON   0x000fd5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR0L   0x000fd6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    TMR0H   0x000fd7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               STATUSbits   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   STATUS   0x000fd8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR2L   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     FSR2   0x000fd9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR2H   0x000fda       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   PLUSW2   0x000fdb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  PREINC2   0x000fdc       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTDEC2   0x000fdd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTINC2   0x000fde       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    INDF2   0x000fdf       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                      BSR   0x000fe0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     FSR1   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR1L   0x000fe1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR1H   0x000fe2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   PLUSW1   0x000fe3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  PREINC1   0x000fe4       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTDEC1   0x000fe5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTINC1   0x000fe6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    INDF1   0x000fe7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     WREG   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                        W   0x000fe8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     FSR0   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR0L   0x000fe9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    FSR0H   0x000fea       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   PLUSW0   0x000feb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  PREINC0   0x000fec       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTDEC0   0x000fed       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                 POSTINC0   0x000fee       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    INDF0   0x000fef       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              INTCON3bits   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  INTCON3   0x000ff0       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  INTCON2   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+              INTCON2bits   0x000ff1       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               INTCONbits   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   INTCON   0x000ff2       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     PROD   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PRODL   0x000ff3       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                    PRODH   0x000ff4       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   TABLAT   0x000ff5       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  TBLPTRL   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   TBLPTR   0x000ff6       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  TBLPTRH   0x000ff7       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                  TBLPTRU   0x000ff8       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                       PC   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                      PCL   0x000ff9       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   PCLATH   0x000ffa       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   PCLATU   0x000ffb       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+               STKPTRbits   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                   STKPTR   0x000ffc       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                      TOS   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     TOSL   0x000ffd       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     TOSH   0x000ffe       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+                     TOSU   0x000fff       data     extern C:\MCC18\src\traditional\proc\p18F46K20.asm
+
+

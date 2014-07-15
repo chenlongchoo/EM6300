@@ -1,0 +1,21 @@
+//Issue Log
+
+Short Command Format
+-------------------------------
+CMD[DEST_ADDRESS][CMD_CODE][MSG_SIZE]#[MSG][HEX_10][HEX_13]
+
+[DEST_ADDRESS]	- Network address of the destination node.
+[CMD_CODE]		- Command code.
+[MSG_SIZE]		- Length of the field [MSG] + 14.
+[MSG]			- Message to send.
+[HEX_10]		- Hex value 10.
+[HEX_13]		- Hex value 13.
+
+
+05 Nov 2009
+-------------------------------
+1) Issues when received data is not valid. Validation needed.
+
+03 Dec 2009
+-------------------------------
+1) Coordinator is sending command 0x03 with its own network address wrong.
