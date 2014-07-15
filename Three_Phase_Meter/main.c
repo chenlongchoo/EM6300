@@ -6,8 +6,6 @@
 
 #include "HardwareProfile.h"
 #include "AppConfig.h"
-
-//#include "adc.h"
 #include "eep.h"
 #include "FSIO.h"
 
