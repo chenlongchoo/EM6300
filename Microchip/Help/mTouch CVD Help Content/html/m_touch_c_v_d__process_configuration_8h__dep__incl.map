@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$m_touch_c_v_d_8h.html" title="Main framework header file used by all mTouchCVD files." alt="" coords="228,83,335,112"/>
+<area shape="rect" id="node5" href="$main__example_8c.html" title="An example implementation of the mTouch CVD Framework&#39;s API calls." alt="" coords="5,160,123,189"/>
+<area shape="rect" id="node7" href="$m_touch_c_v_d_8c.html" title="This module provides a group of functions performing the post acquisition filtering and decoding for ..." alt="" coords="147,160,253,189"/>
+<area shape="rect" id="node9" href="$m_touch_c_v_d___acquistion_8c.html" title="Implements the ISR for the framework which performs the sensor scanning." alt="" coords="277,160,451,189"/>
+<area shape="rect" id="node11" href="$m_touch_c_v_d___comm_8c.html" title="Implements the communication function of the framework used for debugging." alt="" coords="475,160,624,189"/>
+</map>

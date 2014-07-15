@@ -1,0 +1,39 @@
+~inc:header.inc~
+<div id="content">
+
+<div style="width:100%;" id="id_success"></div>
+
+<h2>Super User Configuration</h2>
+
+<div class="result fail" style="display:~status_fail~">
+ERROR: A field was unparsable or too much data was POSTed.  Try again.
+</div>
+<p class="error">
+<b>CAUTION:</b> Incorrect settings may cause the board to lose data!</p>
+
+<!--
+- Reset user password. 
+- Change super user password.
+- Reset energy counters. (Bottom board).
+- Reset all calibration to default. (Bottom Board).
+- Reset network settings. (Top Board).
+-->
+
+<!-- onclick="javascript:if(confirm('Confirm reset password?')) ResetUserPassword();">Reset user password</button> -->
+<form method="post" action="/super/index.htm" name="config">
+<fieldset>
+<input type="submit" name="rupw" value="Reset User Password" />
+</fieldset>
+
+<div style="text-align:center;display:none"><input type="submit" class="sm" value="Save Config" /></div>
+
+</form>
+</div>
+
+<script language="javascript">
+<!--
+if(window.location.href.indexOf("?S") > 0)
+	document.getElementById("id_success").innerHTML = "Saved";
+//-->
+</script>
+~inc:footer.inc~

@@ -1,0 +1,407 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>Getting Started: Running the “Graphics MultiApp” demo</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	font-style:italic;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"Document Map Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	background:navy;
+	font-size:10.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-link:"Plain Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:#365F91;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Arial","sans-serif";
+	font-weight:bold;
+	font-style:italic;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Arial","sans-serif";
+	font-weight:bold;}
+span.DocumentMapChar
+	{mso-style-name:"Document Map Char";
+	mso-style-link:"Document Map";
+	font-family:"Tahoma","sans-serif";}
+span.PlainTextChar
+	{mso-style-name:"Plain Text Char";
+	mso-style-link:"Plain Text";
+	font-family:"Courier New";}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+p.element10, li.element10, div.element10
+	{mso-style-name:element10;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 65.95pt 1.0in 65.95pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=MsoPlainText align=center style='text-align:center'><a
+name="_Toc194573682"><b><u><span style='font-size:16.0pt;font-family:"Arial","sans-serif"'>Getting
+Started: Running the “Graphics MultiApp Demo”</span></u></b></a></p>
+
+<p class=MsoPlainText><span style='font-size:16.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<h2><a href="Getting%20Started%20-%20Required%20Hardware.htm">Required Hardware</a><a
+name="_Toc276094095"></a></h2>
+
+<h2><a href="Getting%20Started%20-%20Configuring%20the%20Hardware%20Common.htm">Configuring
+the Hardware</a><a name="_Toc276094096"></a></h2>
+
+<h2><a href="Getting%20Started%20-%20Demo%20Compatibility%20Matrix.htm">Demo
+Compatibility Matrix</a></h2>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoPlainText><a name="_Toc276094098"></a><a name="running_the_demo"><span
+class=Heading2Char><span style='font-size:14.0pt'>Running the Demo</span></span></a><span
+style='font-family:"Arial","sans-serif"'>:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif"'>For proper demo execution, the</span> <span
+style='font-size:10.0pt;font-family:"Arial","sans-serif"'>ResourcesExternalSPIFlash.hex
+file in &quot;Graphic Resources” folder must be programmed into external flash
+memory installed on the selected hardware. Please refer to the <a
+href="Getting%20Started%20-%20Programming%20Memory%20on%20Graphics%20PICtail%20Daughter%20and%20Demo%20Boards.htm">Getting
+Started - Programming Memory on Graphics PICtail Daughter and Demo Boards.htm</a>.</span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>The
+demo runs from two main menu screens, with Figure on top appearing on power-up
+as the default screen. Navigation between the two menu screens is done with the
+arrows in the screen’s lower right corner. A total of 10 interactive demos are
+provided in the application. Touching the appropriate icon invokes that demo.
+Touching the “Demo” button in the lower left of either menu screen runs a
+continuous loop of several of the demos. Touching “Exit”, generally in the
+lower left of any of the demos, returns to the menu screen.</span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoPlainText style='page-break-after:avoid'><span style='font-family:
+"Arial","sans-serif"'>            </span><span style='font-family:"Arial","sans-serif"'><img
+border=0 width=468 height=649 src="images/GMAP%20Demo.jpg"></span></p>
+
+<p class=MsoNormal><a name="_Toc195786561"></a><a name="_Toc195786501"></a><a
+name="_Toc195786411"><b>            </b></a></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>The
+demos available on the first screen are:</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Lighting: this
+demonstrates a lighting control terminal application. Using the touch screen,
+sliders and buttons are provided to vary the red, green and blue lighting
+colors.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Language: this
+shows how multiple languages can be integrated into one application. Text
+examples in Roman, Cyrillic, simplified Chinese, Japanese and Korean alphabets
+are shown.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Game: this is a
+simple, interactive adaptation of a “snake” video game. Its operation is
+self-explanatory.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Animation: this
+shows animation of stored graphics, along with image scaling and interactivity.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Drawing: this demo
+implements free-hand drawing with a selectable color palette using the touch
+screen.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>ECG: this simulates
+an electrocardiogram display, demonstrating how analog data can be used to
+produce a graphic output. The “Ext” option switches between the fixed ECG
+display and a graphing display based on the potentiometer’s position.</span></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:"Arial","sans-serif"'>The
+demos available from the second screen are:</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Clock: this is a
+simple numeric date and time display, based on the microcontroller’s RTCC.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Graph Demo: this
+demo uses the Chart widget from the Microchip Graphics Library to generate a
+wide range of bar and pie charts based on a fixed set of data.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>External Flash:
+this demo shows images or pictures stored in the on-board Flash memory.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Thumb Drive</span><span
+style='font-family:"Arial","sans-serif"'>: This portion is enabled when using
+the PIC devices with USB module. The demo uses the USB Host interface to read a
+thumb drive connected to the USB port and scan it for graphics files (JPEG or
+BMP formats only). The application then produces a directory of graphics
+images, and displays the corresponding file when selected.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>SD Card Demo: This
+portion is enabled when using the PIC devices with no USB module. The demo uses
+the MDD File System to read an SD Card connected to a SD &amp; MMC PICtail Plus<sup>TM</sup>
+Daughter Board (AC164122) and scan it for graphics files (JPEG or BMP formats
+only). The application then produces a directory of graphics images, and
+displays the corresponding file when selected.</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoPlainText><a
+href="Getting%20Started%20-%20Programming%20External%20Memory.htm"><b><i><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'>Setting up the External
+Memory Programming Mode</span></i></b></a></p>
+
+<p class=MsoPlainText><span style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>With
+the exceptions of all PIC32 Starter Kit based projects (which do not use
+external memory), all projects in this demo are configured to use the UART Mode
+in programming the external memory. </span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>To
+program the external memory:</span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>For
+PIC24FJ256DA210 Development Board</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:"Arial","sans-serif"'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Hold down MCLR and
+S2 switches on the board</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:"Arial","sans-serif"'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Release MCLR while
+holding down S2. This will place the board on programming mode.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:"Arial","sans-serif"'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Send the hex data
+from the External Memory Programmer utility.</span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:"Arial","sans-serif"'>For
+Explorer 16 Board</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:"Arial","sans-serif"'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Hold down MCLR and
+S6 switches on the board</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:"Arial","sans-serif"'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Release MCLR while
+holding down S6. This will place the board on programming mode.</span></p>
+
+<p class=MsoPlainText style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:"Arial","sans-serif"'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"Arial","sans-serif"'>Send the hex data
+from the External Memory Programmer utility.</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Trademarks:</b></p>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";color:black'>The Microchip name and logo, the
+Microchip logo, MPLAB, and PIC are registered trademarks of Microchip
+Technology Incorporated in the U.S.A. and other countries.</span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";color:black'>PICDEM and PICTail are trademarks
+of Microchip Technology Incorporated in the U.S.A. and other countries.</span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";color:black'>SD is a trademark of the SD
+Association in the U.S.A and other countries</span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:"Arial","sans-serif";color:black'>Microsoft, Windows, Excel, and
+Windows Vista are either registered trademarks or trademarks of Microsoft
+Corporation in the United States and/or other countries.</span></i></p>
+
+</div>
+
+</body>
+
+</html>

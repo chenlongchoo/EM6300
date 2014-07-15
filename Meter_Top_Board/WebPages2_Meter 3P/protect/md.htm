@@ -1,0 +1,67 @@
+~inc:header.inc~
+<div id="content">
+
+<div style="width:100%;" id="id_success"></div>
+
+<h2>Max Demand Setting</h2>
+
+<div class="result fail" style="display:~status_fail~">
+ERROR: A field was unparsable or too much data was POSTed.  Try again.
+</div>
+
+<p class="error" />
+<p>Enter the new settings for the board below:</p>
+
+<form method="post" action="/protect/md.htm" id="form_maxdemand">
+<div style="margin:10px 40px 10px 40px;padding: 8px;border: 1px dotted #333;background:#ddd;">
+<div style="text-align:center">Max Demand Refresh Interval(in mins):
+<input type="text" id='id_mdri'  name="mdri" /></div>
+<input type="hidden" name="mod" id="id_ismodified" />
+</div>
+
+<div style="text-align:center"><input type="submit" value="Save" class="sm" /></div>
+</form>
+
+<div style="display:none;" id="id_st_maxdemand">~GetMaxDemandSetting~</div>
+</div>
+
+<script language="javascript">
+<!--
+
+var maxdemand_interval = document.getElementById("id_mdri");
+
+getSettings();
+
+//function validate()
+//{
+//	var bHasErr = false;
+		
+//	if(maxdemand_interval == "" || !isNumber(maxdemand_interval.value))	
+//		bHasErr = true;
+		
+//	if(bHasErr)
+//	{
+//		alert('Please enter valid values in all fields!');
+//		return false;
+//	}
+//	else document.getElementById("form_maxdemand").submit();
+//}
+
+function getSettings() {
+	
+	var interval = document.getElementById("id_st_maxdemand").innerHTML;
+	if(interval=="")
+	{
+		alert('Error retrieving data.');
+		return;
+	}
+
+	//maxdemand_interval.value = parseInt(interval.substr(0,4), 16);
+	maxdemand_interval.value = interval;
+}
+
+if(window.location.href.indexOf("?S") > 0)
+	document.getElementById("id_success").innerHTML = "Saved";
+//-->
+</script>
+~inc:footer.inc~

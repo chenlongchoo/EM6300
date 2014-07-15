@@ -1,0 +1,224 @@
+~inc:header.inc~
+<td><div id="S0#1"></div></td>
+
+<div id="content">
+<h1>Real-Time Readings</h1>
+<table width="100%">
+<tr><th>Standard</th></tr>
+
+<tr><td onclick="toggleView('PhaseStatus')"><u>Phase Status</u></td></tr>
+<tr><td><div id="PhaseStatus">
+	<table class="readTable" width="100%">
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="M" value="0#0#0">Line Frequency(Hz)</td><td class="readValue"><div id="M0#0"></div></td>
+		<td class="readTitle"><input type="checkbox" name="M" value="0#0#6">Phase A Status</td><td class="readValue"><div id="M0#6"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="M" value="0#0#7">Phase B Status</td><td class="readValue"><div id="M0#7"></div></td>
+		<td class="readTitle"><input type="checkbox" name="M" value="0#0#8">Phase C Status</td><td class="readValue"><div id="M0#8"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="M" value="0#0#5">Global Status</td><td class="readValue"><div id="M0#5"></div></td>
+		<td class="readTitle"><input type="checkbox" name="M" value="0#0#12">Total Real Power</td><td class="readValue"><div id="M0#12"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="M" value="0#0#13">Total Reactive Power</td><td class="readValue"><div id="M0#13"></div></td>
+		<td class="readTitle"><input type="checkbox" name="M" value="0#0#14">Total Apparent Power</td><td class="readValue"><div id="M0#14"></div></td>
+	</tr>
+	</table>
+</div></td></tr>
+
+<tr><td onclick="toggleView('PhaseAStandard')"><u>Phase A</u></td></tr>
+<tr><td><div id="PhaseAStandard">
+	<table class="readTable" width="100%">
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#1">RMS Voltage(V)</td><td class="readValue"><div id="A0#1"></div></td>
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#2">RMS Current(A)</td><td class="readValue"><div id="A0#2"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#3">Raw Voltage</td><td class="readValue"><div id="A0#3"></div></td>
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#4">Raw Current</td><td class="readValue"><div id="A0#4"></div></td>
+	
+	</tr>
+	<tr>	
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#9">Reactive Power(kVAr)</td><td class="readValue"><div id="A0#9"></div></td>
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#7">Real Power(kW)</td><td class="readValue"><div id="A0#7"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#8">Apparent Power(kVA)</td><td class="readValue"><div id="A0#8"></div></td>
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#10">Real Energy(kWh)</td><td class="readValue"><div id="A0#10"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#11">Reactive Energy(kVAhr)</td><td class="readValue"><div id="A0#11"></div></td>
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#12">Apparent Energy(kVAh)</td><td class="readValue"><div id="A0#12"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="A" value="0#0#0">Power Factor(%)</td><td class="readValue"><div id="A0#0"></div></td>
+	</tr>
+	</table>
+</div></td></tr>
+	
+<tr><td onclick="toggleView('PhaseBStandard')"><u>Phase B</u></td></tr>
+<tr><td><div id="PhaseBStandard">
+	<table class="readTable" width="100%">
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#1">RMS Voltage(V)</td><td class="readValue"><div id="B0#1"></div></td>
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#2">RMS Current(A)</td><td class="readValue"><div id="B0#2"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#3">Raw Voltage</td><td class="readValue"><div id="B0#3"></div></td>
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#4">Raw Current</td><td class="readValue"><div id="B0#4"></div></td>
+	
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#9">Reactive Power(kVAr)</td><td class="readValue"><div id="B0#9"></div></td>
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#7">Real Power(kW)</td><td class="readValue"><div id="B0#7"></div></td>	
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#8">Apparent Power(kVA)</td><td class="readValue"><div id="B0#8"></div></td>
+		
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#10">Real Energy(kWh)</td><td class="readValue"><div id="B0#10"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#11">Reactive Energy(kVAhr)</td><td class="readValue"><div id="B0#11"></div></td>
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#12">Apparent Energy(kVAh)</td><td class="readValue"><div id="B0#12"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="B" value="0#0#0">Power Factor(%)</td><td class="readValue"><div id="B0#0"></div></td>
+	</tr>
+	</table>
+</div></td></tr>
+	
+<tr><td onclick="toggleView('PhaseCStandard')"><u>Phase C</u></td></tr>
+<tr><td><div id="PhaseCStandard">
+	<table class="readTable" width="100%">
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#1">RMS Voltage(V)</td><td class="readValue"><div id="C0#1"></div></td>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#2">RMS Current(A)</td><td class="readValue"><div id="C0#2"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#3">Raw Voltage</td><td class="readValue"><div id="C0#3"></div></td>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#4">Raw Current</td><td class="readValue"><div id="C0#4"></div></td>
+	
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#9">Reactive Power(kVAr)</td><td class="readValue"><div id="C0#9"></div></td>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#7">Real Power(kW)</td><td class="readValue"><div id="C0#7"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#8">Apparent Power(kVA)</td><td class="readValue"><div id="C0#8"></div></td>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#10">Real Energy(kWh)</td><td class="readValue"><div id="C0#10"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#11">Reactive Energy(kVAhr)</td><td class="readValue"><div id="C0#11"></div></td>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#12">Apparent Energy(kVAh)</td><td class="readValue"><div id="C0#12"></div></td>
+	</tr>
+	<tr>
+		<td class="readTitle"><input type="checkbox" name="C" value="0#0#0">Power Factor(%)</td><td class="readValue"><div id="C0#0"></div></td>
+	</tr>
+	</table>
+	
+</div></td></tr>
+
+</table>
+
+</div>
+
+
+<script type="text/javascript">
+var l = document.getElementById("S0#1");
+l.style.display = 'none';
+
+populateReadings();
+
+/*	This function checks which checkboxes are checked and mark them with '1'.
+	RequestReadings() will later send requests for those marked with '1'.
+*/
+function populateReadings() {
+	var s = document.getElementById('S0#1').innerHTML;
+	var pos1 = s.search("/");
+//	var para_list = new Array(0,0,0,0,0,0,0,0,0,0,0,0,0);  // Binary value of the readings to request for.
+	var para_list = new Array(0,0,0,0);
+	var str1 = new String();		 
+	var a = document.getElementById('content').getElementsByTagName('input'); 
+	for( b=0; b<a.length; b++)
+		if( a[b].type == 'checkbox' && a[b].checked )
+		{
+			a[b].value = "1"+a[b].value.substring(1);
+
+			switch (a[b].name)
+			{
+				case "A":
+//					para_list[Base2_Logarithm(a[b].value.substring(4))] += Math.pow(2,3);
+					para_list[1] += Exponential2_X(a[b].value.substring(4));
+					break;
+				case "B":
+//					para_list[Base2_Logarithm(a[b].value.substring(4))] += Math.pow(2,2);
+					para_list[2] += Exponential2_X(a[b].value.substring(4));
+					break;
+				case "C":
+//					para_list[Base2_Logarithm(a[b].value.substring(4))] += Math.pow(2,1);
+					para_list[3] += Exponential2_X(a[b].value.substring(4));
+					break;
+				case "M":
+//					para_list[Base2_Logarithm(a[b].value.substring(4))] += Math.pow(2,0);
+					para_list[0] += Exponential2_X(a[b].value.substring(4));
+					break;
+			}
+		}
+		
+//	for(b=0; b<13; b++)
+	for(b=0; b<4; b++)
+	{
+//		if(para_list[b] > 9)
+//			str1 = str1.concat(para_list[b]);
+//		else
+//			str1 = str1.concat("0", para_list[b]);
+		str1 = str1.concat(para_list[b]);
+		str1 = str1.concat("e");
+	}
+	
+//	if(pos1 > 0)
+//		newAJAXCommand('ss.cgi?rl='+str1, false);
+	requestReadings();
+}
+
+function requestReadings() {
+	var a = document.getElementById('content').getElementsByTagName('input');
+	for( b=0; b<a.length; b++ )
+	{
+		if( a[b].type == 'checkbox' && a[b].value.charAt(0) == "1" )
+		{
+			a[b].value = "0"+a[b].value.substring(1);
+			var _ph = "0";
+			switch( a[b].name )
+			{
+				case 'M': _ph = "0"; break;
+				case 'A': _ph = "1"; break;
+				case 'B': _ph = "2"; break;
+				case 'C': _ph = "3"; break;
+			}
+			newAJAXCommand('rt.cgi?phase='+_ph+'&reg='+escape(a[b].value.substring(4))+'&ph='+a[b].name+'&l='+escape(a[b].value.substring(2)), (''+a[b].name+a[b].value.substring(2)).toUpperCase(), false);
+//			newAJAXCommand('rt.cgi?ph='+a[b].name+'&l='+escape(a[b].value.substring(2)), (''+a[b].name+a[b].value.substring(2)).toUpperCase(), false);
+			setTimeout('requestReadings()', 500);
+			return;
+		}
+	}
+	setTimeout('populateReadings()', 4000);
+}
+
+function Base2_Logarithm(a)
+{
+	var temp = new Number(a);
+	temp = Math.log(temp)/Math.log(2);
+	return temp;
+}
+function Exponential2_X(a)
+{
+	var temp = new Number(a);
+	temp = Math.pow(2,temp);
+	return temp;
+}
+</script>
+
+~inc:footer.inc~

@@ -1,0 +1,16 @@
++inc:header.inc
++inc:footer.inc
++RT
++status_fail
++GetCalibration
++ext_ratio
++config_mac
++config_hostname
++config_dhcpchecked
++config_ip
++config_gw
++config_subnet
++config_dns1
++config_dns2
++GetMaxDemandSetting
++reboot

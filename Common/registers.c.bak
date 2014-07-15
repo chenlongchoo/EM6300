@@ -1,0 +1,408 @@
+//power.c
+
+#include "HardwareProfile.h"
+#include "registers.h"
+
+RAW_ENERGY_STORAGE				raw_energy_storage;
+READING_STORAGE					reading_storage;
+READING_STORAGE_1				reading_storage_1;
+MAX_MIN_STORAGE					max_min_storage;
+
+#pragma romdata ko = 0x200
+rom near unsigned short POWER_CALIBRATION_QUEUE[POWER_CALIBRATION_QUEUE_SIZE] = 
+{
+	VOLT_CC, AMP_CC,
+	ENR_CC, PWR_CC,
+	PHASE_A_VOLTAGE_GAIN, PHASE_A_CURRENT_GAIN
+	
+	#if defined (THREE_PHASE_BOTTOM_BOARD) || defined METER_TOP_BOARD
+	, PHASE_B_VOLTAGE_GAIN, PHASE_B_CURRENT_GAIN
+	, PHASE_C_VOLTAGE_GAIN, PHASE_C_CURRENT_GAIN
+	#endif
+	, AUX_CFG
+};
+ 
+rom near unsigned short PHASE_ENERGY_REGISTERS_QUEUE[3][5] =
+{
+	{
+		PHASE_A_RAW_POS_REAL_ENERGY, PHASE_A_ENERGY_REAL_NEG,
+		PHASE_A_ENERGY_REAC_POS, PHASE_A_ENERGY_REAC_NEG,
+		PHASE_A_RAW_APPARANT_ENERGY
+	}	
+	#if defined( THREE_PHASE_BOTTOM_BOARD ) || defined METER_TOP_BOARD
+, 
+	{
+		PHASE_B_RAW_POS_REAL_ENERGY, PHASE_B_ENERGY_REAL_NEG,
+		PHASE_B_ENERGY_REAC_POS, PHASE_B_ENERGY_REAC_NEG,
+		PHASE_B_RAW_APPARANT_ENERGY
+	}	
+,
+	{
+		PHASE_C_RAW_POS_REAL_ENERGY, PHASE_C_ENERGY_REAL_NEG,
+		PHASE_C_ENERGY_REAC_POS, PHASE_C_ENERGY_REAC_NEG,
+		PHASE_C_RAW_APPARANT_ENERGY
+	}	
+	#endif
+};
+	
+rom near char * PHASE_RAW_ENERGY_STORAGE_QUEUE[3][5] =
+{
+	{
+	&raw_energy_storage.PHASE_A_REAL_POSITIVE, //&reading_storage.REAL_ENERGY_A,
+	&raw_energy_storage.PHASE_A_REAL_NEGATIVE, //&reading_storage.REAL_ENERGY_C,
+	&raw_energy_storage.PHASE_A_REACTIVE_POSITIVE,
+	&raw_energy_storage.PHASE_A_REACTIVE_NEGATIVE,
+	&raw_energy_storage.PHASE_A_APPARENT
+	}
+	#if defined( THREE_PHASE_BOTTOM_BOARD ) || defined METER_TOP_BOARD
+,
+	{	
+	&raw_energy_storage.PHASE_B_REAL_POSITIVE, 
+	&raw_energy_storage.PHASE_B_REAL_NEGATIVE, 
+	&raw_energy_storage.PHASE_B_REACTIVE_POSITIVE,
+	&raw_energy_storage.PHASE_B_REACTIVE_NEGATIVE,
+	&raw_energy_storage.PHASE_B_APPARENT
+	}
+,
+	{
+	&raw_energy_storage.PHASE_C_REAL_POSITIVE, 
+	&raw_energy_storage.PHASE_C_REAL_NEGATIVE, 
+	&raw_energy_storage.PHASE_C_REACTIVE_POSITIVE,
+	&raw_energy_storage.PHASE_C_REACTIVE_NEGATIVE,
+	&raw_energy_storage.PHASE_C_APPARENT
+	}	
+	#endif
+};
+		
+rom near unsigned short POWER_CALIBRATION_SIZE_QUEUE[POWER_CALIBRATION_QUEUE_SIZE] =
+{
+	VOLT_CC_LEN, AMP_CC_LEN,
+	ENR_CC_LEN, PWR_CC_LEN,
+	PHASE_A_VOLTAGE_GAIN_LEN, PHASE_A_CURRENT_GAIN_LEN
+	
+	#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+	, PHASE_B_VOLTAGE_GAIN_LEN, PHASE_B_CURRENT_GAIN_LEN
+	, PHASE_C_VOLTAGE_GAIN_LEN, PHASE_C_CURRENT_GAIN_LEN
+	#endif
+	, AUX_CFG_LEN
+};
+
+rom near unsigned short PHASE_STATUS_FLAGS_QUEUE[PHASE_STATUS_FLAGS_QUEUE_SIZE] =
+{
+	0, INTERRUPT_FLAGS_A
+	#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+	, INTERRUPT_FLAGS_B, INTERRUPT_FLAGS_C
+	#endif
+};	
+
+rom near unsigned short PHASE_STATUS_FLAGS_SIZE_QUEUE[PHASE_STATUS_FLAGS_QUEUE_SIZE] =
+{
+	0, INTERRUPT_FLAGS_A_LEN	
+	#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+	, INTERRUPT_FLAGS_B_LEN, INTERRUPT_FLAGS_C_LEN
+	#endif
+};	
+
+rom near unsigned short ENERGY_OVERFLOW_FLAGS_QUEUE[ENERGY_OVERFLOW_FLAGS_QUEUE_SIZE] =
+{
+	ENERGY_OVERFLOW_A
+	#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+	, ENERGY_OVERFLOW_B, ENERGY_OVERFLOW_C
+	#endif
+};	
+
+rom near unsigned short ENERGY_OVERFLOW_FLAGS_SIZE_QUEUE[ENERGY_OVERFLOW_FLAGS_QUEUE_SIZE] =
+{
+	ENERGY_OVERFLOW_A_LEN	
+	#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+	, ENERGY_OVERFLOW_B_LEN, ENERGY_OVERFLOW_C_LEN
+	#endif
+};
+
+rom near char * POWER_READINGS_M[POWER_REGISTERS_QUEUE_SIZE] =
+{
+	&reading_storage_1.LINE_FREQ,  
+	&reading_storage_1.AMPCC, &reading_storage_1.ENRCC,
+	&reading_storage_1.VOLTCC, &reading_storage_1.PWRCC,
+	&reading_storage_1.GLOBAL_STATUS, &reading_storage_1.PHASE_A_STATUS, 
+	&reading_storage_1.PHASE_B_STATUS, &reading_storage_1.PHASE_C_STATUS, 
+	&reading_storage_1.HARMONIC_CONFIG, &reading_storage.REAL_ENERGY_T,	//2012-09-25 Liz editted 
+	&reading_storage.CURRENT_NEUTRAL, &reading_storage.REAL_POWER_T,
+	&reading_storage.REACTIVE_POWER_T, &reading_storage.APPARENT_POWER_T,
+	&reading_storage_1.CURRENT_TRANSFORMER_RANGE
+};
+
+// POWER_READINGS_X stores the readings read from MAXQ3180, ready to send out.
+rom near char * POWER_READINGS_A[POWER_REGISTERS_QUEUE_SIZE] =
+{	
+	&reading_storage_1.POWER_FACTOR_A,
+	&reading_storage.VOLT_A, &reading_storage.CURRENT_A,
+	&reading_storage_1.RAW_VOLTAGE_A, &reading_storage_1.RAW_CURRENT_A,
+	&reading_storage_1.VOLT_GAIN_A, &reading_storage_1.CURRENT_GAIN_A,
+	&reading_storage.REAL_POWER_A, &reading_storage.APPARENT_POWER_A, 
+	&reading_storage.REACTIVE_POWER_A, &reading_storage.REAL_ENERGY_A, 
+	&reading_storage.REACTIVE_ENERGY_A, &reading_storage.APPARENT_ENERGY_A,
+	&max_min_storage.MAX_POWER_A, &max_min_storage.MIN_POWER_A,
+	0
+};	
+
+#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+rom near char * POWER_READINGS_B[POWER_REGISTERS_QUEUE_SIZE] =
+{
+	&reading_storage_1.POWER_FACTOR_B, 
+	&reading_storage.VOLT_B, &reading_storage.CURRENT_B,
+	&reading_storage_1.RAW_VOLTAGE_B, &reading_storage_1.RAW_CURRENT_B,
+	&reading_storage_1.VOLT_GAIN_B, &reading_storage_1.CURRENT_GAIN_B,
+	&reading_storage.REAL_POWER_B, &reading_storage.APPARENT_POWER_B, 
+	&reading_storage.REACTIVE_POWER_B, &reading_storage.REAL_ENERGY_B,  //&raw_energy_storage.PHASE_A_REAL_NEGATIVE,
+	&reading_storage.REACTIVE_ENERGY_B,	&reading_storage.APPARENT_ENERGY_B,
+	&max_min_storage.MAX_POWER_B, &max_min_storage.MIN_POWER_B,
+	0 
+};
+	
+rom near char * POWER_READINGS_C[POWER_REGISTERS_QUEUE_SIZE] =
+{
+	&reading_storage_1.POWER_FACTOR_C, 
+	&reading_storage.VOLT_C, &reading_storage.CURRENT_C,
+	&reading_storage_1.RAW_VOLTAGE_C, &reading_storage_1.RAW_CURRENT_C,
+	&reading_storage_1.VOLT_GAIN_C, &reading_storage_1.CURRENT_GAIN_C,
+	&reading_storage.REAL_POWER_C, &reading_storage.APPARENT_POWER_C, 
+	&reading_storage.REACTIVE_POWER_C, &reading_storage.REAL_ENERGY_C, 
+	&reading_storage.REACTIVE_ENERGY_C, &reading_storage.APPARENT_ENERGY_C,
+	&max_min_storage.MAX_POWER_C, &max_min_storage.MIN_POWER_C,
+	0
+};	
+#endif
+
+rom near char * POWER_READINGS[4] = 
+{
+	&POWER_READINGS_M, &POWER_READINGS_A
+#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+	, &POWER_READINGS_B, &POWER_READINGS_C
+#endif
+};
+
+//rom near const unsigned short POWER_REGISTERS_QUEUE[POWER_REGISTERS_QUEUE_SIZE] 
+rom near const unsigned short POWER_REGISTERS_QUEUE_M[POWER_REGISTERS_QUEUE_SIZE] = 
+{
+	LINE_FREQUENCY, 
+	AMP_CC, ENR_CC,
+	VOLT_CC, PWR_CC,
+	IRQ_FLAG, INTERRUPT_FLAGS_A, 
+	INTERRUPT_FLAGS_B, INTERRUPT_FLAGS_C, 
+	AUX_CFG, TOTAL_REAL_ENERGY, // LIZ(2012-09-25)
+	HARMONIC_RMS_CURRENT, TOTAL_REAL_POWER,
+	TOTAL_REACTIVE_POWER, TOTAL_APPARANT_POWER,
+	0
+};
+
+// No need to declare energy readings here because they will always be read.
+rom near const unsigned short POWER_REGISTERS_QUEUE_A[POWER_REGISTERS_QUEUE_SIZE] =
+{	
+	PHASE_A_POWER_FACTOR,
+	PHASE_A_RMS_VOLTAGE, PHASE_A_RMS_CURRENT,
+	PHASE_A_RAW_RMS_VOLTAGE, PHASE_A_RAW_RMS_CURRENT,
+	PHASE_A_VOLTAGE_GAIN, PHASE_A_CURRENT_GAIN,
+	PHASE_A_REAL_POWER, PHASE_A_APPARANT_POWER, 
+	PHASE_A_REACTIVE_POWER, PHASE_A_REAL_ENERGY,
+	PHASE_A_REACTIVE_ENERGY, PHASE_A_APPARANT_ENERGY, 
+	PHASE_A_MAX_DEMAND, 0,
+	0
+};	
+	
+#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+rom near const unsigned short POWER_REGISTERS_QUEUE_B[POWER_REGISTERS_QUEUE_SIZE] =
+{
+	PHASE_B_POWER_FACTOR,
+	PHASE_B_RMS_VOLTAGE, PHASE_B_RMS_CURRENT,
+	PHASE_B_RAW_RMS_VOLTAGE, PHASE_B_RAW_RMS_CURRENT,
+	PHASE_B_VOLTAGE_GAIN, PHASE_B_CURRENT_GAIN,
+	PHASE_B_REAL_POWER, PHASE_B_APPARANT_POWER, 
+	PHASE_B_REACTIVE_POWER, PHASE_B_REAL_ENERGY,
+	PHASE_B_REACTIVE_ENERGY, PHASE_B_APPARANT_ENERGY, 
+	PHASE_B_MAX_DEMAND, 0,
+	0
+};
+rom near const unsigned short POWER_REGISTERS_QUEUE_C[POWER_REGISTERS_QUEUE_SIZE] =
+{		
+	PHASE_C_POWER_FACTOR,
+	PHASE_C_RMS_VOLTAGE, PHASE_C_RMS_CURRENT,
+	PHASE_C_RAW_RMS_VOLTAGE, PHASE_C_RAW_RMS_CURRENT,
+	PHASE_C_VOLTAGE_GAIN, PHASE_C_CURRENT_GAIN,
+	PHASE_C_REAL_POWER, PHASE_C_APPARANT_POWER, 
+	PHASE_C_REACTIVE_POWER, PHASE_C_REAL_ENERGY,
+	PHASE_C_REACTIVE_ENERGY, PHASE_C_APPARANT_ENERGY,
+	PHASE_C_MAX_DEMAND, 0,
+	0 
+};
+#endif
+
+rom near const unsigned short * POWER_REGISTERS_QUEUE[4] = 
+{
+	POWER_REGISTERS_QUEUE_M, POWER_REGISTERS_QUEUE_A,
+#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+	POWER_REGISTERS_QUEUE_B, POWER_REGISTERS_QUEUE_C
+#endif
+};
+
+//rom near const unsigned char POWER_REGISTERS_SIZE_QUEUE[POWER_REGISTERS_QUEUE_SIZE] = 
+rom near const unsigned char POWER_REGISTERS_SIZE_QUEUE_M[POWER_REGISTERS_QUEUE_SIZE] = 
+{
+	LINE_FREQUENCY_LEN, 
+	AMP_CC_LEN, ENR_CC_LEN,
+	VOLT_CC_LEN, PWR_CC_LEN,
+	IRQ_FLAG_LEN, INTERRUPT_FLAGS_A_LEN, 
+	INTERRUPT_FLAGS_B_LEN, INTERRUPT_FLAGS_C_LEN, 
+	AUX_CFG_LEN, TOTAL_REAL_ENERGY_LEN, //2012-09-25 Liz.
+	HARMONIC_RMS_CURRENT_LEN, TOTAL_REAL_POWER_LEN,
+	TOTAL_REACTIVE_POWER_LEN, TOTAL_APPARANT_POWER_LEN,
+	2
+};
+rom near const unsigned char POWER_REGISTERS_SIZE_QUEUE_A[POWER_REGISTERS_QUEUE_SIZE] = 
+{
+	PHASE_A_POWER_FACTOR_LEN,
+	PHASE_A_RMS_VOLTAGE_LEN, PHASE_A_RMS_CURRENT_LEN,
+	PHASE_A_RAW_RMS_VOLTAGE_LEN, PHASE_A_RAW_RMS_CURRENT_LEN,
+	PHASE_A_VOLTAGE_GAIN_LEN, PHASE_A_CURRENT_GAIN_LEN,
+	PHASE_A_REAL_POWER_LEN, PHASE_A_APPARANT_POWER_LEN, 
+	PHASE_A_REACTIVE_POWER_LEN, PHASE_A_REAL_ENERGY_LEN,
+	PHASE_A_APPARANT_ENERGY_LEN, PHASE_A_REACTIVE_ENERGY_LEN,
+	PHASE_A_MAX_DEMAND_LEN, 8,
+	0
+};
+	
+#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+rom near const unsigned char POWER_REGISTERS_SIZE_QUEUE_B[POWER_REGISTERS_QUEUE_SIZE] = 
+{
+	PHASE_B_POWER_FACTOR_LEN,
+	PHASE_B_RMS_VOLTAGE_LEN, PHASE_B_RMS_CURRENT_LEN,
+	PHASE_B_RAW_RMS_VOLTAGE_LEN, PHASE_B_RAW_RMS_CURRENT_LEN,
+	PHASE_B_VOLTAGE_GAIN_LEN, PHASE_B_CURRENT_GAIN_LEN,
+	PHASE_B_REAL_POWER_LEN, PHASE_B_APPARANT_POWER_LEN, 
+	PHASE_B_REACTIVE_POWER_LEN, PHASE_B_REAL_ENERGY_LEN,
+	PHASE_B_APPARANT_ENERGY_LEN, PHASE_B_REACTIVE_ENERGY_LEN,
+	PHASE_B_MAX_DEMAND_LEN, 8,
+	0
+};
+rom near const unsigned char POWER_REGISTERS_SIZE_QUEUE_C[POWER_REGISTERS_QUEUE_SIZE] = 
+{
+	PHASE_C_POWER_FACTOR_LEN,
+	PHASE_C_RMS_VOLTAGE_LEN, PHASE_C_RMS_CURRENT_LEN,
+	PHASE_C_RAW_RMS_VOLTAGE_LEN, PHASE_C_RAW_RMS_CURRENT_LEN,
+	PHASE_C_VOLTAGE_GAIN_LEN, PHASE_C_CURRENT_GAIN_LEN,
+	PHASE_C_REAL_POWER_LEN, PHASE_C_APPARANT_POWER_LEN, 
+	PHASE_C_REACTIVE_POWER_LEN, PHASE_C_REAL_ENERGY_LEN,
+	PHASE_C_APPARANT_ENERGY_LEN, PHASE_C_REACTIVE_ENERGY_LEN,
+	PHASE_C_MAX_DEMAND_LEN, 8,
+	0
+};
+#endif
+rom near const unsigned char * POWER_REGISTERS_SIZE_QUEUE[4] = 
+{
+	&POWER_REGISTERS_SIZE_QUEUE_M, &POWER_REGISTERS_SIZE_QUEUE_A,
+#if defined THREE_PHASE_BOTTOM_BOARD || defined METER_TOP_BOARD
+	&POWER_REGISTERS_SIZE_QUEUE_B, &POWER_REGISTERS_SIZE_QUEUE_C
+#endif
+};
+
+unsigned char POWER_REGISTERS_DIVIDE_BY_M[POWER_REGISTERS_QUEUE_SIZE] =
+{
+	3, 
+	0, 0,
+	0, 0,
+	0, 0,
+	0, 0,
+	0, 2, 
+	4, 7,
+	7, 7,
+	0
+};
+
+unsigned char POWER_REGISTERS_DIVIDE_BY_A[POWER_REGISTERS_QUEUE_SIZE] =
+{	
+	2, 
+	3, 4,
+	0, 0,
+	0, 0,
+	7, 7,
+	7, 4,
+	4, 4,
+	7, 7,
+	0
+};
+
+rom near const unsigned char * POWER_REGISTERS_DIVIDE_BY[2] = 
+{
+	&POWER_REGISTERS_DIVIDE_BY_M, &POWER_REGISTERS_DIVIDE_BY_A
+};
+
+rom near const unsigned char POWER_SIGNED_REGISTERS_M[POWER_REGISTERS_QUEUE_SIZE] =
+{
+	0, 
+	0, 0,
+	0, 0,
+	0, 0,
+	0, 0,
+	0, 0,
+	0, 1,
+	1, 0,
+	0
+};
+
+rom near const unsigned char POWER_SIGNED_REGISTERS_A[POWER_REGISTERS_QUEUE_SIZE] =
+{
+	1, 
+	0, 0,
+	0, 0,
+	0, 0,
+	1, 0,
+	1, 0,
+	1, 0,
+	1, 0,
+	0
+};
+
+// 2012-06-15 Liz: Added for MAX_MIN voltage/current/power record
+rom near char * MAX_MIN_STORAGE_QUEUE[3][2] =
+{
+	{
+	&max_min_storage.MAX_POWER_A, &max_min_storage.MIN_POWER_A
+	}
+	#if defined( THREE_PHASE_BOTTOM_BOARD ) || defined METER_TOP_BOARD
+,
+	{	
+	&max_min_storage.MAX_POWER_B, &max_min_storage.MIN_POWER_B
+	}
+,
+	{
+	&max_min_storage.MAX_POWER_C, &max_min_storage.MIN_POWER_C
+	}	
+	#endif
+};
+
+rom near char * PREV_MAX_MIN_STORAGE_QUEUE[3][1] =
+{
+	{
+	&max_min_storage.PRE_MAX_POWER_A
+	}
+	#if defined( THREE_PHASE_BOTTOM_BOARD ) || defined METER_TOP_BOARD
+,
+	{	
+	&max_min_storage.PRE_MAX_POWER_B
+	}
+,
+	{
+	&max_min_storage.PRE_MAX_POWER_C
+	}	
+	#endif
+};
+//
+#pragma romdata
+
+void Set_div(unsigned char c, unsigned char reg, unsigned char phase)
+{
+	if(phase!=0)
+		POWER_REGISTERS_DIVIDE_BY_A[reg] = c;
+	else
+		POWER_REGISTERS_DIVIDE_BY_M[reg] = c;
+}	

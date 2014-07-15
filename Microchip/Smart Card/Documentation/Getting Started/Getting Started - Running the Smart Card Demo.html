@@ -1,0 +1,1784 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List
+href="Getting%20Started%20-%20Running%20the%20Smart%20Card%20Demo_files/filelist.xml">
+<link rel=Edit-Time-Data
+href="Getting%20Started%20-%20Running%20the%20Smart%20Card%20Demo_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Getting Started: Smart Card Demo</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="country-region"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>C12109</o:Author>
+  <o:LastAuthor>Abhay</o:LastAuthor>
+  <o:Revision>181</o:Revision>
+  <o:TotalTime>1008</o:TotalTime>
+  <o:Created>2008-03-29T21:04:00Z</o:Created>
+  <o:LastSaved>2011-07-13T09:59:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2041</o:Words>
+  <o:Characters>11634</o:Characters>
+  <o:Company>Microchip Technology Inc</o:Company>
+  <o:Lines>96</o:Lines>
+  <o:Paragraphs>27</o:Paragraphs>
+  <o:CharactersWithSpaces>13648</o:CharactersWithSpaces>
+  <o:Version>11.9999</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>90</w:Zoom>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:Tunga;
+	panose-1:0 0 4 0 0 0 0 0 0 0;
+	mso-font-charset:1;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:4194304 0 0 0 0 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+@font-face
+	{font-family:Fixedsys;
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:13.0pt;
+	font-family:Arial;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-link:"Plain Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Courier New";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;
+	font-weight:bold;}
+span.PlainTextChar
+	{mso-style-name:"Plain Text Char";
+	mso-style-locked:yes;
+	mso-style-link:"Plain Text";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";
+	mso-ansi-language:EN-US;
+	mso-fareast-language:EN-US;
+	mso-bidi-language:AR-SA;}
+p.element10, li.element10, div.element10
+	{mso-style-name:element10;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 65.95pt 1.0in 65.95pt;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:778649414;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1535691306 1090818812 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:1179345190;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1592680704 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="54274"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoPlainText align=center style='text-align:center'><a
+name="_Toc194573682"><b style='mso-bidi-font-weight:normal'><u><span
+style='font-size:16.0pt;font-family:Arial'>Getting Started: Smart Card Demo</span></u></b></a><b
+style='mso-bidi-font-weight:normal'><u><span style='font-size:16.0pt;
+font-family:Arial'><o:p></o:p></span></u></b></p>
+
+<p class=MsoPlainText><b style='mso-bidi-font-weight:normal'><u><span
+style='font-size:16.0pt;font-family:Arial'><o:p><span style='text-decoration:
+ none'>&nbsp;</span></o:p></span></u></b></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><!--[if supportFields]><span
+style='font-family:Arial'><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>TOC \o &quot;1-3&quot; \h \z \u <span
+style='mso-element:field-separator'></span></span><![endif]--><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483068">Required
+Hardware:<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483068 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000360038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483069">Configuration
+1: HPC Explorer<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483069 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000360039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483070">Configuration
+2: Explorer 16<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483070 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000370030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483071">Configuration
+3: Low Pin Count USB Development Kit<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483071 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000370031000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483072">Configuration
+4: PICDEM FS USB<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483072 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000370032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483073">Configuring
+the Hardware:<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483073 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>1<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000370033000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483074">Configuration
+1: HPC Explorer<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483074 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>2<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000370034000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483075">Configuration
+2: Explorer 16<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483075 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>3<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000370035000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483076">Configuration
+3: PIC18F14K50 + LPC Board<span style='color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483076 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>5<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000370036000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc3 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483077">Configuration
+4: PICDEM FS USB<span style='color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none'><span style='mso-tab-count:1 dotted'>.. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483077 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000370037000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483078"><span
+style='mso-bidi-font-family:Arial;mso-bidi-language:AR-SA'>Firmware</span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483078 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>6<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000370038000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483079"><span
+style='mso-bidi-font-family:Arial;mso-bidi-language:AR-SA'>Running the Demo</span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483079 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>7<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000370039000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoToc2 style='tab-stops:right dotted 479.6pt'><span
+class=MsoHyperlink><span style='mso-no-proof:yes'><a href="#_Toc267483080">Trademarks:<span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-tab-count:1 dotted'> </span></span><!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span> PAGEREF
+_Toc267483080 \h </span><span style='color:windowtext;text-decoration:none;
+text-underline:none'><span style='display:none;mso-hide:screen'><span
+style='mso-element:field-separator'></span></span></span><![endif]--><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'>9<!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003200360037003400380033003000380030000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
+style='mso-bidi-font-family:Tunga;mso-no-proof:yes'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><!--[if supportFields]><span style='font-family:Arial'><span
+style='mso-element:field-end'></span></span><![endif]--><span style='font-family:
+Arial'><o:p>&nbsp;</o:p></span></p>
+
+<h2><a name="_Toc267483068"></a><a name="required_hardware"><span
+style='mso-bookmark:_Toc267483068'>Required Hardware</span></a><span
+style='mso-bookmark:_Toc267483068'>:</span></h2>
+
+<p class=MsoPlainText><span style='font-family:Arial'><span
+style='mso-spacerun:yes'>  </span>To run this project, you will need one of the
+following sets of hardware:<o:p></o:p></span></p>
+
+<h3><span style='mso-spacerun:yes'>    </span><a name="_Toc267483069">Configuration
+1: HPC Explorer</a></h3>
+
+<p class=MsoPlainText><span style='font-family:Arial'><span
+style='mso-spacerun:yes'>     </span><span style='mso-tab-count:1'>       </span><a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=DM183022">High
+pin count (HPC) Explorer</a> (DM183022)<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><span style='mso-tab-count:
+1'>            </span>SC (Smart/Sim Card) PICTail Board<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:Arial'>And
+one of the following PIMs<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span
+style='font-family:Arial'><a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=MA180021">PIC18F87J50
+Plug-In-Module (PIM)</a> (MA180021)<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span
+style='font-family:Arial'><a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=MA180024">PIC18F46J50
+Full Speed USB Demo Board</a> (MA180024)<o:p></o:p></span></p>
+
+<h3><span style='mso-spacerun:yes'>    </span><a name="_Toc267483070">Configuration
+2: Explorer 16</a></h3>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:Arial'><a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=DM240001">Explorer
+16</a> (DM240001)<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:Arial'>SC
+(Smart/Sim Card) PICTail Board<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><span style='mso-tab-count:
+1'>            </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><span style='mso-tab-count:
+1'>            </span>And one of the following PIMs<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span
+style='font-family:Arial'><a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=MA240014"><span
+lang=DE style='mso-ansi-language:DE'>PIC24FJ256GB110 Plug-In-Module (PIM)</span></a></span><span
+lang=DE style='font-family:Arial;mso-ansi-language:DE'> (MA240014),<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span
+style='font-family:Arial'><a
+href="http://www.microchipdirect.com/ProductSearch.aspx?keywords=PIC32MX795F512L"><span
+lang=DE style='mso-ansi-language:DE'>PIC32MX795F512L Plug-In-Module (PIM)</span></a></span><span
+lang=DE style='font-family:Arial;mso-ansi-language:DE'> (MA320003),<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span lang=DE
+style='font-family:Arial;mso-ansi-language:DE'>dsPIC33FJ128MC710,<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span lang=DE
+style='font-family:Arial;mso-ansi-language:DE'>PIC24HJ256GP610<o:p></o:p></span></p>
+
+<h3><a name="_Toc207767006"><span lang=DE style='mso-ansi-language:DE'><span
+style='mso-spacerun:yes'>     </span></span></a><a name="_Toc267483071"></a><a
+name="_Toc245126859"><span style='mso-bookmark:_Toc267483071'>Configuration 3:
+Low Pin Count USB Development Kit</span></a></h3>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>Low Pin Count USB Development Kit with PICKit 2
+Debugger/Programmer</span><span style='mso-bidi-language:AR-SA'> (<a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=DV164126">DV164126</a>)
+</span><span style='font-size:10.0pt;font-family:Arial'>or without
+Debugger/Programmer</span><span style='mso-bidi-language:AR-SA'> (<a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=DM164127">DM164127</a>).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>SC (Smart/Sim Card) PICTail Board<o:p></o:p></span></p>
+
+<h3><span style='mso-spacerun:yes'>    </span><a name="_Toc267483072"></a><a
+name="_Toc245789176"><span style='mso-bookmark:_Toc267483072'>Configuration 4:
+PICDEM FS USB</span></a></h3>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial;mso-bidi-font-family:"Courier New";mso-bidi-language:AR-SA'><a
+href="http://www.microchipdirect.com/productsearch.aspx?Keywords=DM163025">PICDEM
+FS USB</a> (DM163025)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>SC (Smart/Sim Card) PICTail Board<o:p></o:p></span></p>
+
+<h2><a name="_Toc267483073"></a><a name="configuring_the_hardware"><span
+style='mso-bookmark:_Toc267483073'>Configuring the Hardware</span></a><span
+style='mso-bookmark:_Toc267483073'>:</span></h2>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>This
+section describes how to set up the various configurations of hardware to run
+this demo.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'><a
+href="#config_2">Configuration 1: HPC Explorer</a><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'><a
+href="#config_3">Configuration 2:<span style='mso-spacerun:yes'> 
+</span>Explorer 16</a><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:Arial'><a
+href="#config_6">Configuration 3: PIC18F14K50 + LPC Board</a><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:Arial'><a
+href="#_Configuration_4:_PICDEM">Configuration 4: PICDEM FS USB Board</a><o:p></o:p></span></p>
+
+<h3><span style='mso-spacerun:yes'> </span><a name="config_2"><span
+style='mso-tab-count:1'>         </span></a><a name="_Toc267483074"><span
+style='mso-bookmark:config_2'>Configuration 1: HPC Explorer</span></a><span
+style='mso-bookmark:config_2'></span></h3>
+
+<span style='mso-bookmark:config_2'></span>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>1)
+Before inserting PIC18F87J50 PIM or PIC18F46J50 PIM in the HPC Explorer board,
+insure that the processor selector switch (S3) is in the “ICE” position as seen
+in the image below.<span style='mso-spacerun:yes'>  </span>Failure to so will
+result in difficulties in getting the PIC18F87J50/PIC18F46J50 PIM to sit
+properly on the HPC Explorer.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-family:Arial'><img
+border=0 width=605 height=240 id="_x0000_i1025"
+src="../../../USB/Documentation/images/HPC%20Explorer%20(processor%20select).JPG"><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>2)
+Before inserting PIC18F87J50/PIC18F46J50 PIM into the HPC Explorer board,
+remove all the attached cables from both the boards. Be careful while inserting
+the PIM into HPC board. Insure that no pins are bent or damaged during the process.<span
+style='mso-spacerun:yes'>  </span>Also insure that the PIM is not shifted in
+any direction and that all of the headers are properly aligned.<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>3)<span
+style='mso-spacerun:yes'>  </span>Insert the J4 port pins of SC (Smart/Sim
+Card) PICTail Board in the J3 <st1:place w:st="on"><st1:PlaceType w:st="on">port</st1:PlaceType>
+ of <st1:PlaceName w:st="on">HPC Explorer</st1:PlaceName></st1:place> board.
+Make sure that the Smart Card Connector is facing towards the HPC Explorer
+board. Insert the Smart Card in SC PICTail Board.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><span style='mso-tab-count:
+1'>            </span><img border=0 width=362 height=546 id="_x0000_i1026"
+src="../images/HPC%20Explorer%20+%2087J50%20PIM%20+%20Smart%20Card.jpg"><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<h3 style='text-indent:.5in'><a name="_Toc267483075"></a><a name="config_3"><span
+style='mso-bookmark:_Toc267483075'>Configuration 2: Explorer 16</span></a></h3>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>1)
+Before attaching the PIM to the Explorer 16 board, insure that the processor
+selector switch (S2) is in the “PIM” position as seen in the image below. <o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-family:Arial'><img
+border=0 width=473 height=356 id="_x0000_i1027"
+src="../../../USB/Documentation/images/Explorer%2016%20(processor%20switch).JPG"><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:Arial'>2)
+Short the J7 jumper to the “PIC24” setting<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='text-indent:.5in'><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-family:Arial'><img
+border=0 width=402 height=334 id="_x0000_i1028"
+src="../../../USB/Documentation/images/Explorer%2016%20(programming%20jumper).JPG"><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>3)
+Be careful while inserting the PIC24FJ256GB110 PIM or any other appropriate PIM
+into Exp 16 board. Insure that no pins are bent or damaged during the
+process.<span style='mso-spacerun:yes'>  </span>Also insure that the PIM is not
+shifted in any direction and that all of the headers are properly aligned.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>4)
+Short JP1 to SRC1 (i.e. RD1) or SRC2 (i.e. RB15) based upon the smart card
+clock pin configured in the firmware: Example: - Short JP1 to SRC1 while using
+PIC24FJ256GB110 demo and Short JP2 to SRC2 while using PIC32MX795F512L demo.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'><img
+border=0 width=639 height=480 id="_x0000_i1029"
+src="../images/Smart%20Card%20PICTail%20Board.jpg"><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in;text-indent:.5in'><span
+style='font-family:Arial'><span style='mso-tab-count:1'>            </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>5)<span
+style='mso-spacerun:yes'>  </span>Insert the J2 slot of SC (Smart/Sim Card) PICTail
+card into J5 <st1:place w:st="on"><st1:PlaceType w:st="on">port</st1:PlaceType>
+ of <st1:PlaceName w:st="on">Explorer</st1:PlaceName></st1:place> 16 board.
+Make sure that the Smart Card Connector is facing towards the Explorer 16
+board. Insert the Smart Card in SC PICTail board.<span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<h3 style='text-indent:.5in'><a name="config_6"></a><a name="_Toc267483076"></a><a
+name="_Toc207767013"></a><a name="_Toc207769089"><span style='mso-bookmark:
+_Toc207767013'><span style='mso-bookmark:_Toc267483076'><span style='mso-bookmark:
+config_6'>Configuration 3: </span></span></span></a><span style='mso-bookmark:
+_Toc267483076'><span style='mso-bookmark:config_6'>PIC18F14K50 + LPC Board</span></span><span
+style='mso-bookmark:config_6'></span></h3>
+
+<span style='mso-bookmark:config_6'></span>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>1)
+Make sure that JP1 of SC PICTail card is left open. Make sure that J12 of LPC
+board is left open. One side of J4 port pins of the SC (Smart/Sim Card) PICTail
+Board matches with the J11 <st1:place w:st="on"><st1:PlaceType w:st="on">port</st1:PlaceType>
+ of <st1:PlaceName w:st="on">LPC</st1:PlaceName></st1:place> board. Insert the
+matching side of J4 port of SC PICTail board into the J11 port of LPC board. Make
+sure that the Smart Card Connector is facing towards the LPC board. Insert the
+Smart Card in SC PICTail board. Apart from the above guidelines, couple of
+below steps has to be followed to make the demo work:-<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:.5in'><span
+style='font-size:10.0pt;font-family:Arial'>1) Short Tx &amp; Rx line of the
+UART (i.e. short pin 1 &amp; pin 6 of J13 port using a wire in the LPC board) and
+connect it to I/O pin of SC PICTail board.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'><span
+style='mso-tab-count:1'>            </span>2) Connect RB6 (i.e. pin 5 of J13
+port in LPC board) to “Card Present” signal pin of SC PICTail board as shown
+below.<span style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-family:Arial'><img
+border=0 width=340 height=255 id="_x0000_i1030"
+src="../images/LPC%20+%2018F14K50%20+%20Smart%20Card.jpg"><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><span style='mso-tab-count:1'>            </span><o:p></o:p></span></p>
+
+<h3 style='text-indent:.5in'><a name="_Toc267483077"></a><a name="_Toc245789184"></a><a
+name="_Configuration_5:_PICDEMTM"></a><a name="_Configuration_4:_PICDEM"></a><span
+style='mso-bookmark:_Toc267483077'><span style='mso-bookmark:_Toc245789184'>Configuration
+4: PICDEM FS USB</span></span></h3>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .75in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Arial;mso-fareast-font-family:Arial;mso-bidi-font-family:Arial;
+mso-bidi-language:AR-SA'><span style='mso-list:Ignore'>1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:10.0pt;font-family:Arial;mso-bidi-font-family:"Courier New";
+mso-bidi-language:AR-SA'>If using the PICDEM FS USB Demo Board, no hardware
+related configuration or jumper setting changes should be necessary.<span
+style='mso-spacerun:yes'>  </span>The demo board need only be programmed with
+appropriate firmware.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><img border=0 width=891 height=382 id="_x0000_i1031"
+src="../../../USB/Documentation/images/FSUSB.jpg"><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>2)<span
+style='mso-spacerun:yes'>  </span>Don’t short the jumper at J11 port.<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>3)<span
+style='mso-spacerun:yes'>  </span>Insert the J2 <st1:PlaceType w:st="on">port</st1:PlaceType>
+of <st1:PlaceName w:st="on">SC</st1:PlaceName> (Smart/Sim Card) PICTail card
+into J3 <st1:place w:st="on"><st1:PlaceType w:st="on">port</st1:PlaceType> of <st1:PlaceName
+ w:st="on">PICDEM FSUSB</st1:PlaceName></st1:place> board as per the pin
+configuration. Insert the Smart Card in SC PICTail board.<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><a name="_Toc267483078"></a><a name=firmware><span
+style='mso-bookmark:_Toc267483078'><span class=Heading2Char><span
+style='font-size:14.0pt'>Firmware</span></span></span></a><span
+style='mso-bookmark:_Toc267483078'></span><span style='mso-bookmark:firmware'></span><span
+style='font-family:Arial'>:<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>To
+run this project, you will need to load the corresponding firmware into the
+devices. <o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><span
+style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:.5in'><span style='font-family:Arial'>The
+source code for this demo is available in the “&lt;Install Directory\Smart Card
+Demo” directory.<span style='mso-spacerun:yes'>  </span>In this directory you
+will find all of the user level source and header files, linker file as well as
+project file for each of the hardware platforms.<span
+style='mso-spacerun:yes'>  </span>Find the project (*.mcp) file that
+corresponds to the hardware platform you wish to test. Compile and program the
+demo code into the hardware platform. For more help on how to compile and
+program projects, please refer to the MPLAB® IDE help available through the
+help menu of MPLAB (Help-&gt;Topics…-&gt;MPLAB IDE).<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><a name="_Toc267483079"></a><a name="running_the_demo"><span
+style='mso-bookmark:_Toc267483079'><span class=Heading2Char><span
+style='font-size:14.0pt'>Running the Demo</span></span></span></a><span
+style='mso-bookmark:_Toc267483079'></span><span style='mso-bookmark:running_the_demo'></span><span
+style='font-family:Arial'>:<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>This demo uses the selected hardware platform as a Smart
+card reader. The demo has to be run in the debug mode of MPLAB IDE. Please
+refer <a href="#configuring_the_hardware">“Configuring the Hardware”</a><span
+style='mso-spacerun:yes'>  </span>section for the bench setup connections.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>Smart Card consists of 8 pins namely:- <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><img border=0 width=489 height=217 id="_x0000_i1032"
+src="../images/Smart%20Card%20Signals.JPG"><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<pre style='margin-left:.5in'><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>I/O: Input or Output for serial data to the integrated circuit inside the card.<o:p></o:p></span></pre><pre
+style='margin-left:.5in'><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>VPP:<span style='mso-spacerun:yes'>  </span>Programming voltage input (optional use by the card).<o:p></o:p></span></pre><pre
+style='margin-left:.5in'><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>GND: Ground (reference voltage).<o:p></o:p></span></pre><pre
+style='margin-left:.5in'><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>CLK: Clocking or timing signal.<o:p></o:p></span></pre><pre
+style='margin-left:.5in'><span style='font-family:Arial;mso-bidi-font-family:
+"Times New Roman"'>RST: Reset Signal to the Card.<o:p></o:p></span></pre>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>VCC: Power supply input (optional use by the card).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>Communication between the interfacing device and smart card
+is done as per the following steps:-<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-layout-grid-align:none;text-autospace:none'><span
+style='font-size:10.0pt;font-family:Verdana;mso-bidi-font-family:Verdana;
+color:#000033'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>Insertion
+of the smart card in the slot.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>Detection
+of the smart card insertion by the microcontroller (interfacing device).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>Microcontroller
+does the cold reset of the smart card.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>Answer
+to Reset (ATR) response by the card.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>PPS
+exchange (if smart card supports it).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>Execution
+of the transaction(s) between the card &amp; the interfacing device.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>Removal
+of the smart card from the slot.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>Detection
+of the smart card removal by the microcontroller.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>Deactivation
+of the contacts.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>At the current times there are two communication protocols
+that are in general use:-<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>T
+= 0 asynchronous half duplex character transmission.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:list 1.0in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
+style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:10.0pt;font-family:Arial'>T
+= 1 asynchronous half duplex block transmission.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>The data transfers between the card and the terminal happens
+on the single wire I/O line. The smart card library supports both T=0 &amp; T=1
+protocol. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>Example code for T=0 cards:-&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Arial'>The demo executes the card commands namely SUBMIT CODE,
+SELECT FILE, READ RECORD &amp; WRITE RECORD. The command list can be extended further
+as per the project requirement.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'>&nbsp;</p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>Example code for T=1 cards:-<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:1.0in'><span style='font-size:10.0pt;
+font-family:Arial'>The demo executes the &quot;Get CPLC (Card Production Life
+Cycle) data&quot; command for T=1 java card. The command list can be extended
+further as per the smart card manual and the project requirement.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:1.0in'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>The demo uses the signal connections between the smart card
+&amp; PIC micro port pins as per the below table:-<span
+style='mso-spacerun:yes'>         </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><span style='mso-spacerun:yes'>       </span><o:p></o:p></span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=664
+ style='width:497.85pt;margin-left:41.15pt;border-collapse:collapse;border:
+ none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0in 5.4pt 0in 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt;font-family:Arial;color:blue'>Signal Name<o:p></o:p></span></b></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt;font-family:Arial;color:blue'>PIC18F46J50<o:p></o:p></span></b></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt;font-family:Arial;color:blue'>PIC18F87J50<o:p></o:p></span></b></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt;font-family:Arial;color:blue'>PIC18F4550<o:p></o:p></span></b></p>
+  </td>
+  <td width=133 valign=bottom style='width:99.55pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt;font-family:Arial;color:blue'>PIC18F14K50<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SIM_CARD_DET<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB1<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB1<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB1<o:p></o:p></span></p>
+  </td>
+  <td width=133 valign=bottom style='width:99.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB4<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SMART_CLK<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB2<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RC2<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RC2<o:p></o:p></span></p>
+  </td>
+  <td width=133 valign=bottom style='width:99.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RC2<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SMART_I/O<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RC6,RC7<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RC6,RC7<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RC6,RC7<o:p></o:p></span></p>
+  </td>
+  <td width=133 valign=bottom style='width:99.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB7,RB5<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SMART_RST<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB4<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB4<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB4<o:p></o:p></span></p>
+  </td>
+  <td width=133 valign=bottom style='width:99.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RC1<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SMART_CARD_DET<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB3<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB3<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB3<o:p></o:p></span></p>
+  </td>
+  <td width=133 valign=bottom style='width:99.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB6<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SMART_VCC<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB0<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB0<o:p></o:p></span></p>
+  </td>
+  <td width=131 valign=bottom style='width:97.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB0<o:p></o:p></span></p>
+  </td>
+  <td width=133 valign=bottom style='width:99.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RC0<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=684
+ style='width:512.9pt;margin-left:41.15pt;border-collapse:collapse;mso-padding-alt:
+ 0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt;font-family:Arial;color:blue'>Signal Name<o:p></o:p></span></b></p>
+  </td>
+  <td width=131 nowrap valign=bottom style='width:97.9pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt;font-family:Arial;color:blue'>PIC24FJ256GB110<o:p></o:p></span></b></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt;font-family:Arial;color:blue'>PIC32MX795F512L<o:p></o:p></span></b></p>
+  </td>
+  <td width=148 nowrap valign=bottom style='width:111.3pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt;font-family:Arial;color:blue'>dsPIC33FJ128MC710<o:p></o:p></span></b></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt;font-family:Arial;color:blue'>PIC24HJ256GP610<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SIM_CARD_DET<o:p></o:p></span></p>
+  </td>
+  <td width=131 nowrap valign=bottom style='width:97.9pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB1<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB1<o:p></o:p></span></p>
+  </td>
+  <td width=148 nowrap valign=bottom style='width:111.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB1<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB1<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SMART_CLK<o:p></o:p></span></p>
+  </td>
+  <td width=131 nowrap valign=bottom style='width:97.9pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB15<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RD1<o:p></o:p></span></p>
+  </td>
+  <td width=148 nowrap valign=bottom style='width:111.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RD1<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RD1<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SMART_I/O<o:p></o:p></span></p>
+  </td>
+  <td width=131 nowrap valign=bottom style='width:97.9pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RC4, RF2<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RF2 , RF8<o:p></o:p></span></p>
+  </td>
+  <td width=148 nowrap valign=bottom style='width:111.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RF2 , RF3<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RF2 , RF3<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SMART_RST<o:p></o:p></span></p>
+  </td>
+  <td width=131 nowrap valign=bottom style='width:97.9pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RE8<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RE8<o:p></o:p></span></p>
+  </td>
+  <td width=148 nowrap valign=bottom style='width:111.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RE8<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RA12<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SMART_CARD_DET<o:p></o:p></span></p>
+  </td>
+  <td width=131 nowrap valign=bottom style='width:97.9pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB0<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB0<o:p></o:p></span></p>
+  </td>
+  <td width=148 nowrap valign=bottom style='width:111.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB0<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB0<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes;height:12.75pt'>
+  <td width=139 nowrap valign=bottom style='width:104.6pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;padding:
+  0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>SMART_VCC<o:p></o:p></span></p>
+  </td>
+  <td width=131 nowrap valign=bottom style='width:97.9pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB9<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB9<o:p></o:p></span></p>
+  </td>
+  <td width=148 nowrap valign=bottom style='width:111.3pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB9<o:p></o:p></span></p>
+  </td>
+  <td width=133 nowrap valign=bottom style='width:99.55pt;border-top:none;
+  border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt;height:12.75pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt;font-family:Arial'>RB9<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>“SMART_CARD_DET”/”SIM_CARD_DET” signals indicate the
+presence of Smart Card/Sim Card to the microcontroller. Either of one between
+Smart Card &amp; Sim Card has to be inserted in the Smart Card PICTail board.
+If both the cards are inserted at a time in the PICTail card, then the demo
+won’t work successfully.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'>If the user wants to connect the smart card signals to
+different port pins of the micro, then he or she needs to modify the pin
+mapping in “sc_config.h” file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><span style='font-size:10.0pt;
+font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:10.0pt;font-family:Arial'>The demo
+waits in the while(1) loop until the smart card is inserted in the smart card
+connector slot. Once the card is inserted in the slot, ATR (Answer to Reset)
+and PPS (Protocol &amp; Parameter Selection) operations are performed. Then
+after the execution of card commands is done as per the smart card manual
+provided by the manufacturer. If the user inserts T=0 card in the slot, then
+“SC_TransactT0” function is called &amp; the result of the executed command
+from the smart card is stored in “apduData”. If the user inserts T=1 card in
+the slot, then “SC_TransactT1” function is called &amp; the result of the
+executed command from the smart card is stored in “apduData”. Variable
+“cardResponse” stores the status codes &amp; the length of the received data
+from the smart card.</span><span style='font-size:10.0pt;font-family:Fixedsys;
+mso-bidi-font-family:Fixedsys'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:10.0pt;font-family:Fixedsys;
+mso-bidi-font-family:Fixedsys'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:10.0pt;font-family:Arial'>Note:
+After initially being reset by the card reader, the smart card responds with a
+string of characters known as the Answer to Reset, or ATR. These characters
+consist of an initial character, TS, followed by a maximum of 32 additional
+characters. Together, these characters provide information to the card reader
+about how to communicate with the card for the remainder of the session. If the
+card reader wants to modify any of these data transmission parameters in the
+smart card, then it must perform PPS in accordance with ISO/IEC 7816-3 before
+the transmission protocol is actually used. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:10.0pt;font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in;mso-layout-grid-align:none;
+text-autospace:none'><span style='font-size:10.0pt;font-family:Arial'>For more
+details about smart card communication using PIC microcontrollers, please refer
+the application note <a href="../01370A.pdf">AN1370</a><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:.5in'><span style='font-family:Arial'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'>Troubleshooting Tips</span></i></b><span style='font-size:
+10.0pt;font-family:Arial'>:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Arial'><span
+style='mso-tab-count:1'>            </span><b style='mso-bidi-font-weight:normal'>Issue
+1: </b>How to get the exact delays for Work Wait time functionality?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.5in'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt;font-family:Arial'>Solution:<span
+style='mso-spacerun:yes'>  </span></span></b><span style='font-size:10.0pt;
+font-family:Arial'>It is advisable to use Timers to generate the exact delays. <o:p></o:p></span></p>
+
+<h2><a name="_Toc267483080"></a><a name="_Toc195786411"></a><a
+name="_Toc195786501"></a><a name="_Toc195786561"><span style='mso-bookmark:
+_Toc195786501'><span style='mso-bookmark:_Toc195786411'><span style='mso-bookmark:
+_Toc267483080'>Trademarks:</span></span></span></a></h2>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:Arial;color:black'>The Microchip name and logo, the Microchip logo,
+MPLAB, and PIC are registered trademarks of Microchip Technology Incorporated
+in the <st1:place w:st="on"><st1:country-region w:st="on">U.S.A.</st1:country-region></st1:place>
+and other countries.<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:Arial;color:black'>PICDEM and PICTail are trademarks of Microchip
+Technology Incorporated in the <st1:country-region w:st="on"><st1:place w:st="on">U.S.A.</st1:place></st1:country-region>
+and other countries.<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:Arial;color:black'>Microsoft, Windows, and Windows Vista are either
+registered trademarks or trademarks of Microsoft Corporation in the <st1:country-region
+w:st="on"><st1:place w:st="on">United States</st1:place></st1:country-region>
+and/or other countries.<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='margin-left:.5in'><i><span style='font-size:10.0pt;
+font-family:Arial;color:black'>SD is a trademark of the SD Association in the
+U.S.A and other countries</span></i><span style='font-family:Arial'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+~inc:header.inc~
+
+
+
+<div id="content">
+
+<div style="width:100%;" id="id_success"></div>
+
+<h2>Calibration</h2>
+
+<div class="result fail" style="display:~status_fail~">
+ERROR: A field was unparsable or too much data was POSTed.  Try again.
+</div>
+
+<form method="post" action="/protect/calib.htm" id="form_calib">
+<fieldset>
+<div><label>CT Value:</label><input type="text" id="id_ct" name="ct_r" /></div>
+<div>Note: Changing CT value requires resetting energy values.</div>
+<div><label>VOLT_CC:</label><input type="text" id="id_vcc" name="vcc" /></div>
+<hr>
+<div><label>Voltage Gain(A):</label><input type="text" id="id_phAv" name="phAv" /></div>
+<div><label>Voltage Gain(B):</label><input type="text" id="id_phBv" name="phBv" /></div>
+<div><label>Voltage Gain(C):</label><input type="text" id="id_phCv" name="phCv" /></div>
+<hr>
+<div><label>Current Gain(A):</label><input type="text" id="id_phAc" name="phAc" /></div>
+<div><label>Current Gain(B):</label><input type="text" id="id_phBc" name="phBc" /></div>
+<div><label>Current Gain(C):</label><input type="text" id="id_phCc" name="phCc" /></div>
+<hr>
+<div><label>External Voltage Ratio :</label><input type="text" id="id_exvr" name="exvr" /></div>
+
+<input type="hidden" name="mod" id="id_ismodified" />
+<input type="checkbox" name="cneg" id="id_cneg" style="display:none" />
+</fieldset>
+
+<br/>
+<div style="text-align:center"><button onclick="return validate();">Save</button></div>
+</form>
+
+<div style="display:none;" id="id_st_calibration">~GetCalibration~</div>
+</div>
+
+
+<script type="text/javascript">
+<!--
+var ct_v = document.getElementById("id_ct");
+var v_cc = document.getElementById("id_vcc");
+var phA_v = document.getElementById("id_phAv");
+var phA_c = document.getElementById("id_phAc");
+var phB_v = document.getElementById("id_phBv");
+var phB_c = document.getElementById("id_phBc");
+var phC_v = document.getElementById("id_phCv");
+var phC_c = document.getElementById("id_phCc");
+var cneg = document.getElementById("id_cneg");
+var ex_volt_ratio = document.getElementById("id_exvr");	// 2012-05-24 Liz: added external voltage ratio
+	
+getCalib();
+
+function validate()
+{
+	var bHasErr = false;
+		
+	if(ct_v.value == "" || !isNumber(ct_v.value) ||
+	  v_cc.value == "" || !isNumber(v_cc.value) ||
+	  phA_v.value == "" || !isNumber(phA_v.value) ||
+	  phA_c.value == "" || !isNumber(phA_c.value) ||
+	  phB_v.value == "" || !isNumber(phB_v.value) ||
+	  phB_c.value == "" || !isNumber(phB_c.value) ||
+	  phC_v.value == "" || !isNumber(phC_v.value) ||
+	  phC_c.value == "" || !isNumber(phC_c.value) ||
+	  ex_volt_ratio.value == "" || !isNumber(ex_volt_ratio.value))	// 2012-05-24 Liz: added external voltage ratio
+		bHasErr = true;
+		
+	if(bHasErr)
+	{
+		alert('Please enter valid values in all fields!');
+		return false;
+	}
+	else document.getElementById("form_calib").submit();
+}
+
+function getCalib() {
+	// CT value (pos 44)
+	// volt_cc (pos 0)
+	// voltage gain(A) (pos 16)
+	// current gain(A) (POS 20)
+	// voltage gain(B) (pos 24)
+	// current gain(B) (pos 28)
+	// voltage gain(C) (pos 32)
+	// current gain(C) (pos 36)
+	// external voltage ratio (pos 48)
+	
+	var calib = document.getElementById("id_st_calibration").innerHTML;
+	if(calib=="")
+	{
+		alert('Error retrieving data.');
+		return;
+	}
+	var compute_neg = parseInt(calib.substr(58, 2), 16);
+
+	ct_v.value = parseInt(calib.substr(44,4), 16);
+	v_cc.value = parseInt(calib.substr(0, 4), 16);
+	phA_v.value = parseInt(calib.substr(16, 4), 16);
+	phA_c.value = parseInt(calib.substr(20, 4), 16);
+	phB_v.value = parseInt(calib.substr(24, 4), 16);
+	phB_c.value = parseInt(calib.substr(28, 4), 16);
+	phC_v.value = parseInt(calib.substr(32, 4), 16);
+	phC_c.value = parseInt(calib.substr(36, 4), 16);
+	ex_volt_ratio.value = parseInt(calib.substr(48, 4), 16);	// 2012-05-24 Liz: added external voltage ratio
+	
+	document.getElementById("id_ismodified").value = parseInt(calib.substr(52, 4), 16);
+	document.getElementById("id_cneg").checked = ((compute_neg & 64) == 64);  // 64d = 0x40.
+}
+
+if(window.location.href.indexOf("?S") > 0)
+	document.getElementById("id_success").innerHTML = "Saved";
+-->
+</script>
+
+~inc:footer.inc~

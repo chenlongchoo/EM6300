@@ -1,0 +1,44 @@
+~inc:header.inc~
+<div id="content">
+
+<div style="width:100%;" id="id_success"></div>
+
+<h2>Computation Setting</h2>
+
+<div class="result fail" style="display:~status_fail~">
+ERROR: A field was unparsable or too much data was POSTed.  Try again.
+</div>
+
+<p class="error">
+<b>CAUTION:</b> Incorrect settings may cause consumption data to be corrupted. Be sure of the functions before making changes.</p>
+<p>Enter the new settings for the board below:</p>
+
+<form method="post" action="/protect/compute.htm" name="setting">
+<div style="margin:10px 40px 10px 40px;padding: 8px;border: 1px dotted #333;background:#ddd;">
+<div><input type="checkbox" name="cneg" id="id_cneg"/><label for="id_cneg">Compute negative energy</label></div>
+<br>
+<div style="display:none">Max Demand Refresh Interval(in mins):
+<input type="text" name="vexr" value="~ext_ratio~" /></div>
+<input type="hidden" name="mod" id="id_ismodified" />
+</div>
+
+<div style="text-align:center"><input type="submit" value="Save" class="sm" /></div>
+</form>
+
+<div style="display:none;" id="id_st_calibration">~GetCalibration~</div>
+</div>
+
+<script language="javascript">
+<!--
+
+var calib = document.getElementById("id_st_calibration").innerHTML;
+var compute_neg = parseInt(calib.substring(58, 60), 16);
+
+document.getElementById("id_ismodified").value = parseInt(calib.substring(52, 56), 16);
+document.getElementById("id_cneg").checked = ((compute_neg & 64) == 64);  // 64d = 0x40.
+
+if(window.location.href.indexOf("?S") > 0)
+	document.getElementById("id_success").innerHTML = "Saved";
+//-->
+</script>
+~inc:footer.inc~
