@@ -49,13 +49,16 @@ BOOL UPDATE_DATETIME = FALSE;	// 2014-01-21 liz.
 char DateTime[6] = "";			// 2014-01-21 Liz.
 #endif
 
+#define MCU_RX_ARRAY_SIZE	3
 #define MCU_RX_BUFFER_SIZE				60
-static unsigned char MCU_RX_BUFFER_POINTER = 0;
+static unsigned char MCU_RX_BUFFER_POINTER[MCU_RX_ARRAY_SIZE] = {0,0,0};
 // 2012-05-12(Eric) - Changed type from volatile far char to volatile far BYTE as the signed type
 // could cause problems when computing checksum.
-volatile far BYTE MCU_RX_BUFFER[MCU_RX_BUFFER_SIZE] = {"\0"};
+volatile far BYTE MCU_RX_BUFFER[MCU_RX_ARRAY_SIZE][MCU_RX_BUFFER_SIZE] = {"\0", "\0", "\0"};
 static char b_reset_maxq = 0;
-static unsigned char is_7ESB_found = 0;
+static unsigned char is_7ESB_found[MCU_RX_ARRAY_SIZE] = {0,0,0};
+unsigned char	is_receive_complete[MCU_RX_ARRAY_SIZE] = {0,0,0};
+unsigned char   buffer_write_index = 0, buffer_read_index = 0;
 
 //2012-08-03 Liz: must declare here instead of inside MMT_MODBUS_REQUEST
 //	unknown bug which caused
@@ -129,20 +132,35 @@ void MCUUnloadData(void)
 	{		
 		c1 = MCUReadByte();
 		
+		if(c1 == 0x7E && is_receive_complete[buffer_write_index])
+		{
+			is_receive_complete[buffer_write_index] = 0;
+			buffer_write_index++;
+			if(buffer_write_index >= 3)
+			{
+				buffer_write_index = 0;
+			}
+		}
+		
 		// Unload all data inside the buffer, don't need to check for the start byte. 
 		// Received data will be processed later in MCUProcessIncomingMessage
 		
 		// Check if first byte 7E is found, start to load data from begining of the buffer
 		// If already found 1 byte 7E, don't care about the rest 7E inside msg
-		if(!is_7ESB_found && c1 == 0x7E)
+		if(!is_7ESB_found[buffer_write_index] && c1 == 0x7E)
 		{
-			is_7ESB_found = 1;
-			MCU_RX_BUFFER[0] = MCU_RX_BUFFER_POINTER = 0;	
+			memset(MCU_RX_BUFFER[buffer_write_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+			is_7ESB_found[buffer_write_index] = 1;
+			MCU_RX_BUFFER[buffer_write_index][0] = MCU_RX_BUFFER_POINTER[buffer_write_index] = 0;	
 		}	
 		
-		if(MCU_RX_BUFFER_POINTER < MCU_RX_BUFFER_SIZE-1)
-			MCU_RX_BUFFER[MCU_RX_BUFFER_POINTER++] = c1;	
-		
+		// Write into buffer according to buffer write index
+		if(is_7ESB_found[buffer_write_index] && MCU_RX_BUFFER_POINTER[buffer_write_index] < MCU_RX_BUFFER_SIZE-1)
+		{
+			MCU_RX_BUFFER[buffer_write_index][MCU_RX_BUFFER_POINTER[buffer_write_index]++] = c1;
+		}
+				
+		/*
 		#if( CLOCK_SPEED == 32000000 )
 			Delay100TCYx(10);	//40
 		#elif( CLOCK_SPEED == 48000000 )
@@ -150,6 +168,7 @@ void MCUUnloadData(void)
 		#else
 			#error "No clock speed defined."
 		#endif
+		*/
 	}
 }
 
@@ -178,17 +197,13 @@ void MCUProcessIncomingMessage(void)
 	// ***************
 	// When the first byte is not a valid start byte, looking for a valid start byte within MCU_RX_BUFFER.
 	// When a valid start byte is found, move the array forward until 7E is the start byte.
-	if( MCU_RX_BUFFER[0] != 0x7E ) 
+	if( MCU_RX_BUFFER[buffer_read_index][0] != 0x7E ) 
 	{
-		MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0;
-		is_7ESB_found = 0;
 		return;
 	}
 
-	if( MCU_RX_BUFFER_POINTER < 3 ) // wait until get start byte 0x7E and data_length before verifying message
+	if( MCU_RX_BUFFER_POINTER[buffer_read_index] < 3 ) // wait until get start byte 0x7E and data_length before verifying message
 	{
-		// 2012-05-12(Eric) - We might get stuck in this state for some time... maybe infinitely?
-		INTCONbits.GIEH = 1;
 		return;
 	}
 	// END 7EPROB
@@ -196,44 +211,59 @@ void MCUProcessIncomingMessage(void)
 	{
 		// Verify checksum.
 		// 2012-05-12(Eric) - Changed from char to BYTE.
-		BYTE data_length = MCU_RX_BUFFER[1];
+		BYTE data_length = MCU_RX_BUFFER[buffer_read_index][1];
 		unsigned char i = 0, checksum = 0;
 		
 		// 2014-05-07 Liz. 
-		// **Note: Valid message in MCU_RX_BUFFER should content Data with MCU_RX_BUFFER_SIZE = data_length + 3
+		// **Note: Valid message in MCU_RX_BUFFER should contain Data with MCU_RX_BUFFER_SIZE = data_length + 3
 		//		   Data format: 0x7E | data_length(1 BYTE) | Data(data_length BYTES) | Checksum(1 BYTE)
 		if( data_length >= (MCU_RX_BUFFER_SIZE-3) ) // invalid msg, clear start byte and data_length
 		{ 
-			MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0; 
-			is_7ESB_found = 0;
+			memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+			MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+			is_7ESB_found[buffer_read_index] = 0;
+			buffer_read_index++;
+			if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+			{
+				buffer_read_index = 0;
+			}
+			is_receive_complete[buffer_read_index] = 1;
 			return;
 		}
 		
-		if( data_length > MCU_RX_BUFFER_POINTER-3 ) // wait if msg not fully loaded yet
+		if( data_length > MCU_RX_BUFFER_POINTER[buffer_read_index] - 3 ) // wait if msg not fully loaded yet
 		{ 
-			// 2012-05-12(Eric) - We might get stuck in this state for some time... maybe infinitely?
-			INTCONbits.GIEH = 1;
 			return;
 		}
+		
+		is_receive_complete[buffer_read_index] = 1;
 		
 		for( i=2; i<data_length+2; i++ )
 		{
 			// 2012-05-12(Eric) - As MCU_RX_BUFFER is defined as char type and checksum a unsigned type,
 			// using the operator += could cause undesirable result. Eg. checksum(1000) += MCU_RX_BUFFER(-20).
-			checksum += MCU_RX_BUFFER[i];
+			checksum += MCU_RX_BUFFER[buffer_read_index][i];
 		}
-		if(checksum == 0x7E || checksum == 0x00)	checksum++;
-		
-		if( MCU_RX_BUFFER[i] != checksum ) 
+		if(checksum == 0x7E || checksum == 0x00)
 		{
-			MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0; 
-			is_7ESB_found = 0;
-			INTCONbits.GIEH = 1;
-			MCU_RX_BUFFER[data_length+2] = 0;	// Remove checksum byte.
+			checksum++;
+		}	
+		
+		if( MCU_RX_BUFFER[buffer_read_index][i] != checksum ) 
+		{
+			memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+			MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+			is_7ESB_found[buffer_read_index] = 0;
+			buffer_read_index++;
+			if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+			{
+				buffer_read_index = 0;
+			}
 			return;
 		}	
+		
 		// Remove checksum byte.
-		MCU_RX_BUFFER[data_length+2] = 0;
+		MCU_RX_BUFFER[buffer_read_index][data_length+2] = 0;
 		// 2012-05-08(Eric) - DEBUG send out checksum to indicate that message have been received.
 		MCUWriteByte(checksum);
 		
@@ -243,19 +273,25 @@ void MCUProcessIncomingMessage(void)
 			// 2012-05-08(Eric) - Add in Transaction ID...
 			// The bottom board have to be modified later to return back the Transaction ID to top board.
 			// This is in order for top board match the request the response was generated for.
-			DWORD dwTransactionID = *((DWORD*)&MCU_RX_BUFFER[2]);
-			MCU_MESSAGE_TYPE msg_type = (MCU_MESSAGE_TYPE)MCU_RX_BUFFER[6];
-			BYTE * data = &MCU_RX_BUFFER[7];
+			DWORD dwTransactionID = *((DWORD*)&MCU_RX_BUFFER[buffer_read_index][2]);
+			MCU_MESSAGE_TYPE msg_type = (MCU_MESSAGE_TYPE)MCU_RX_BUFFER[buffer_read_index][6];
+			BYTE * data = &MCU_RX_BUFFER[buffer_read_index][7];
 			#else
-			MCU_MESSAGE_TYPE msg_type = (MCU_MESSAGE_TYPE)MCU_RX_BUFFER[2];
-			BYTE * data = &MCU_RX_BUFFER[3];
+			MCU_MESSAGE_TYPE msg_type = (MCU_MESSAGE_TYPE)MCU_RX_BUFFER[buffer_read_index][2];
+			BYTE * data = &MCU_RX_BUFFER[buffer_read_index][3];
 			#endif
 			
 			// 2013-11-12 Liz. Check if refenrece is 0
 			if(data == 0)
 			{	
-				MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0; 
-				is_7ESB_found = 0;	
+				memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+				MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+				is_7ESB_found[buffer_read_index] = 0;
+				buffer_read_index++;
+				if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+				{
+					buffer_read_index = 0;
+				}
 				return;
 			}
 			//
@@ -271,7 +307,7 @@ void MCUProcessIncomingMessage(void)
 					char is_success=0;
 					
 					memset(&mcu_request, 0, sizeof(MCU_REQUEST_BLOCK));
-					memcpy(&mcu_request.Serialised[0], &MCU_RX_BUFFER[2], data_length);
+					memcpy(&mcu_request.Serialised[0], &MCU_RX_BUFFER[buffer_read_index][2], data_length);
 					
 					mcu_request.w.header.message_type = MMT_MODBUS_READ_RESPONSE;
 					
@@ -295,8 +331,14 @@ void MCUProcessIncomingMessage(void)
 							// 2013-11-12 Liz. Check if refenrece is 0
 							if(ptr1 == 0 || ptr2 == 0)
 							{
-								MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0; 
-								is_7ESB_found = 0;	
+								memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+								MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+								is_7ESB_found[buffer_read_index] = 0;
+								buffer_read_index++;
+								if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+								{
+									buffer_read_index = 0;
+								}
 								return;
 							}	
 							//
@@ -306,11 +348,6 @@ void MCUProcessIncomingMessage(void)
 							memcpy(&maxqFlag[2], (char*)reading_storage_1.PHASE_C_STATUS, 1);
 							maxqFlag[3] = *ptr1;
 							maxqFlag[4] = *ptr2;
-							
-							// 2013-03-27 Liz. Added MAXQ_RESET_FLAG
-							//maxqFlag[5] = MAXQ_RESET_FLAG[0];
-							//memcpy((char*)&mcu_request.w.data, &maxqFlag[0], 6);
-							//
 							
 							memcpy((char*)&mcu_request.w.data, &maxqFlag[0], 5);
 							is_success = 1; 
@@ -337,7 +374,7 @@ void MCUProcessIncomingMessage(void)
 				case MMT_MODBUS_WRITE_REQUEST:
 				{
 					memset(&mcu_request, 0, sizeof(MCU_REQUEST_BLOCK));
-					memcpy(&mcu_request.Serialised[0], &MCU_RX_BUFFER[2], data_length);
+					memcpy(&mcu_request.Serialised[0], &MCU_RX_BUFFER[buffer_read_index][2], data_length);
 					
 					mcu_request.w.header.message_type = MMT_MODBUS_WRITE_RESPONSE;
 
@@ -452,8 +489,14 @@ void MCUProcessIncomingMessage(void)
 							// 2013-11-12 Liz. Check if refenrece is 0
 							if(max_value == 0)
 							{
-								MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0; 
-								is_7ESB_found = 0;	
+								memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+								MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+								is_7ESB_found[buffer_read_index] = 0;
+								buffer_read_index++;
+								if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+								{
+									buffer_read_index = 0;
+								}
 								return;
 							}	
 							//
@@ -523,12 +566,6 @@ void MCUProcessIncomingMessage(void)
 						
 						if(EnrOvfCounter1.Flags.bIs_3Pkwh_Ready != 1)
 						{
-							sg[3] = 6;
-							sg[4] = 'A';
-							sg[5] = 'B';
-							sg[6] = 'C';
-							
-						//	MCUSendString(7, &sg[0]);
 							break;
 						}	
 					}	
@@ -540,14 +577,13 @@ void MCUProcessIncomingMessage(void)
 					//	   If not, dont send invalid response to top board.									
 					length = sg[3];
 					if(length != 0)
+					{
 						MCUSendString(14+sg[3], sg); // where sg[3] contains the length of the reading.
+					}	
 				}
 					break;	
 				case MMT_GET_CALIBRATION_DATA:
 				{
-					// 2012-08-10 Liz: Removed. Dont need to declare another array here.
-					//BYTE sm[sizeof(CALIBRATION_VALUES)+2];
-					
 					sg[0] = (BYTE)MMT_GENERIC_RESPONSE;
 					memcpy(&sg[1], &CalibrationData, sizeof(CALIBRATION_VALUES));
 					MCUSendString(sizeof(CALIBRATION_VALUES)+1, sg);
@@ -673,11 +709,6 @@ void MCUProcessIncomingMessage(void)
 					//	   If not, dont send invalid response to top board.					
 					if(EnrOvfCounter1.Flags.bIs_3Pkwh_Ready != 1)
 					{
-						sg[1] = 'F';
-						sg[2] = 'A';
-						sg[3] = 'I';
-						sg[4] = 0;	
-						MCUSendString(4, &sg[0]);
 						break;
 					}
 					
@@ -709,18 +740,23 @@ void MCUProcessIncomingMessage(void)
 			}	
 		}
 	}
-	// 7EPROB
-	// Whenever we want to clear the buffer, just set the start byte to 0.
-	MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0; 
-	is_7ESB_found = 0;
-	// END 7EPROB
+	memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+	MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+	is_7ESB_found[buffer_read_index] = 0;
+	buffer_read_index++;
+	if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+	{
+		buffer_read_index = 0;
+	}
 	
 	INTCONbits.GIEH = 1;
 	
 	// 2013-03-18 Liz: check if need to reset maxq and bottom board
 	if(b_reset_maxq == 1)
+	{
 		InitMAXQ();
 		//ResetBot();
+	}	
 }
 #endif
 
@@ -740,16 +776,13 @@ void MCUProcessIncomingMessage(void)
 		return;
 	}
 
-	if( MCU_RX_BUFFER[0] != 0x7E ) // valid data should start with byte 0x7E
+	if( MCU_RX_BUFFER[buffer_read_index][0] != 0x7E ) // valid data should start with byte 0x7E
 	{
-		MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0;
-		is_7ESB_found = 0;
 		return;
 	}
 
-	if( MCU_RX_BUFFER_POINTER < 3 ) // wait until get start byte 0x7E and data_length before verifying message
+	if( MCU_RX_BUFFER_POINTER[buffer_read_index] < 3 ) // wait until get start byte 0x7E and data_length before verifying message
 	{
-		INTCONbits.GIEH = 1;
 		return;
 	}
 	
@@ -757,42 +790,58 @@ void MCUProcessIncomingMessage(void)
 		// Verify checksum.
 		{
 			unsigned char i = 0, checksum = 0;
-			unsigned char data_length = MCU_RX_BUFFER[1];
+			unsigned char data_length = MCU_RX_BUFFER[buffer_read_index][1];
 
 			// 2014-05-07 Liz. 
 			// **Note: Valid message in MCU_RX_BUFFER should content Data with MCU_RX_BUFFER_SIZE = data_length + 3
 			//		   Data format: 0x7E | data_length(1 BYTE) | Data(data_length BYTES) | Checksum(1 BYTE)			
 			if( data_length >= (MCU_RX_BUFFER_SIZE-3) ) // invalid msg, clear start byte and data_length
 			{ 
-				MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0; 
-				is_7ESB_found = 0;
+				memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+				MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+				is_7ESB_found[buffer_read_index] = 0;
+				buffer_read_index++;
+				if(buffer_read_index >= 3)
+				{
+					buffer_read_index = 0;
+				}
+				is_receive_complete[buffer_read_index] = 1;
 				SetMCUIsBusy(FALSE);	// 2014-01-27 Liz. Release MCU for new requests.
 				return;
 			}
 		
-			if( data_length > MCU_RX_BUFFER_POINTER-3 ) // wait if msg not fully loaded yet
-			{ 
-				INTCONbits.GIEH = 1;
+			if( data_length > MCU_RX_BUFFER_POINTER[buffer_read_index]-3 ) // wait if msg not fully loaded yet
+			{
 				return;
 			}
+			
+			is_receive_complete[buffer_read_index] = 1;
 					
 			for( i=2; i<data_length+2; i++ )	// calculate checksum
 			{
-				checksum += MCU_RX_BUFFER[i];
+				checksum += MCU_RX_BUFFER[buffer_read_index][i];
 			}
-			if(checksum == 0x7E || checksum == 0x00)	checksum++;
-			
-			if( MCU_RX_BUFFER[i] != checksum )	// verify checksum
+			if(checksum == 0x7E || checksum == 0x00)
 			{
-				MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0;
-				is_7ESB_found = 0;
-				MCU_RX_BUFFER[data_length+2] = 0;	// clear checksum
+				checksum++;
+			}	
+			
+			if( MCU_RX_BUFFER[buffer_read_index][i] != checksum )	// verify checksum
+			{
+				memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+				MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+				is_7ESB_found[buffer_read_index] = 0;
+				buffer_read_index++;
+				if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+				{
+					buffer_read_index = 0;
+				}
 				SetMCUIsBusy(FALSE);	// 2014-01-27 Liz. Release MCU for new requests.
 				return;
 			}
 
 			// Remove checksum byte.
-			MCU_RX_BUFFER[data_length+2] = 0;
+			MCU_RX_BUFFER[buffer_read_index][data_length+2] = 0;
 			// Send the checksum to indicate receipt.
 			MCUWriteByte(checksum);
 			
@@ -804,15 +853,21 @@ void MCUProcessIncomingMessage(void)
 		
 		// Process received message.
 		{
-			BYTE data_length = MCU_RX_BUFFER[1];
-			BYTE msg_type = MCU_RX_BUFFER[2];
-			BYTE * data = &MCU_RX_BUFFER[3];
+			BYTE data_length = MCU_RX_BUFFER[buffer_read_index][1];
+			BYTE msg_type = MCU_RX_BUFFER[buffer_read_index][2];
+			BYTE * data = &MCU_RX_BUFFER[buffer_read_index][3];
 			
 			// 2013-11-12 Liz. Check if refenrece is 0
 			if(data == 0)
 			{
-				MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0; 
-				is_7ESB_found = 0;	
+				memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+				MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+				is_7ESB_found[buffer_read_index] = 0;
+				buffer_read_index++;
+				if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+				{
+					buffer_read_index = 0;
+				}
 				SetMCUIsBusy(FALSE);	// 2014-01-27 Liz. Release MCU for new requests.
 				return;
 			}	
@@ -823,13 +878,19 @@ void MCUProcessIncomingMessage(void)
 				case MMT_MODBUS_READ_RESPONSE:
 				case MMT_MODBUS_WRITE_RESPONSE:	//2012-10-02 Liz added
 				{
-					MCU_REQUEST_BLOCK * mcuPtr = (MCU_REQUEST_BLOCK*)&MCU_RX_BUFFER[2];
+					MCU_REQUEST_BLOCK * mcuPtr = (MCU_REQUEST_BLOCK*)&MCU_RX_BUFFER[buffer_read_index][2];
 					
 					// 2013-11-12 Liz. Check if refenrece is 0
 					if(mcuPtr == 0)
 					{
-						MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0; 
-						is_7ESB_found = 0;
+						memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+						MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+						is_7ESB_found[buffer_read_index] = 0;
+						buffer_read_index++;
+						if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+						{
+							buffer_read_index = 0;
+						}
 						SetMCUIsBusy(FALSE);	// 2014-01-27 Liz. Release MCU for new requests.	
 						return;
 					}	
@@ -897,8 +958,14 @@ void MCUProcessIncomingMessage(void)
 					// 2013-11-12 Liz. Check if refenrece is 0
 					if(kk == 0 || storage == 0)
 					{
-						MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0; 
-						is_7ESB_found = 0;	
+						memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+						MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+						is_7ESB_found[buffer_read_index] = 0;
+						buffer_read_index++;
+						if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+						{
+							buffer_read_index = 0;
+						}
 						SetMCUIsBusy(FALSE);	// 2014-01-27 Liz. Release MCU for new requests.
 						return;
 					}	
@@ -975,8 +1042,14 @@ void MCUProcessIncomingMessage(void)
 			}
 		}
 	}	
-	MCU_RX_BUFFER[0] = MCU_RX_BUFFER[1] = MCU_RX_BUFFER_POINTER = 0;
-	is_7ESB_found = 0;
+	memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+	MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+	is_7ESB_found[buffer_read_index] = 0;
+	buffer_read_index++;
+	if(buffer_read_index >= MCU_RX_ARRAY_SIZE)
+	{
+		buffer_read_index = 0;
+	}
 }	
 #endif
 
@@ -1032,8 +1105,9 @@ BOOL MCURequestToBOTTOMBoard(char msg_type, char * msg_in, char msg_size, BOOL b
 	if( reset_uart_count > 5 )
 	{
 		// Reset everything about the MCU...
-		MCU_RX_BUFFER[0] = MCU_RX_BUFFER_POINTER = 0;
-		is_7ESB_found = 0;
+		memset(MCU_RX_BUFFER[buffer_read_index], 0, sizeof(MCU_RX_BUFFER[0][0]) * MCU_RX_BUFFER_SIZE);
+		MCU_RX_BUFFER_POINTER[buffer_read_index] = 0;
+		is_7ESB_found[buffer_read_index] = 0;
 		reset_uart_count = 0;
 		
 		MCUClose();
