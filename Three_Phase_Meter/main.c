@@ -127,16 +127,13 @@ void HighISR(void);
 	#pragma interruptlow LowISR
 	void LowISR(void)
 	{	
+		
 	}
 	#pragma code
 
 	#pragma interrupt HighISR
 	void HighISR(void)
 	{
-		char backup = INTCON;
-		
-		INTCON = 0;
-		
 		#ifdef APP_USE_MCU
 			if( MCU_RX_INTERRUPT_FLAG) //&& (is_processing == 1) )
 			{
@@ -164,11 +161,9 @@ void HighISR(void);
 			}
 			///////////////////////////////////////////
 												
-			HandleRTCC();			// Update time and calendar			
-			PIR1bits.TMR1IF = 0;	// Clear interrupt flag
+			HandleRTCC();			// Update time and calendar
 		}
-					
-		INTCON = backup;
+		PIR1bits.TMR1IF = 0;	// Clear interrupt flag
 	}
 	#pragma code
 
