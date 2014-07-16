@@ -86,46 +86,17 @@ void MCUOpen(void)
 	}
 }
 
-
-
 void MCUTasks(void)
 {
-	// Check for errors with USART.
-#if defined(__18F26K20) || defined(__18F46K20)
-	if( RCSTAbits.OERR )
-	{
-		RCSTAbits.CREN = 0;
-		RCSTAbits.CREN = 1;
-	}
-#elif defined(__18F87J50)		
-	if( RCSTA1bits.OERR )
-	{
-		RCSTA1bits.CREN = 0;
-		RCSTA1bits.CREN = 1;
-	}
-#endif
-	
+	ClearOverrunError();	
 	MCUProcessIncomingMessage();
 }
 
 void MCUUnloadData(void)
 {
-	// 2012-05-12(Eric) - Changed from char to BYTE.
 	BYTE c1;
 
-#if defined(__18F26K20) || defined(__18F46K20)
-	if( RCSTAbits.OERR )
-	{
-		RCSTAbits.CREN = 0;
-		RCSTAbits.CREN = 1;
-	}
-#elif defined(__18F87J50)		
-	if( RCSTA1bits.OERR )
-	{
-		RCSTA1bits.CREN = 0;
-		RCSTA1bits.CREN = 1;
-	}
-#endif
+	ClearOverrunError();
 
 	// Unload as much data as possible.
 	while( MCU_RX_INTERRUPT_FLAG )	// && (MCU_RX_BUFFER_POINTER < MCU_RX_BUFFER_SIZE-1) )
@@ -159,16 +130,6 @@ void MCUUnloadData(void)
 		{
 			MCU_RX_BUFFER[buffer_write_index][MCU_RX_BUFFER_POINTER[buffer_write_index]++] = c1;
 		}
-				
-		/*
-		#if( CLOCK_SPEED == 32000000 )
-			Delay100TCYx(10);	//40
-		#elif( CLOCK_SPEED == 48000000 )
-			Delay100TCYx(15);	//80
-		#else
-			#error "No clock speed defined."
-		#endif
-		*/
 	}
 }
 
@@ -179,14 +140,7 @@ void MCUProcessIncomingMessage(void)
 	
 	// 2013-03-18 Liz: check if need to reset maxq and bottom board
 	b_reset_maxq = 0;
-	
-	// Clear any errors.
-	if( RCSTAbits.OERR )
-	{
-		RCSTAbits.CREN = 0;
-		RCSTAbits.CREN = 1;
-	}
-	
+		
 	if( MCU_RX_BUFFER_POINTER == 0 ) 
 		return;
 
@@ -763,13 +717,6 @@ void MCUProcessIncomingMessage(void)
 #if defined(__18F87J50)
 void MCUProcessIncomingMessage(void)
 {
-	// Clear any errors.
-	if( RCSTA1bits.OERR )
-	{
-		RCSTA1bits.CREN = 0;
-		RCSTA1bits.CREN = 1;
-	}
-	
 	// Wait if not receive any valid data	
 	if( MCU_RX_BUFFER_POINTER == 0 ) 
 	{
@@ -1167,12 +1114,7 @@ BOOL MCURequestToBOTTOMBoard(char msg_type, char * msg_in, char msg_size, BOOL b
 		// 2012-05-07(Eric) - Added to prevent wdt timeout during retries.
 		ClrWdt();
 		
-		// Code to wait for response from MCU1.
-		if( RCSTA1bits.OERR )
-		{
-			RCSTA1bits.CREN = 0;
-			RCSTA1bits.CREN = 1;
-		}
+		ClearOverrunError();
 
 		{
 			unsigned long timeout = 0;
@@ -1240,19 +1182,7 @@ BOOL MCUSendString(unsigned char data_length, char * str)
 //	#endif
 	/////////////////////////////////////////////////
 
-#if defined(__18F26K20) || defined(__18F46K20)
-	if( RCSTAbits.OERR )
-	{
-		RCSTAbits.CREN = 0;
-		RCSTAbits.CREN = 1;
-	}
-#elif defined(__18F87J50)		
-	if( RCSTA1bits.OERR )
-	{
-		RCSTA1bits.CREN = 0;
-		RCSTA1bits.CREN = 1;
-	}
-#endif
+	ClearOverrunError();
 	
 	// Add start byte.
 	MCUWriteByte(0x7E);
@@ -1289,19 +1219,7 @@ BOOL MCUSendString(unsigned char data_length, char * str)
 //		if(check_typ_count>=14)
 //			check_typ_count=0;
 
-#if defined(__18F26K20) || defined(__18F46K20)
-	if( RCSTAbits.OERR )
-	{
-		RCSTAbits.CREN = 0;
-		RCSTAbits.CREN = 1;
-	}
-#elif defined(__18F87J50)		
-	if( RCSTA1bits.OERR )
-	{
-		RCSTA1bits.CREN = 0;
-		RCSTA1bits.CREN = 1;
-	}
-#endif
+		ClearOverrunError();
 		
 		if(wRetry<44000)
 		{

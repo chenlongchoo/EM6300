@@ -75,6 +75,15 @@ int InitUSART(int baud)
 	return 1;
 }
 
+void ClearOverrunError(void)
+{
+	if( RCSTAbits.OERR )
+	{
+		RCSTAbits.CREN = 0;
+		RCSTAbits.CREN = 1;
+	}
+}
+
 #elif defined METER_TOP_BOARD
 
 int InitUSART(int baud)
@@ -146,5 +155,14 @@ int InitUSART(int baud)
 	}
 	return 1;
 }
+
+void ClearOverrunError(void)
+{
+	if( RCSTA1bits.OERR )
+	{
+		RCSTA1bits.CREN = 0;
+		RCSTA1bits.CREN = 1;
+	}
+}	
 
 #endif
