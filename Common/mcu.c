@@ -1,10 +1,7 @@
-//
 #include <delays.h>
 #include <stdlib.h>
 #include <string.h>
-#include <usart.h>
-
-#include "HardwareProfile.h"
+#include "usart_Meter.h"
 #include "AppConfig.h"
 #include "mcu.h"
 #include "menu.h"
@@ -52,11 +49,6 @@ BOOL UPDATE_DATETIME = FALSE;	// 2014-01-21 liz.
 char DateTime[6] = "";			// 2014-01-21 Liz.
 #endif
 
-//2012-08-10 Liz: Removed, not in use
-//char MCU_PENDING_REQUESTS_POINTER = 0;
-//char MCU_PENDING_REQUESTS[10][20];
-//
-
 #define MCU_RX_BUFFER_SIZE				60
 static unsigned char MCU_RX_BUFFER_POINTER = 0;
 // 2012-05-12(Eric) - Changed type from volatile far char to volatile far BYTE as the signed type
@@ -77,40 +69,21 @@ void SetMCUIsBusy(BOOL a);
 void MCUWriteByte(BYTE b);
 
 
+/***************************************/
+/********* Routines ******************/
+/***************************************/
+
 void MCUOpen(void)
 {	
-	#if !defined(CLOCK_SPEED)
-		#error "No processor clock speed defined."
-	#else
-		#if defined(__18F87J50)
-			Open1USART(
-				USART_TX_INT_OFF
-				& USART_RX_INT_ON
-				& USART_ASYNCH_MODE
-				& USART_EIGHT_BIT
-				& USART_CONT_RX
-				& USART_BRGH_LOW,
-				//77);
-				38);
-		#elif defined(__18F2455)
-
-		#elif (defined(__18F26K20) || defined( __18F46K20 )) && ( CLOCK_SPEED == 32000000 )
-			OpenUSART(
-				USART_TX_INT_OFF
-				& USART_RX_INT_ON
-				& USART_ASYNCH_MODE
-				& USART_EIGHT_BIT
-				& USART_CONT_RX
-				& USART_BRGH_HIGH,
-				103);
-				//207);
-		#else
-		#error "No supported controller defined."
-		#endif
-	#endif
-	INTCONbits.PEIE = 1;
-	INTCONbits.GIEH = 1;
+	signed char success = -1;
+	success = InitUSART(19200);
+	if(!success)
+	{
+		// TODO: try auto-baud detect or other bauds
+	}
 }
+
+
 
 void MCUTasks(void)
 {

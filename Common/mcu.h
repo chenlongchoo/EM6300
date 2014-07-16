@@ -1,5 +1,3 @@
-//mcu.h
-
 #ifndef MCU_H
 #define MCU_H
 
